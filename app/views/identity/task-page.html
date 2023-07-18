@@ -1,0 +1,26 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      Tasks
+    </h1>
+    
+    {{ govukButton({
+        text: "Go to prototype",
+        classes: "govuk-button--primary",
+        href: "/identity/auth/v9/gov-account.html.html"
+      }) }}
+    
+  </div>
+
+</div>
+
+{% endblock %}
