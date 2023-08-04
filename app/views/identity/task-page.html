@@ -8,19 +8,30 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-
     <h1 class="govuk-heading-xl">
       Tasks
     </h1>
-    
+ 
+    <h2 class="govuk-heading-m">Task 1</h2>
     {{ govukButton({
-        text: "Go to prototype",
-        classes: "govuk-button--primary",
-        href: "/identity/auth/v9/gov-account.html.html"
-      }) }}
-    
-  </div>
+      text: "Start",
+      href: "/identity/auth/v9/gov-account.html"
+    }) }}
 
+    <h2 class="govuk-heading-m">Task 2</h2>
+    {{ govukButton({
+      text: "Start",
+      href: "https://surveys.publishing.service.gov.uk/s/4XH0R7/"
+    }) }}
+
+    <h2 class="govuk-heading-m">Task 3</h2>
+    {{ govukButton({
+      text: "Start",
+      href: "task-3-examples"
+    }) }}
+
+  </div>
 </div>
+
 
 {% endblock %}

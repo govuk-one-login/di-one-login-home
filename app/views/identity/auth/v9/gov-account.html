@@ -4,26 +4,6 @@
   GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
-{% block header %}
-  {{ govukOneLoginServiceHeader({
-    serviceName: "My example service name",
-    navigationItems: [{
-      href: "#",
-      text: 'service link 1',
-      id: 'servicelink1'
-    },{
-      href: "#",
-      text: 'service link 2',
-      id: 'servicelink2'
-    },{
-      href: "#",
-      text: 'service link 3',
-      id: 'servicelink3'
-    }],
-    activeLinkId: 'servicelink3'
-  }) }}
-{% endblock %}
-
 {% block content %}
 
 <div class="govuk-grid-row">

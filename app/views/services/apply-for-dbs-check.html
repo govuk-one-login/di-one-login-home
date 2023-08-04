@@ -4,7 +4,14 @@
   GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
+{% block header %}
+  {{ govukOneLoginServiceHeader({
+    serviceName: "Basic criminal record check"
+  }) }}
+{% endblock %}
+
 {% block content %}
+
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
@@ -39,7 +46,7 @@
         </fieldset>
       </div>
 
-    <a href="/identity/task-1-finish.html" role="button" draggable="false" class="govuk-button govuk-button--continue" data-module="govuk-button">
+    <a href="/identity/end-of-task-1.html" role="button" draggable="false" class="govuk-button govuk-button--continue" data-module="govuk-button">
       Continue
     </a>
 

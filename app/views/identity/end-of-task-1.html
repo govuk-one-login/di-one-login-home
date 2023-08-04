@@ -1,0 +1,20 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<h1 class="govuk-heading-xl">
+  End of task 1
+</h1>
+<p>Go back to the tasks page to continue.</p>
+
+{{ govukButton({
+  text: "Tasks page",
+  href: "/identity/task-page.html"
+}) }}
+
+
+{% endblock %}
