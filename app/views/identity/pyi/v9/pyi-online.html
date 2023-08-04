@@ -25,12 +25,10 @@
 </ul>
   </div>
   
-  <div>
-    {{ govukButton({
-      text: "Continue",
-      href: "/identity/pyi/mvp/passport-details.html"
-    }) }}
-  </div>
+  <form class="form" action="/identity/pyi/v9/passport-details" method="post">
+      
+    <button class="govuk-button" data-module="govuk-button">Continue</button>
+  </form>
 </div>
 </div>
 {% endblock %}
