@@ -1,0 +1,90 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+  {{ govukOneLoginServiceHeader({
+    serviceName: "Basic criminal record check"
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+  <div class="summary-list-container govuk-!-margin-bottom-4">
+    <h1 class="govuk-heading-l">Share your proof of identity</h1>
+    <p class="govuk-body">You proved your identity with GOV.UK One Login on 20 June 2023.</p>
+    <p>This will be shared with <span class="govuk-!-font-weight-bold"> Personal tax account</span>.</p>
+  
+  <div class="id-info">
+    <h3 class="govuk-heading-m ">Identity information that will be shared </h3>
+    <!--<hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">--> 
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row" style="border-top: 1px solid #b1b4b6; padding-top:10px">
+        <dt class="govuk-summary-list__key">
+          Name on your passport 
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['first-name'] or 'Firstname' }} {{ data['middle-names'] }} {{ data['surname'] or 'Surname' }}
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row govuk-summary-list__row--no-border" >
+        <dt class="govuk-summary-list__key">
+          Date of birth
+        </dt>
+        <dd class="govuk-summary-list__value">
+          10 October 1970
+        </dd>
+      </div>
+    </dl>
+  </div>
+  <br>
+
+  <div>
+    {{ govukButton({
+      text: "Continue",
+      href: "/identity/pyi/share-other-info.html"
+    }) }}
+  </div>
+</div>
+  <!--
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+        <h2 class="govuk-heading-m">
+          Do you want to continue with this information?
+        </h2>
+      </legend>
+      <div class="govuk-radios" data-module="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="sign-in" name="sign-in" type="radio" value="government-gateway" aria-describedby="sign-in-item-hint">
+          <label class="govuk-label govuk-radios__label" for="sign-in">
+            Yes, share this information with Personal tax account
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
+          <label class="govuk-label govuk-radios__label" for="sign-in-2">
+            No, contact the GOV.UK One Login team to update this information
+          </label>
+          <div id="sign-in-2-item-hint" class="govuk-hint govuk-radios__hint">
+            Your information will be deleted and you’ll need to prove your identity again.
+        </div>
+      </div>
+    </fieldset>
+  </div>
+-->
+
+<h2 class="govuk-heading-m">If you’ve changed your name</h2>
+<p>If you want GOV.UK One Login to share a different name with services, you can <a href="/identity/pyi/update-your-name-q.html" class="govuk-link">contact the GOV.UK One Login team to update it</a>.</p>
+<p>Your identity information will be deleted and you’ll need to prove your identity again.</p>
+
+
+  
+  
+</div>
+
+{% endblock %}

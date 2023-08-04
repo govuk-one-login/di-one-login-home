@@ -1,0 +1,41 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      You’ve proved your identity with GOV.UK One Login before
+    </h1>
+
+    <p>Your saved identity information will be shared with <b>Personal tax account</b> so they can be sure it’s you.</p>
+    <p>Continue to see the information that will be shared.  </p>
+
+
+      {{ govukButton({
+        text: "Continue",
+        href: "/identity/pyi/v9/share-id-info.html"
+      }) }}
+  
+
+      </div>
+          </div>
+  
+        </div>
+      </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+
+    <!-- The Related items component is not part of GOV.UK Frontend but will be styled if used in the Prototype Kit -->
+
+
+
+  </div>
+</div>
+{% endblock %}
