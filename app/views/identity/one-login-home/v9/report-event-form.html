@@ -1,0 +1,45 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+  
+{% endblock %}
+
+
+{% block content %}
+
+<a href="#" class="govuk-back-link">Back</a>
+
+<div>
+<h1 class="govuk-heading-xl">Report an event you do not recognise</h1>
+<p class="govuk-body">If there’s something you do not recognise about this event, report it to the GOV.UK One Login team. </p>
+
+<div class="govuk-inset-text">
+  <p class="govuk-body govuk-!-font-weight-bold">Signed in</p>
+  <p class="govuk-body govuk-!-font-weight-bold">22 August  2023 at 7:00pm (UK time)</p>
+  <p class="govuk-body govuk-!-font-weight-regular">You visited Personal tax account.</p>
+</div>
+
+<div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper">
+    <label class="govuk-label govuk-label--m" for="more-detail">
+      Is there anything else you’d like to tell us about the event ? (optional)
+    </label>
+  </h1>
+  <div id="more-detail-hint" class="govuk-hint">
+    For example, tell us if you do not recognise the date of the event or the services it says you visited.
+  </div>
+  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+</div>
+<div id="more-detail-hint" class="govuk-hint">
+  You have 1,200 characters remaining
+</div>
+<p class="govuk-body govuk-!-font-weight-regular">The GOV.UK One Login team will reply to you within 2 working days on <a class="govuk-body govuk-!-font-weight-bold">email@example.com</a>.</p>
+
+<a href="/identity/one-login-home/v9/event-reported-success.html" role="button" draggable="false" class="govuk-button govuk-button--continue" data-module="govuk-button">
+  Report
+</a>
+
+
+</div>
+{% endblock %}
