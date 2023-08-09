@@ -12,9 +12,7 @@
       Choose how to get security codes
     </h1>
 
-    <p class="govuk-body">We will sometimes need to send you a security code when you sign in, to help keep your account secure.</p>
-
-    <p class="govuk-body">You must use a UK phone number.</p>
+    <p class="govuk-body">To finish creating your GOV.UK One Login, choose a way to prove it’s you when you sign in.</p>
 
     <!-- <form class="form" action="/auth/mvp/create-entermobile-sms" method="post"> -->
     <form class="form" action="/identity/auth/v9/create-enter-mobile" method="post">
@@ -30,9 +28,6 @@
               <label class="govuk-label govuk-radios__label" for="security-code">
                 Text message
               </label>
-              <div id="security-code-item-hint" class="govuk-hint govuk-radios__hint">
-                Get a code sent to your mobile phone
-              </div>
             </div>
 
             <!-- Voice call -->
@@ -40,15 +35,23 @@
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="security-code-2" name="security-code" type="radio" value="otp-voice" aria-describedby="security-code-2-item-hint">
               <label class="govuk-label govuk-radios__label" for="security-code-2">
-                Phone call
-              </label>
-              <div id="sign-in-2-item-hint" class="govuk-hint govuk-radios__hint">
-                Get an automated call to a mobile phone or landline
-              </div>
+                Authenticator app for smartphone, tablet or computer              </label>
             </div>
-
           </div> <!-- /. govuk-radios -->
         </fieldset> <!-- /. govuk-fieldset -->
+        <br>
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              What is an authenticator app?
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <p>An authenticator app creates a security code that helps confirm it’s you when you sign in.</p>
+            <p>You can use an authenticator app on your smartphone, tablet or desktop computer. Download an authenticator app for your smartphone or tablet from your app store or search online for an authenticator app for your computer.</p>
+          </div>
+        </details>
+
       </div> <!-- /. govuk-form-group -->
 
       <button class="govuk-button" data-module="govuk-button">Continue</button>

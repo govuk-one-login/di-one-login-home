@@ -14,16 +14,29 @@
 
     <p>We will send a 6 digit security code to the  number you give us.</p>
 
-    <p>You must use a UK mobile phone number.</p>
+    <p>This phone number will also be shared with services you access with your GOV.UK One Login.</p>
 
     <form class="form" action="/identity/auth/v9/create-check-sms" method="post">
 
       <div class="govuk-form-group">
 
-        <label class="govuk-label" for="mobile-number">UK phone number</label>
+        <label class="govuk-label" for="mobile-number">UK mobile phone number</label>
 
         <input class="govuk-input govuk-input--width-20" id="mobile-number" name="mobileNumber" type="tel" spellcheck="false" autocomplete="tel">
 
+      </div>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+              <label class="govuk-label govuk-checkboxes__label" for="waste">
+                I do not have a UK mobile number
+              </label>
+            </div>
+          </div>
+        </fieldset>
       </div>
 
       <button class="govuk-button" data-module="govuk-button">Continue</button>

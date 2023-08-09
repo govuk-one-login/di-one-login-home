@@ -10,13 +10,19 @@
   <div class="govuk-grid-column-two-thirds">
     <form action="/auth/v9/create-email" method="post" class="form">
       
-      <h3 class="govuk-heading-m">Create your GOV.UK One Login or sign in</h3>
+      <h3 class="govuk-heading-l">Create your GOV.UK One Login or sign in</h3>
+       <p>You can use your GOV.UK One Login to access some government services.</p>
+       <p>In the future, you’ll be able to use it to access all services on GOV.UK.</p>
 
       <p>You'll need:</p>
       <ul class="govuk-list govuk-list--bullet">
         <li>an email address</li>
         <li>a way to get security codes - this can be a UK mobile phone number or an authenticator app</li>
       </ul>
+
+      <div class="govuk-inset-text">
+        <p>GOV.UK One Login is also available <a href=""> in Welsh (Cymraeg)</a>.</p>
+      </div>
 
         <div class="govuk-button-group">
           {{ govukButton({
@@ -30,6 +36,19 @@
             href: "/identity/auth/v9/signin-email"
           }) }}
         </div>
+        
+        <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            About GOV.UK One Login
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <p>GOV.UK One Login is new. At the moment you can only use it to access some government services (for example, Personal tax account).</p>
+          <p>GOV.UK One Login does not work with all government accounts or services yet (for example Universal Credit).</p>
+          <p>In the future, you’ll be able to use GOV.UK One Login to access all services on GOV.UK.</p>
+          <a href="#" class="govuk-link" rel="noreferrer noopener" target="_blank">Read more about GOV.UK One Login (opens in a new tab).</a> </div>
+      </details>
         <!--
       <details class="govuk-details" data-module="govuk-details">
         <summary class="govuk-details__summary">
