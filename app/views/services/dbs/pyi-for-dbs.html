@@ -1,0 +1,37 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<a href="#" class="govuk-back-link">Back</a>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="/service/verify/v1/verify-start" method="post" class="form">
+
+      <h1 class="govuk-heading-l">
+        Prove your identity
+      </h1>
+
+      <p>To apply for a basic DBS check, you need to first prove your identity. </p>
+      <p>You can do this by signing into or creating a GOV.UK One Login.</p>
+      <p>Your basic DBS check results will only show the name on your identity document. </p>
+
+    <a href="/identity/pyi/v9/prove-your-id.html" role="button" draggable="false" class="govuk-button govuk-button--continue" data-module="govuk-button">
+      Continue
+    </a>
+
+    
+
+
+    </form>
+
+  </div>
+
+</div>
+
+{% endblock %}
