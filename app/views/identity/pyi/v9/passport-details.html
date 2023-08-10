@@ -2,6 +2,12 @@
 
 {% block pageTitle %}
   GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+  
+{% endblock %}
+
+{% block header %}
+  {{ govukOneLoginServiceHeader({
+  }) }}
 {% endblock %}
 
 <div class="govuk-phase-banner">

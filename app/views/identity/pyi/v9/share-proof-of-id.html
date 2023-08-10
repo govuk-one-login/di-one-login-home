@@ -7,7 +7,6 @@
 
 {% block header %}
   {{ govukOneLoginServiceHeader({
-    serviceName: "Basic criminal record check"
   }) }}
 {% endblock %}
 
@@ -16,88 +15,103 @@
   <div class="govuk-grid-column-two-thirds">
 
   <div class="summary-list-container govuk-!-margin-bottom-4">
-    <h1 class="govuk-heading-l">Share other identity information saved in your GOV.UK One Login</h1>
-    <p>You can share more of the information saved in your GOV.UK One Login with<span class="govuk-!-font-weight-bold"> Personal tax account</span>.</p>
+    <h1 class="govuk-heading-l">Share other personal details saved in your GOV.UK One Login</h1>
+    <p>You can choose to share more of the personal details saved in your GOV.UK One Login with<span class="govuk-!-font-weight-bold"> Personal tax account</span>.</p>
     <p>This is so you do not have to enter it again.</p>
-    <p>You gave this information when you proved your identity with GOV.UK One Login.</p>
-    <p>If it is out of date, you can choose not to share it and enter it when you use the service instead.</p>
-
+    
+    <div class="govuk-inset-text">
+      If any of these details are out of date, you can choose not to share them and enter them when you use the service instead.
+    </div>
 
   
   <div class="id-info">
-    <h3 class="govuk-heading-s">Address history</h3>
+    <h3 class="govuk-heading-m">Your preferred name</h3>
     <!--<hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">--> 
     <dl class="govuk-summary-list">
       <div class="govuk-summary-list__row govuk-summary-list__row--no-border" style="border-top: 1px solid #b1b4b6; padding-top:10px">
         <dd class="govuk-summary-list__value">
-          <p>Current address</p>
-          <p>1 Street<br>Bristol<br>BS5 6LA</p>
-          <p>Previous address 1</p>
-          <p>2 Road<br>Bristol<br>BS5 6LA</p>
-          <p>Previous address 2</p>
-          <p>3 Lane<br>Bristol<br>BS5 6LA</p>
-
+          <p>Jane</p>
+          <p>This is the name you’d like GOV.UK One Login to use when we communicate with you.</p>
         </dd>
       </div>
 
     </dl>
   </div>
   <br>
-  <div class="govuk-form-group">
-    <fieldset class="govuk-fieldset">
-      <legend class="govuk-fieldset__legend">
-        Do you want to share these addresses?
-      </legend>
-      <div class="govuk-radios" data-module="govuk-radios">
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="address" name="address" type="radio" value="yes">
-          <label class="govuk-label govuk-radios__label" for="address">
-            Yes
-          </label>
-        </div>
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="address-2" name="address" type="radio" value="no">
-          <label class="govuk-label govuk-radios__label" for="address-2">
-            No
-          </label>
-        </div>
-      </div>
-    </fieldset>
-  </div>
+
 
   <div>
     <div class="id-info">
 
-    <h3 class="govuk-heading-s">Passport details</h3>
+    <h3 class="govuk-heading-s">Address history</h3>
       <!--<hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">--> 
       <dl class="govuk-summary-list">
-      <div class="govuk-summary-list__row  govuk-summary-list__row--no-border" style="border-top: 1px solid #b1b4b6; padding-top:10px">
-        <dd class="govuk-summary-list__value">
-          <p>Passport number:<br> 123456789</p>
-          <p>Country:<br> UK</p>
-          <p>Expiry date:<br> 27 May 2028</p>
-        </dd>
-      </div>
+        <div class="govuk-summary-list__row govuk-summary-list__row--no-border" style="border-top: 1px solid #b1b4b6; padding-top:10px">
+          <dd class="govuk-summary-list__value">
+            <p>Current address</p>
+            <p>1 Street<br>Bristol<br>BS5 6LA</p>
+            <p>Previous address 1</p>
+            <p>2 Road<br>Bristol<br>BS5 6LA</p>
+            <p>Previous address 2</p>
+            <p>3 Lane<br>Bristol<br>BS5 6LA</p>
+  
+          </dd>
+        </div>
     </div>
 
   </div>
 <br>
+<div>
+  <div class="id-info">
+
+  <h3 class="govuk-heading-s">Passport details</h3>
+    <!--<hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">--> 
+    <dl class="govuk-summary-list">
+    <div class="govuk-summary-list__row  govuk-summary-list__row--no-border" style="border-top: 1px solid #b1b4b6; padding-top:10px">
+      <dd class="govuk-summary-list__value">
+        <p>Passport number:<br> 123456789</p>
+        <p>Country:<br> UK</p>
+        <p>Expiry date:<br> 27 May 2028</p>
+      </dd>
+    </div>
+  </div>
+
+</div>
+<br>
 <div class="govuk-form-group">
-  <fieldset class="govuk-fieldset">
-    <legend class="govuk-fieldset__legend">
-      Do you want to share these passport details?
+  <fieldset class="govuk-fieldset" aria-describedby="countries-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h1 class="govuk-fieldset__heading">
+        Which personal details do you want to share?
+      </h1>
     </legend>
-    <div class="govuk-radios" data-module="govuk-radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="passport" name="passport" type="radio" value="yes">
-        <label class="govuk-label govuk-radios__label" for="passport">
-          Yes
+    <div id="countries-hint" class="govuk-hint">
+      Select all the details you want to share
+    </div>
+    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="countries" name="countries" type="checkbox" value="france">
+        <label class="govuk-label govuk-checkboxes__label" for="countries">
+          Your preferred name
         </label>
       </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="passport-2" name="passport" type="radio" value="no">
-        <label class="govuk-label govuk-radios__label" for="passport-2">
-          No
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="countries-2" name="countries" type="checkbox" value="portugal">
+        <label class="govuk-label govuk-checkboxes__label" for="countries-2">
+          Address history
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="countries-3" name="countries" type="checkbox" value="spain">
+        <label class="govuk-label govuk-checkboxes__label" for="countries-3">
+          Passport details
+        </label>
+      </div>
+      <div class="govuk-checkboxes__divider">or</div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="countries-5" name="countries" type="checkbox" value="none" data-behaviour="exclusive">
+        <label class="govuk-label govuk-checkboxes__label" for="countries-5">
+          None, do not share any of these details
         </label>
       </div>
     </div>

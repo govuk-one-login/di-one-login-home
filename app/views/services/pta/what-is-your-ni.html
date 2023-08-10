@@ -15,17 +15,22 @@
   <div class="govuk-grid-column-two-thirds">
 
     <h1 class="govuk-heading-xl">
-      What is your National Insurance number?
+      Match your GOV.UK One login to your HMRC details
     </h1>
 
-    <p>Personal tax account needs your National Insurance number to match you with their records.</p>
+    <p>Personal tax account needs your National Insurance number to match you against their records.</p>
+    
+    <h2 class="govuk-heading-m">What is your National Insurance number?</h2>
 
     <div class="govuk-form-group">
       <div id="event-name-hint" class="govuk-hint">
-        Example: QQ 12 34 56 C
+        It’s on your National Insurance card, benefit letter, payslip or P60. For example, QQ123456C.
       </div>
       <input class="govuk-input" id="event-name" name="event-name" type="text" aria-describedby="event-name-hint">
     </div>
+
+    <p><a href="#">I do not have a National Insurance number, or have lost or forgotten it</p>
+
 
       {{ govukButton({
         text: "Continue",

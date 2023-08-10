@@ -1,14 +1,26 @@
-{% extends "layouts/main.html" %}
+{% extends "di-govuk-one-login-service-header/layouts/service-header.html" %}
 
 {% block pageTitle %}
-  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+  {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
-{% block header %}
-  {{ govukOneLoginServiceHeader({
-    serviceName: "Personal tax account"
-  }) }}
-{% endblock %}
+{% set serviceName = "Personal tax account" %}
+
+{% set navigationItems = [
+  {
+    href: "#",
+    text: 'Messages',
+    id: 'testing1'
+  },{
+    href: "#",
+    text: 'Check progress',
+    id: 'testing2'
+  },{
+    href: "#",
+    text: 'Profile and settings',
+    id: 'testing3'
+  }]
+%} 
 
 {% block content %}
 <div class="govuk-grid-row">
