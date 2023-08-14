@@ -7,18 +7,40 @@
 
 {% block content %}
 
-<div>
-<h1 class="govuk-heading-xl">Your GOV.UK One Login homepage</h1>
-<p class="govuk-body">govuk-body</p>
-
-<div class="cards">
-  <div class="card">
-    <div class="card__content">
-      
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Your GOV.UK One Login</h1>
+    <p class="govuk-body">You're signed in as <strong>name@example.com</strong></p>
+  
+    <div class="one-login-home-cards__container">
+      <div class="one-login-home-cards__card">
+          <h3 class="govuk-heading-s"><a href="#">Your services</a></h3>
+          <p class="govuk-body">See and access the services you've used with your GOV.UK One Login.</p>
+      </div>
+      <div class="one-login-home-cards__card">
+          <h3 class="govuk-heading-s"><a href="#">Personal details</a></h3>
+          <p class="govuk-body">See your personal details including the information you gave to prove your identity.</p>
+      </div>
+      <div class="one-login-home-cards__card">
+          <h3 class="govuk-heading-s"><a href="#">Security</a></h3>
+          <p class="govuk-body">Update your sign in details, see your sign in history or delete your GOV.UK One Login.</p>
+      </div>
+      <div class="one-login-home-cards__card">
+          <h3 class="govuk-heading-s"><a href="#">Contact us</a></h3>
+          <p class="govuk-body">Contact us to report a problem with your GOV.UK One Login or give feedback.</p>
+      </div>
+    </div>
+    <div class="information-box">
+      <h3 class="govuk-heading-m">
+        About GOV.UK One Login
+      </h3>
+      <p class="govuk-body">GOV.UK One Login is new. At the moment you can only use it to access some government services (for example, Personal tax account).</p>
+      <p class="govuk-body">In the future, you’ll be able to use GOV.UK One Login to access all services on GOV.UK.</p>
+      <p class="govuk-body"> You can
+        <a href="#" class="govuk-link" rel="noreferrer noopener" target="_blank">read more about GOV.UK One Login</a> and the services you can use with it.
+      </p>
+  
     </div>
   </div>
-</div>
-
-
 </div>
 {% endblock %}
