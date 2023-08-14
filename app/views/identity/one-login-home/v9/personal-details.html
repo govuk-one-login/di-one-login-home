@@ -1,0 +1,185 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+  
+{% endblock %}
+
+{% block header %}
+  {{ govukOneLoginServiceHeader({
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <div class="govuk-breadcrumbs govuk-breadcrumbs--collapse-on-mobile">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="/identity/one-login-home/v9/one-login-homepage.html">Home</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="#">Your services</a>
+        </li>
+      </ol>
+    </div>
+    <h1 class="govuk-heading-xl">
+      Personal details
+    </h1>
+    
+    <div class="activity-card govuk-!-margin-bottom-6">
+      <h2 class="govuk-heading-m">Your preferred name</h2>
+      <p>This is the name you’d like GOV.UK One Login and services to use when communicating with you.</p>
+      
+    <dl class="govuk-summary-list govuk-!-margin-bottom-0">
+      <div class="govuk-summary-list__row" style="border-top: 1px solid #b1b4b6; padding-top:10px">
+        <dt class="govuk-summary-list__key">
+          Name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['emailAddress'] or 'your.name@example.com' }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">
+            Change<span class="govuk-visually-hidden"> name</span>
+          </a>
+        </dd>
+      </div>
+    </dl>
+    <br>
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          How your preferred name is used
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        We need to know your nationality so we can work out which elections you’re entitled to vote in. If you cannot provide your nationality, you’ll have to send copies of identity documents through the post.
+      </div>
+    </details>
+  </div>
+
+  <div class="activity-card govuk-!-margin-bottom-6">
+    <h2 class="govuk-heading-m">Contact details</h2>
+    <p>This is the name you’d like GOV.UK One Login and services to use when communicating with you.</p>
+    
+  <dl class="govuk-summary-list govuk-!-margin-bottom-0">
+    <div class="govuk-summary-list__row" style="border-top: 1px solid #b1b4b6; padding-top:10px">
+      <dt class="govuk-summary-list__key">
+        Email address
+      </dt>
+      <dd class="govuk-summary-list__value">
+        jane.brown@gmail.com 
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="#">
+          Change<span class="govuk-visually-hidden"> name</span>
+        </a>
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row" style="border-top: 1px solid #b1b4b6; padding-top:10px">
+      <dt class="govuk-summary-list__key">
+        Phone number
+      </dt>
+      <dd class="govuk-summary-list__value">
+        07777 777777
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="#">
+          Change<span class="govuk-visually-hidden"> name</span>
+        </a>
+      </dd>
+    </div>
+  </dl>
+  <br>
+  <details class="govuk-details" data-module="govuk-details">
+    <summary class="govuk-details__summary">
+      <span class="govuk-details__summary-text">
+        How your contact details are used
+      </span>
+    </summary>
+    <div class="govuk-details__text">
+      We need to know your nationality so we can work out which elections you’re entitled to vote in. If you cannot provide your nationality, you’ll have to send copies of identity documents through the post.
+    </div>
+  </details>
+</div>
+
+<div class="activity-card govuk-!-margin-bottom-6">
+  <h2 class="govuk-heading-m">Information you used to prove your identity</h2>
+  <p>You used this information to prove your identity on 20 June 2023.</p>
+  <div class="govuk-inset-text">
+    It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application.
+  </div>
+<dl class="govuk-summary-list govuk-!-margin-bottom-0">
+  <div class="govuk-summary-list__row" style="border-top: 1px solid #b1b4b6; padding-top:10px">
+    <dt class="govuk-summary-list__key">
+      Name on passport
+    </dt>
+    <dd class="govuk-summary-list__value">
+      jane.brown@gmail.com 
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#">
+        Change<span class="govuk-visually-hidden"> name</span>
+      </a>
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row" style="border-top: 1px solid #b1b4b6; padding-top:10px">
+    <dt class="govuk-summary-list__key">
+      Date of birth
+    </dt>
+    <dd class="govuk-summary-list__value">
+      07777 777777
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#">
+        Change<span class="govuk-visually-hidden"> name</span>
+      </a>
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row" style="border-top: 1px solid #b1b4b6; padding-top:10px">
+    <dt class="govuk-summary-list__key">
+      Address
+    </dt>
+    <dd class="govuk-summary-list__value">
+      <p>Current address</p>
+      <p>1 Street<br>Bristol<br>BS5 6LA</p>
+      <p>Previous address 1</p>
+      <p>2 Road<br>Bristol<br>BS5 6LA</p>
+      <p>Previous address 2</p>
+      <p>3 Lane<br>Bristol<br>BS5 6LA</p>
+
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#">
+        Change<span class="govuk-visually-hidden"> name</span>
+      </a>
+    </dd>
+    
+  </div>
+</dl>
+<br>
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      How your contact details are used
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    We need to know your nationality so we can work out which elections you’re entitled to vote in. If you cannot provide your nationality, you’ll have to send copies of identity documents through the post.
+  </div>
+  <p>testing</p>
+</details>
+<p>test</p>
+
+</div>
+
+</div>
+
+  </div>
+</div>
+
+{% endblock %}
