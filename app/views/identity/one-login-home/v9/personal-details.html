@@ -26,10 +26,10 @@
         </li>
       </ol>
     </div>
+
     <h1 class="govuk-heading-xl">
       Personal details
     </h1>
-    
     <div class="activity-card govuk-!-margin-bottom-6">
       <h2 class="govuk-heading-m">Your preferred name</h2>
       <p>This is the name you’d like GOV.UK One Login and services to use when communicating with you.</p>
@@ -40,7 +40,9 @@
           Name
         </dt>
         <dd class="govuk-summary-list__value">
-          {{ data['emailAddress'] or 'your.name@example.com' }}
+          <p>
+            {{ data['preferred-name'] }}
+        </p>
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="#">
@@ -57,14 +59,14 @@
         </span>
       </summary>
       <div class="govuk-details__text">
-        We need to know your nationality so we can work out which elections you’re entitled to vote in. If you cannot provide your nationality, you’ll have to send copies of identity documents through the post.
+        When you use your GOV.UK One Login to access some services, you can choose if you want to share your preferred name. If you do, the service will use it when communicating with you.
       </div>
     </details>
   </div>
 
   <div class="activity-card govuk-!-margin-bottom-6">
     <h2 class="govuk-heading-m">Contact details</h2>
-    <p>This is the name you’d like GOV.UK One Login and services to use when communicating with you.</p>
+    <p>At the moment, these will always be the same as the details you use to sign in. You can <a href="/identity/one-login-home/v9/security.html">change your email address or phone number in Security</a>.</p>
     
   <dl class="govuk-summary-list govuk-!-margin-bottom-0">
     <div class="govuk-summary-list__row" style="border-top: 1px solid #b1b4b6; padding-top:10px">
@@ -102,7 +104,8 @@
       </span>
     </summary>
     <div class="govuk-details__text">
-      We need to know your nationality so we can work out which elections you’re entitled to vote in. If you cannot provide your nationality, you’ll have to send copies of identity documents through the post.
+      <p>Your GOV.UK One Login shares your email address and phone number with the services you access with it. Services may use these details to communicate with you.</p>
+      <a href="/identity/one-login-home/v9/your-services.html" class="govuk-link govuk-link--no-visited-state">Services you’ve accessed with your GOV.UK One Login</a>
     </div>
   </details>
 </div>
@@ -111,8 +114,7 @@
   <h2 class="govuk-heading-m">Information you used to prove your identity</h2>
   <p>You used this information to prove your identity on 20 June 2023.</p>
   <div class="govuk-inset-text">
-    It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application.
-  </div>
+    You do not need to keep this information up to date. Your proof of identity stays valid even if your information has changed.   </div>
 <dl class="govuk-summary-list govuk-!-margin-bottom-0">
   <div class="govuk-summary-list__row" style="border-top: 1px solid #b1b4b6; padding-top:10px">
     <dt class="govuk-summary-list__key">
@@ -165,15 +167,13 @@
 <details class="govuk-details" data-module="govuk-details">
   <summary class="govuk-details__summary">
     <span class="govuk-details__summary-text">
-      How your contact details are used
+      How your identity information is used
     </span>
   </summary>
   <div class="govuk-details__text">
-    We need to know your nationality so we can work out which elections you’re entitled to vote in. If you cannot provide your nationality, you’ll have to send copies of identity documents through the post.
-  </div>
-  <p>testing</p>
+    Your GOV.UK One Login uses this information to confirm your identity when a service needs to check who you are. You’ll be told when a service has asked for these details so you can decide if you want to share them.  </div>
 </details>
-<p>test</p>
+<p>If you want to update this information, you can <a href="#">contact the GOV.UK One Login team </a>. They will delete it and you’ll need to prove your identity again. </p>
 
 </div>
 
