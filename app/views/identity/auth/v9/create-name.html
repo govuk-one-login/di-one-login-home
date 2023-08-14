@@ -16,15 +16,10 @@
     <p>This does not have to be the same as the name on your identity documents.</p>
     <p>Your preferred name may be shared with services you access with your GOV.UK One Login.</p>
 
-    <div class="govuk-form-group">
-      <div id="event-name-hint" class="govuk-hint">
-        Enter your preferred name
-      </div>
-      <input class="govuk-input" id="event-name" name="event-name" type="text" aria-describedby="event-name-hint">
-    </div>
-
     <form class="form" action="/identity/auth/v9/create-success" method="post">
-      
+      {{ govukInput({
+      name: 'preferred-name'
+  }) }}
       <button class="govuk-button" data-module="govuk-button">Continue</button>
     </form>
 
