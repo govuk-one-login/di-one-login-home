@@ -5,8 +5,36 @@
 
 // Add extra styles here
 
-    // service cards with titles
+.information-box {
+  margin-bottom: govuk-spacing(4);
+  padding: govuk-spacing(3);
+  background: govuk-colour("light-grey");
+  @include govuk-media-query($from: tablet) {
+    padding: govuk-spacing(6);
+    margin-top: govuk-spacing(2);
+    margin-bottom: govuk-spacing(8);
+  }
+}
 
+.one-login-home-cards__container {
+  display: inline-grid;
+  gap: govuk-spacing(4);
+  @include govuk-media-query ($from: tablet) { 
+    grid-template-columns: repeat(3, 1fr);
+  }
+  margin-bottom: govuk-spacing(6);
+  margin-top: govuk-spacing(6);
+}
+
+.one-login-home-cards__card {
+  padding: govuk-spacing(3);
+  border: 1px solid $govuk-border-colour;
+
+  p {
+    margin-bottom: 0;
+  }
+}
+    // service cards with titles
     .id-info {
         border: 1px solid #b1b4b6;
         padding: 15px;
