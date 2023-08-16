@@ -28,48 +28,52 @@
     <h1 class="govuk-heading-xl">
       Security
     </h1>
-    
+
     <div class="activity-card govuk-!-margin-bottom-6">
       <h2 class="govuk-heading-m">Your sign in details</h2>
-      
+    <p>We use security codes to make sure it’s you when you sign in.</p> 
     <dl class="govuk-summary-list govuk-!-margin-bottom-0">
       <div class="govuk-summary-list__row" style="border-top: 1px solid #b1b4b6; padding-top:10px">
         <dt class="govuk-summary-list__key">
           Email address
         </dt>
         <dd class="govuk-summary-list__value">
-          {{ data['emailAddress'] or 'your.name@example.com' }}
+          name@email.com
         </dd>
+  
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="#">
             Change<span class="govuk-visually-hidden"> name</span>
           </a>
         </dd>
       </div>
-      <div class="govuk-summary-list__row">
+      <div class="govuk-summary-list__row" style="border-top: 1px solid #b1b4b6; padding-top:10px">
         <dt class="govuk-summary-list__key">
           Password
         </dt>
         <dd class="govuk-summary-list__value">
           ••••••••••••••••
         </dd>
+  
         <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="change-password-1.html">
-            Change<span class="govuk-visually-hidden"> date of birth</span>
+          <a class="govuk-link" href="#">
+            Change<span class="govuk-visually-hidden"> name</span>
           </a>
         </dd>
       </div>
-      <br>
-  <details class="govuk-details" data-module="govuk-details">
-    <summary class="govuk-details__summary">
-      <span class="govuk-details__summary-text">
-        How your email address is used
-      </span>
-    </summary>
-    <div class="govuk-details__text">
-      Your GOV.UK One Login shares your email address with the services you access with it. They may also use it to communicate with you.
+    </dl>
+    
+    <br>
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          How your email address is used
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        Your GOV.UK One Login shares your email address with the services you access with it. They may also use it to communicate with you.    </div>
+    </details>
     </div>
-  </div>
 
   <div class="activity-card govuk-!-margin-bottom-6">
     <h2 class="govuk-heading-m">How you get security codes</h2>
