@@ -32,7 +32,8 @@
       <div class="govuk-summary-list__row govuk-summary-list__row--no-border" style="border-top: 1px solid #b1b4b6; padding-top:10px">
         <dd class="govuk-summary-list__value">  
         <p>
-            {{ data['preferred-name'] }}
+          {{ data['preferred-name'] or "Preferred name not given" }}
+
         </p>
       </dd>
       </div>
@@ -51,12 +52,34 @@
         <div class="govuk-summary-list__row govuk-summary-list__row--no-border" style="border-top: 1px solid #b1b4b6; padding-top:10px">
           <dd class="govuk-summary-list__value">
             <p>Current address</p>
-            <p>1 Street<br>Bristol<br>BS5 6LA</p>
+            <p>{% if data['address-city-current'] %}
+
+              {% if data['address-flat-number-current'] %}
+                {{ data['address-flat-number-current'] }},<br>
+              {% endif %}
+
+              {% if data['address-house-number-current'] %}
+                {{ data['address-house-number-current'] }}
+              {% endif %}
+
+              {% if data['address-house-name-current'] %}
+                {{ data['address-house-name-current'] }},<br>
+              {% endif %}
+
+              {{ data['address-street-current'] }},<br>
+              {{ data['address-city-current'] }},<br>
+              {{ data['address-postcode'] or 'LS1 3BE' }}
+
+            {% else %}
+              Office 14, <br>
+              New Station St, <br>
+              Leeds, <br>
+              LS1 5DL
+            {% endif %} </p>
             <p>Previous address 1</p>
             <p>2 Road<br>Bristol<br>BS5 6LA</p>
             <p>Previous address 2</p>
             <p>3 Lane<br>Bristol<br>BS5 6LA</p>
-  
           </dd>
         </div>
     </div>
