@@ -34,6 +34,32 @@
     margin-bottom: 0;
   }
 }
+
+.govuk-header--with-sign-out-link {
+  .govuk-header__content {
+    text-align: right;
+  }
+
+  @include govuk-media-query ($until: tablet) { 
+    .govuk-header__navigation-list {
+      display: block !important;
+    }
+
+    .govuk-header__menu-button {
+      display: none !important;
+    }
+
+    .govuk-header__logo {
+      float: left;
+      padding-right: 0;
+    }
+
+    .govuk-header__content {
+      float: right;
+    }
+  }
+}
+
     // service cards with titles
     .id-info {
         border: 1px solid #b1b4b6;
