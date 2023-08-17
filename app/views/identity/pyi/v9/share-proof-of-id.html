@@ -95,7 +95,7 @@
     <div class="govuk-summary-list__row  govuk-summary-list__row--no-border" style="border-top: 1px solid #b1b4b6; padding-top:10px">
       <dd class="govuk-summary-list__value">
         <p>Passport number:<br> <p>
-          {{ data['passport-number'] }} 
+          {{ data['passport-number'] or "123456" }}
       </p></p>
         <p>Country:<br> UK</p>
         <p>Expiry date:<br> 27 May 2028</p>
