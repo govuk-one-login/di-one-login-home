@@ -26,6 +26,9 @@ containerClasses: "govuk-width-container"
     <p>Your preferred name may be shared with services you access with your GOV.UK One Login.</p>
 
     <form class="form" action="/identity/auth/v9/create-success" method="post">
+      <label class="govuk-label" for="event-name">
+        Enter your preferred name
+      </label>
       {{ govukInput({
       name: 'preferred-name'
   }) }}
