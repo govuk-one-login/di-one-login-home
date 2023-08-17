@@ -4,6 +4,15 @@
   GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
+{% block header %}
+{{ govukHeader({
+homepageUrl: "/",
+serviceName: "",
+serviceUrl: "/",
+containerClasses: "govuk-width-container"
+}) }}
+{% endblock %}
+
 {% block content %}
 
 <div class="govuk-grid-row">

@@ -1,7 +1,16 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+  Prove your identity
+{% endblock %}
+
+{% block header %}
+{{ govukHeader({
+homepageUrl: "/",
+serviceName: "",
+serviceUrl: "/",
+containerClasses: "govuk-width-container"
+}) }}
 {% endblock %}
 
 {% block content %}
