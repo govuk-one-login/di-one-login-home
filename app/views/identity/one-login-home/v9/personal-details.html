@@ -121,7 +121,8 @@
       Name on passport
     </dt>
     <dd class="govuk-summary-list__value">
-      Name Lastname
+      <p>{{ data['first-name'] or "Name" }} {{ data['surname'] or "Lastname" }}
+      </p> 
     </dd>
     <dd class="govuk-summary-list__actions">
       <a class="govuk-link" href="#">
