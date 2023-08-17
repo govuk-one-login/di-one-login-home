@@ -55,7 +55,8 @@
           Name on your passport 
         </dt>
         <dd class="govuk-summary-list__value">
-          <p>Name</p>        
+          <p>{{ data['first-name'] or "Name" }} {{ data['surname'] or "Lastname" }}
+          </p>        
         </dd>
       </div>
       <div class="govuk-summary-list__row govuk-summary-list__row--no-border" >
