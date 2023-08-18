@@ -1,8 +1,18 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+Personal tax account
 {% endblock %}
+
+{% block header %}
+{{ govukHeader({
+homepageUrl: "/identity/task-page.html",
+serviceName: "",
+serviceUrl: "/",
+containerClasses: "govuk-width-container"
+}) }}
+{% endblock %}
+
 
 {% block beforeContent %}
 <div class="govuk-breadcrumbs">
