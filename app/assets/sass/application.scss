@@ -273,10 +273,10 @@
       }
       
       @media (max-width: 856px) {
-        .govuk-header{
+        /*.govuk-header{
           padding-right: 0px;
           border-bottom: 0px;
-        }
+        }*/
         .govuk-service-header{
           display: flex;
           .govuk-header__logo{
@@ -302,10 +302,10 @@
         .service-header-service-name{
           display: none;
         }
-        .govuk-header__container{
+        /*.govuk-header__container{
           border-bottom: none;
           margin-bottom: 0px;
-        }
+        }*/
       }
       
       @media (min-width: 856px) {
