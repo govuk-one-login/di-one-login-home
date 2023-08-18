@@ -33,7 +33,9 @@
           Email address
         </dt>
         <dd class="govuk-summary-list__value">
-          name@email.com
+          <p>
+            {{ data['email-address'] or "name@email.com"}}
+        </p> 
         </dd>
   
         <dd class="govuk-summary-list__actions">

@@ -31,8 +31,9 @@ containerClasses: "govuk-width-container"
 
         <label class="govuk-label" for="mobile-number">UK mobile phone number</label>
 
-        <input class="govuk-input govuk-input--width-20" id="mobile-number" name="mobileNumber" type="tel" spellcheck="false" autocomplete="tel">
-
+        {{ govukInput({
+          name: 'phone-number'
+      }) }}
       </div>
 
       <div class="govuk-form-group">

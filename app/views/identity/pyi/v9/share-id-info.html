@@ -29,7 +29,9 @@
           Email address
         </dt>
         <dd class="govuk-summary-list__value">
-          <p>name@email.com</p>        
+          <p>
+            {{ data['email-address'] or "name@email.com"}}
+        </p>       
         </dd>
       </div>
       <div class="govuk-summary-list__row govuk-summary-list__row--no-border" >
@@ -37,7 +39,7 @@
           Phone number
         </dt>
         <dd class="govuk-summary-list__value">
-          07945000000
+          <p> {{ data['phone-number'] or "07000000000" }}</p>
         </dd>
       </div>
     </dl>
@@ -63,8 +65,8 @@
         <dt class="govuk-summary-list__key">
           Date of birth
         </dt>
-        <dd class="govuk-summary-list__value">
-          10 October 1970
+        <dd class=“govuk-summary-list__value”>
+          {{ data['dob-day'] }}/{{ data['dob-month'] }}/{{ data['dob-year'] }}
         </dd>
       </div>
     </dl>

@@ -35,7 +35,7 @@
         </dt>
         <dd class="govuk-summary-list__value">
           <p>
-            {{ data['preferred-name'] }}
+            {{ data['preferred-name'] or "No preferred name" }}
         </p>
         </dd>
         <dd class="govuk-summary-list__actions">
@@ -68,7 +68,9 @@
         Email address
       </dt>
       <dd class="govuk-summary-list__value">
-        name@email.com 
+        <p>
+          {{ data['email-address'] or "name@email.com"}}
+      </p> 
       </dd>
       <dd class="govuk-summary-list__actions">
         <a class="govuk-link" href="#">
@@ -81,7 +83,9 @@
         Phone number
       </dt>
       <dd class="govuk-summary-list__value">
-        07777 777777
+        <p>
+          {{ data['phone-number'] or "07000000000" }}
+      </p> 
       </dd>
       <dd class="govuk-summary-list__actions">
         <a class="govuk-link" href="#">
@@ -129,7 +133,7 @@
       Date of birth
     </dt>
     <dd class="govuk-summary-list__value">
-      10 October 1970
+      {{ data['dob-day'] }}/{{ data['dob-month'] }}/{{ data['dob-year'] or "01/01/1980"}}
     </dd>
     <dd class="govuk-summary-list__actions">
       <a class="govuk-link" href="#">
