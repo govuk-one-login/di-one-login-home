@@ -1,16 +1,8 @@
-{% extends "layouts/main.html" %}
+{% extends "layouts/cross-service-header.html" %}
+{% set serviceName = nil %}
 
-{% block pageTitle %}
-  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
-  
+{% block beforeContent %}
 {% endblock %}
-
-{% block header %}
-  {{ govukOneLoginServiceHeader({
-  }) }}
-{% endblock %}
-
-
 {% block content %}
 
 <div class="govuk-grid-row">

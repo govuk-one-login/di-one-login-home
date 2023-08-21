@@ -1,13 +1,7 @@
-{% extends "layouts/main.html" %}
+{% extends "layouts/cross-service-header.html" %}
+{% set serviceName =  "Personal tax account" %}
 
-{% block pageTitle %}
-  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
-{% endblock %}
-
-{% block header %}
-  {{ govukOneLoginServiceHeader({
-    serviceName: "Personal tax account"
-  }) }}
+{% block beforeContent %}
 {% endblock %}
 
 {% block content %}
