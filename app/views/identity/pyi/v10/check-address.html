@@ -1,0 +1,114 @@
+{% extends "layouts/cross-service-header.html" %}
+{% set serviceName = nil %}
+
+{% block beforeContent %}
+{% endblock %}
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="address-enter-year" method="post">
+
+      <h1 class="govuk-heading-l">Check your address</h1>
+      <p>Make sure there are no mistakes in your current home address before you continue</p>
+      <p>2 Downing Street, London, SWIA</p>
+
+      <p class="govuk-body">
+        <a href="#" class="govuk-link govuk-link--no-visited-state">I cannot find my address in this list</a>
+      </p>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h3 class="govuk-heading-m">
+                Is this your current home address?
+              </h3>
+            </legend>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
+                <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
+                <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+                  No, there is a mistake
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+      
+      {{ govukButton({
+        text: "Continue",
+        href: "/identity/pyi/v10/address-enter-year.html"
+      }) }}
+
+    </form>
+
+    {# DEVMODE SCENARIOS #}
+
+    {% if data['devMode'] %}
+
+    <details class="nhsuk-details dev-mode" role="group">
+      <summary class="nhsuk-details__summary" role="button" aria-controls="details-content-0" aria-expanded="true">
+        <span class="nhsuk-details__summary-text">
+          Continue with testing scenario
+        </span>
+      </summary>
+      <div class="nhsuk-details__text">
+        <h4>Happy paths</h4>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>
+            <a href="fraud-check?errorcode=">Matched to Experian records and no contra-indicators found</a>
+          </li>
+        </ul>
+        <h4>Errors</h4>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>
+            <a href="fraud-check?errorcode=pyi-no-match">No match with Experian records</a>
+          </li>
+          <li>
+            <a href="fraud-check?errorcode=pyi-no-match">Contra-indicator returned from Experian</a>
+          </li>
+        </ul>
+      </div>
+    </details>
+
+    {% endif %}
+
+  </div>
+</div>
+
+<script type="text/javascript">
+  submitSpinner()
+
+  function buttonClicked(target) {
+    target.setAttribute('disabled', 'disabled')
+    target.className += ' button--save'
+    setTimeout(function () {
+      document.getElementById('button2').click()
+    }, 2000)
+  }
+
+  function submitSpinner() {
+    var selects = document.getElementById('button--save')
+    selects.addEventListener('click', function (event) {
+      event.preventDefault()
+      if (selects.getAttribute('disabled') === 'disabled') {
+        console.log('already clicked')
+      } else {
+        event.preventDefault()
+        console.log(selects.getAttribute('disabled'))
+        buttonClicked(selects)
+      }
+    })
+  }
+</script>
+
+
+{% endblock %}

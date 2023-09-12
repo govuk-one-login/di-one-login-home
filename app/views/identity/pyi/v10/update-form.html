@@ -1,0 +1,65 @@
+{% extends "layouts/cross-service-header.html" %}
+{% set serviceName = nil %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+
+<a href="/identity/pyi/update-your-name-q.html" class="govuk-back-link">Back</a>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+  <div class="summary-list-container govuk-!-margin-bottom-4">
+    
+    <h1 class="govuk-heading-l">Update your GOV.UK One Login identity information</h1>
+    <div class="govuk-form-group">
+      <h2 class="govuk-label-wrapper">
+        <label class="govuk-label govuk-label--m" for="more-detail">
+          What information do you want to update?
+        </label>
+      </h2>
+      <div id="more-detail-hint" class="govuk-hint">
+        We’ll get back to you within 2 working days
+      </div>
+      <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="8" aria-describedby="more-detail-hint"></textarea>
+    </div>
+
+  <div>
+    {{ govukButton({
+      text: "Send message",
+      href: ""
+    }) }}
+  </div>
+</div>
+  <!--
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+        <h2 class="govuk-heading-m">
+          Do you want to continue with this information?
+        </h2>
+      </legend>
+      <div class="govuk-radios" data-module="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="sign-in" name="sign-in" type="radio" value="government-gateway" aria-describedby="sign-in-item-hint">
+          <label class="govuk-label govuk-radios__label" for="sign-in">
+            Yes, share this information with Personal tax account
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
+          <label class="govuk-label govuk-radios__label" for="sign-in-2">
+            No, contact the GOV.UK One Login team to update this information
+          </label>
+          <div id="sign-in-2-item-hint" class="govuk-hint govuk-radios__hint">
+            Your information will be deleted and you’ll need to prove your identity again.
+        </div>
+      </div>
+    </fieldset>
+  </div>
+-->
+  
+</div>
+
+{% endblock %}

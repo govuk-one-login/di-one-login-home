@@ -1,0 +1,95 @@
+{% extends "layouts/cross-service-header.html" %}
+{% set serviceName = nil %}
+
+{% block beforeContent %}
+{% endblock %}
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="fraud-checking-post" method="post">
+
+      <h1 class="govuk-heading-l">When did you start living at your current home address?</h1>
+      <p>2 Downing Street, London, SWIA</p>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="authentication-code">
+          Year
+        </label>
+        <div id="authentication-code-hint" class="govuk-hint">
+            Enter the year you started living at this address, for example 2017
+        </div>
+        <input class="govuk-input govuk-input--width-5 govuk-input--extra-letter-spacing" id="authentication-code" name="authenticationCode" type="text" spellcheck="false" value="NC1701" aria-describedby="authentication-code-hint">
+      </div>
+
+      
+      {{ govukButton({
+        text: "Continue",
+        href: "/identity/pyi/v9/kbv-start.html"
+      }) }}
+
+    </form>
+
+    {# DEVMODE SCENARIOS #}
+
+    {% if data['devMode'] %}
+
+    <details class="nhsuk-details dev-mode" role="group">
+      <summary class="nhsuk-details__summary" role="button" aria-controls="details-content-0" aria-expanded="true">
+        <span class="nhsuk-details__summary-text">
+          Continue with testing scenario
+        </span>
+      </summary>
+      <div class="nhsuk-details__text">
+        <h4>Happy paths</h4>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>
+            <a href="fraud-check?errorcode=">Matched to Experian records and no contra-indicators found</a>
+          </li>
+        </ul>
+        <h4>Errors</h4>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>
+            <a href="fraud-check?errorcode=pyi-no-match">No match with Experian records</a>
+          </li>
+          <li>
+            <a href="fraud-check?errorcode=pyi-no-match">Contra-indicator returned from Experian</a>
+          </li>
+        </ul>
+      </div>
+    </details>
+
+    {% endif %}
+
+  </div>
+</div>
+
+<script type="text/javascript">
+  submitSpinner()
+
+  function buttonClicked(target) {
+    target.setAttribute('disabled', 'disabled')
+    target.className += ' button--save'
+    setTimeout(function () {
+      document.getElementById('button2').click()
+    }, 2000)
+  }
+
+  function submitSpinner() {
+    var selects = document.getElementById('button--save')
+    selects.addEventListener('click', function (event) {
+      event.preventDefault()
+      if (selects.getAttribute('disabled') === 'disabled') {
+        console.log('already clicked')
+      } else {
+        event.preventDefault()
+        console.log(selects.getAttribute('disabled'))
+        buttonClicked(selects)
+      }
+    })
+  }
+</script>
+
+
+{% endblock %}
