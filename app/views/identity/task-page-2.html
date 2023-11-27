@@ -1,0 +1,37 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      Tasks
+    </h1>
+ 
+    <h2 class="govuk-heading-m">Task 1</h2>
+    {{ govukButton({
+      text: "Start",
+      href: "/services/pta/register-for-self-assessment.html"
+    }) }}
+
+    <h2 class="govuk-heading-m">Task 2</h2>
+    {{ govukButton({
+      text: "Start",
+      href: "/services/pta/register-for-self-assessment.html"
+    }) }}
+
+    <h2 class="govuk-heading-m">Task 3</h2>
+    {{ govukButton({
+      text: "Start",
+      href: "/identity/one-login-home/v9/guidance-page-1.html"
+    }) }}
+
+  </div>
+</div>
+
+
+{% endblock %}

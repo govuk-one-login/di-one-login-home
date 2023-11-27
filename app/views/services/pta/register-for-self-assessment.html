@@ -1,0 +1,88 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Personal tax account
+{% endblock %}
+
+{% block header %}
+{{ govukHeader({
+homepageUrl: "/identity/task-page.html",
+serviceName: "",
+serviceUrl: "/",
+containerClasses: "govuk-width-container"
+}) }}
+{% endblock %}
+
+
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/identity/index.html">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="javascript:void(0)">Dealing with HMRC</a>
+    </li>
+  </ol>
+</div>
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      Check how to register for Self Assessment
+
+    </h1>
+
+    <p>Use this tool to find out how to register for Self Assessment.</p>
+    <p>You must register for Self Assessment by 5 October if you need to complete a Self Assessment tax return and have not sent one before. You could be fined if you do not.</p>
+
+    <div class="govuk-inset-text">
+      <p>If you’ve registered and you’re waiting for a Unique Taxpayer Reference (UTR), you can <a href="https://www.gov.uk/guidance/check-when-you-can-expect-a-reply-from-hmrc">check when you can expect a reply from HMRC</a>.</p>
+    </div>
+
+
+      <div id="before-you-start">
+        <div class="gem-c-govspeak govuk-govspeak " data-module="govspeak">
+          <h2 class="govuk-heading-m">If you've registered before</h2>
+  
+          <p>You do not need to register again. If you did not send a Self Assessment tax return last year, you’ll need to reactivate your existing account.</p>
+
+          <h2 class="govuk-heading-m">Before you start</h2>
+
+          <p>You should <a href="https://www.gov.uk/check-if-you-need-tax-return">check if you need to send a tax return </a> before registering.</p>
+          </div>
+  
+        </div>
+        {% from "govuk/components/button/macro.njk" import govukButton %}
+
+      {{ govukButton({
+        text: "Start now",
+        href: "/services/pta/register-for-self-assessment-q1.html",
+        isStartButton: true
+      }) }}
+      </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+
+    <!-- The Related items component is not part of GOV.UK Frontend but will be styled if used in the Prototype Kit -->
+
+
+
+  </div>
+</div>
+  
+        </div>
+      </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+
+    <!-- The Related items component is not part of GOV.UK Frontend but will be styled if used in the Prototype Kit -->
+
+
+
+  </div>
+</div>
+{% endblock %}
