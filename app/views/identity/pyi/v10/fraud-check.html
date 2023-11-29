@@ -1,4 +1,4 @@
-{% extends "layouts/cross-service-header.html" %}
+{% extends "/layouts/govuk-and-sign-out.html" %}
 {% set serviceName = nil %}
 
 {% block beforeContent %}
@@ -29,7 +29,7 @@
 
         {{ govukButton({
           text: "Continue",
-          href: "/identity/pyi/v9/kbv-start.html"
+          href: "/identity/pyi/v10/kbv-start.html"
         }) }}
 
     </form>

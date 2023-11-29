@@ -18,7 +18,7 @@ containerClasses: "govuk-width-container"
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-l">
-      Check your email
+      Check your email 
     </h1>
 
     <div class="govuk-inset-text">
@@ -31,7 +31,7 @@ containerClasses: "govuk-width-container"
 
     <p>The code will expire after 2 hours.</p>
 
-    <form class="form" action="/identity/auth/v9/create-password" method="post">
+    <form class="form" action="/identity/auth/v10/create-password" method="post">
 
       <div class="govuk-form-group">
 
@@ -40,6 +40,8 @@ containerClasses: "govuk-width-container"
         <input class="govuk-input govuk-input--width-5" id="otp" name="create-email-otp" type="text" autocomplete="one-time-code" inputmode="numeric" spellcheck="false" >
 
       </div>
+
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
 
       <details class="govuk-details" data-module="govuk-details">
         <summary class="govuk-details__summary">
@@ -50,9 +52,6 @@ containerClasses: "govuk-width-container"
           <p>We can <a href=""> send the code again</a> or you can <a href="/identity/auth/v9/create-email.html">use a different email address</a>.</p>
         </div>
       </details>
-
-      <button class="govuk-button" data-module="govuk-button">Continue</button>
-
     </form>
   </div>
 </div>

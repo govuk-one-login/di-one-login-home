@@ -4,6 +4,7 @@
   GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
+
 {% block header %}
 {{ govukHeader({
 homepageUrl: "/identity/task-page.html",
@@ -11,7 +12,9 @@ serviceName: "",
 serviceUrl: "/",
 containerClasses: "govuk-width-container"
 }) }}
+
 {% endblock %}
+
 
 {% block content %}
 
@@ -19,13 +22,13 @@ containerClasses: "govuk-width-container"
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-l">You’ve created your GOV.UK One Login</h1>
 
-      <form class="form" action="/identity/pyi/v9/how-to-pyi.html" method="post">
+      <form class="form" action="/identity/pyi/v10/you-need-to-pyi.html" method="post">
 
         <p class="govuk-body">Now continue to prove your identity.</p>
 
       </form>
 
-      <form class="form" action="/identity/pyi/v9/how-to-pyi" method="post">
+      <form class="form" action="/identity/pyi/v10/you-need-to-pyi" method="post">
       
         <button class="govuk-button" data-module="govuk-button">Continue</button>
       </form>

@@ -1,0 +1,41 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block header %}
+{{ govukHeader({
+homepageUrl: "/identity/task-page.html",
+serviceName: "Register for Self-Assessment",
+serviceUrl: "/",
+containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+
+<a href="#" class="govuk-back-link">Back</a>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+  <div class="summary-list-container">
+    <h1 class="govuk-heading-l">You need to prove your identity </h1>
+  </div>
+
+  <div>
+    <p>To register for Self-Assessment, you need to first prove your identity. </p>
+    <p>You can do this with your GOV.UK One Login.</p>
+
+  </div>
+  
+  <form class="form" action="/identity/pyi/v10/prove-your-id" method="post">
+      
+    <button class="govuk-button" data-module="govuk-button">Continue</button>
+  </form>
+</div>
+</div>
+{% endblock %}

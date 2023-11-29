@@ -29,38 +29,39 @@ containerClasses: "govuk-width-container"
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <h1 class="govuk-heading-xl">
-      Check how to register for Self Assessment
+    <span class="govuk-caption-xl">Check how to register for Self Assessment</span>
+    <h1 class="govuk-heading-xl">Register if you're self-employed</h1>
 
-    </h1>
+    <p class="govuk-body">You'll need to register for both:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>Self Assessment</li>
+  <li>Class 2 National Insurance</li>
+</ul>
 
-    <p>Use this tool to find out how to register for Self Assessment.</p>
-    <p>You must register for Self Assessment by 5 October if you need to complete a Self Assessment tax return and have not sent one before. You could be fined if you do not.</p>
 
-    <div class="govuk-inset-text">
-      <p>If you’ve registered and you’re waiting for a Unique Taxpayer Reference (UTR), you can <a href="https://www.gov.uk/guidance/check-when-you-can-expect-a-reply-from-hmrc">check when you can expect a reply from HMRC</a>.</p>
-    </div>
+<p>You’ll need to <a href="/identity/auth/v10/gov-account.html"> sign in </a> to use this service. If you do not already have sign in details, you’ll be able to create them.</p>
+
+<p>You’ll be told when you sign in if you need to prove your identity. This is to keep your details safe and normally involves using photo ID like a passport or driving licence.
+  </p>
 
 
       <div id="before-you-start">
         <div class="gem-c-govspeak govuk-govspeak " data-module="govspeak">
-          <h2 class="govuk-heading-m">If you've registered before</h2>
+          <h2 class="govuk-heading-m">When to register</h2>
   
-          <p>You do not need to register again. If you did not send a Self Assessment tax return last year, you’ll need to reactivate your existing account.</p>
+          <p>You must tell HMRC by 5 October if you need to send a tax return and you have not sent one before. You could be fined if you do not.</p>
 
-          <h2 class="govuk-heading-m">Before you start</h2>
+          <h2 class="govuk-heading-m">If you cannot register online</h2>
 
-          <p>You should <a href="https://www.gov.uk/check-if-you-need-tax-return">check if you need to send a tax return </a> before registering.</p>
+          <p>Register for Self Assessment and Class 2 National Insurance by<a href="https://www.gov.uk/check-if-you-need-tax-return">filling in the form online </a> .Print and post it to HMRC.</p>
+          <p>You’ll need to have all your information ready as you cannot save a partly completed form.</p>
+
+          <h2 class="govuk-heading-m">What happens next</h2>
+
+          <p>You’ll get your Unique Taxpayer Reference (UTR) by post in 15 working days (21 days if you’re abroad). You’ll get it sooner in your <a href="https://www.gov.uk/check-if-you-need-tax-return">HMRC app </a> .</p>
           </div>
   
         </div>
-        {% from "govuk/components/button/macro.njk" import govukButton %}
-
-      {{ govukButton({
-        text: "Start now",
-        href: "/services/pta/register-for-self-assessment-q1.html",
-        isStartButton: true
-      }) }}
       </div>
   </div>
 

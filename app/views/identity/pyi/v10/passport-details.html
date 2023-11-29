@@ -1,4 +1,4 @@
-{% extends "layouts/cross-service-header.html" %}
+{% extends "/layouts/govuk-and-sign-out.html" %}
 {% set serviceName = nil %}
 
 {% block beforeContent %}
@@ -18,6 +18,10 @@
         <p>Your passport includes a lot of information that we can check to make sure that you are who you say you are.</p>
 
         <p>We'll check your details with the HM Passport Office to make sure your passport has not been cancelled or reported as lost or stolen.</p>
+
+        <div class="govuk-inset-text">
+          If you do not have your passport with you and cannot remember your details, you can try to <a href=""> prove your identity another way </a> instead.
+        </div>
 
         {% from "govuk/components/input/macro.njk" import govukInput %}
 

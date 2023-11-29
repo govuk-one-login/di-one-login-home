@@ -11,13 +11,16 @@ serviceName: "",
 serviceUrl: "/",
 containerClasses: "govuk-width-container"
 }) }}
+
+
 {% endblock %}
+
 
 {% block content %}
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <form action="/auth/v9/create-email" method="post" class="form">
+    <form action="/auth/v10/create-email" method="post" class="form">
       
       <h3 class="govuk-heading-l">Create your GOV.UK One Login or sign in</h3>
        <p>You can use your GOV.UK One Login to access some government services.</p>
@@ -36,7 +39,7 @@ containerClasses: "govuk-width-container"
         <div class="govuk-button-group">
           {{ govukButton({
             text: "Create your GOV.UK One Login",
-            href: "/identity/auth/v9/create-email"
+            href: "/identity/auth/v10/create-email.html"
           }) }}
 
           {{ govukButton({
@@ -49,7 +52,7 @@ containerClasses: "govuk-width-container"
         <details class="govuk-details" data-module="govuk-details">
         <summary class="govuk-details__summary">
           <span class="govuk-details__summary-text">
-            About GOV.UK One Login
+          Blurb pending 
           </span>
         </summary>
         <div class="govuk-details__text">

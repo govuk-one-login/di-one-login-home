@@ -1,4 +1,4 @@
-{% extends "layouts/cross-service-header.html" %}
+{% extends "layouts/govuk-and-sign-out.html" %}
 {% set serviceName = nil %}
 
 {% block beforeContent %}
@@ -13,39 +13,47 @@
     <h1 class="govuk-heading-l">How would you like to prove your identity? </h1>
   </div>
   
-  <div>
-    <div class="govuk-form-group">
-      <fieldset class="govuk-fieldset">
-        <legend class="govuk-fieldset__legend">
-          You need to prove your identity before you can apply for a basic DBS check.
-        </legend>
-        <div class="govuk-radios" data-module="govuk-radios">
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
-            <label class="govuk-label govuk-radios__label" for="where-do-you-live">
-              Prove your identity online
-            </label>
-            <div id="sign-in-2-item-hint" class="govuk-hint govuk-radios__hint">
-              Using a photo ID and answering security questions. 
-            </div>
-          </div>
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
-            <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
-              At the Post Office
-            </label>
-            <div id="sign-in-2-item-hint" class="govuk-hint govuk-radios__hint">
-              You’ll need to take your photo ID to be checked in person.
-            </div>
-          </div>
-          </div>
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset">
+      <legend class="govuk-fieldset__legend">
+        Where do you live?
+      </legend>
+      <div class="govuk-radios" data-module="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
+          <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+            By answering security questions
+          </label>
+        <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+          You’ll need a photo ID and to answer questions about things like your mobile phone contract, and any bank accounts, credit cards, loans or mortgages you may have.
         </div>
-        <form class="form" action="/identity/pyi/v9/pyi-online" method="post">
-      
-          <button class="govuk-button" data-module="govuk-button">Continue</button>
-        </form>
-      </fieldset>
-    </div>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
+          <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+            With the GOV.UK Check ID app
+          </label>
+        <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+          You’ll need your photo ID and a smartphone with a working camera.
+        </div>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="whereDoYouLive-3" name="whereDoYouLive" type="radio" value="wales">
+          <label class="govuk-label govuk-radios__label" for="whereDoYouLive-3">
+            At the Post Office
+          </label>
+        <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+          You’ll need to take your photo ID to be checked in person.
+        </div>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
+  {{ govukButton({
+    text: "Continue",
+    href: "/identity/pyi/v10/pyi-online.html"
+    }) }}
 
 </div>
 </div>
