@@ -1,9 +1,19 @@
-{% extends "layouts/cross-service-header.html" %}
-{% set serviceName =  "Basic criminal record check" %}
+{% extends "layouts/main.html" %}
 
-{% block beforeContent %}
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
+
+{% block header %}
+{{ govukHeader({
+homepageUrl: "/identity/task-page.html",
+serviceName: "Basic criminal record check",
+serviceUrl: "/",
+containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
 
 {% block content %}
 

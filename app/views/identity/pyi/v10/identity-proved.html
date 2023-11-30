@@ -1,4 +1,4 @@
-{% extends "layouts/cross-service-header.html" %}
+{% extends "/layouts/govuk-and-sign-out.html" %}
 {% set serviceName = nil %}
 
 {% block content %}
@@ -8,13 +8,12 @@
 
       <form class="form" action="apply-for-dbs-check" method="post">
 
-        <h1 class="govuk-heading-l">You’ve proved your identity, now continue to the service</h1>
+        <h1 class="govuk-heading-l">Continue to the service you want to use</h1>
 
         <div class="ccms-loader ccms-loader__fast govuk-!-margin-bottom-6"></div>
   
-        <p>Your identity information has been saved to your GOV.UK One Login. This means you can skip this step next time a service needs to check who you are.</p>
-        <p>You can now continue to the service you want to use. </p>
-        <p>Some of the information you shared when you proved your identity might be used to automatically fill in forms within the service.</p>
+        <p>You’ve successfully proved your identity. You can now continue to the service you want to use.</p>
+        <p>Some of the information you shared when you proved your identity might be used to automatically fill in forms within the service. </p>
   
         <input class="govuk-input" id="cra-complete" name="errorcode" type="hidden" value="pyi-kbv-fail">
   
@@ -22,8 +21,8 @@
       </form>
 
         <br>
-        <a href="/services/dbs/apply-for-dbs-check.html" role="button" draggable="false" class="govuk-button govuk-button--continue" data-module="govuk-button">
-          Continue to the service
+        <a href="/services/pta/what-is-your-ni.html" role="button" draggable="false" class="govuk-button govuk-button--continue" data-module="govuk-button">
+          Continue 
         </a>
 
       </form>

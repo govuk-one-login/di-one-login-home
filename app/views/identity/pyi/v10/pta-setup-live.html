@@ -1,0 +1,81 @@
+{% extends "/layouts/govuk-and-sign-out.html" %}
+{% set serviceName = nil %}
+
+{% block beforeContent %}
+{% endblock %}
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      You have already proved your identity
+    </h1>
+
+    <p>You have already proved your identity with GOV.UK One Login. You would have done this online or in person at the Post Office.</p>
+    <p>You can now continue to the service you need to use.</p>
+
+    <h3 class="govuk-heading-m">Check your details</h3>
+    <p>You submitted the following details when you proved your identity. You might want to check your details are still correct if you’ve not signed in to GOV.UK One Login in a while.</p>
+    <p>Some of these details might be used to automatically fill in the forms within the service you need to use.</p>
+
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Sarah Philips
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Date of birth
+        </dt>
+        <dd class="govuk-summary-list__value">
+          5 January 1978
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Current home address
+        </dt>
+        <dd class="govuk-summary-list__value">
+          72 Guild Street<br>London<br>SE23 6FH
+        </dd>
+      </div>
+    </dl>
+
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          How to update your details
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        You can contact the GOV.UK One Login team (opens in new tab) to update your details.
+      </div>
+    </details>
+
+      {{ govukButton({
+        text: "Continue",
+        href: "/services/dbs/apply-for-dbs-check.html"
+      }) }}
+  
+
+      </div>
+          </div>
+  
+        </div>
+      </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+
+    <!-- The Related items component is not part of GOV.UK Frontend but will be styled if used in the Prototype Kit -->
+
+
+
+  </div>
+</div>
+{% endblock %}

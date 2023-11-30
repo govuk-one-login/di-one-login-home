@@ -1,4 +1,4 @@
-{% extends "layouts/cross-service-header.html" %}
+{% extends "/layouts/govuk-and-sign-out.html" %}
 {% set serviceName = nil %}
 
 {% block content %}
@@ -61,7 +61,7 @@
 
         <input class="govuk-input" name="kbvNum" type="hidden" value="{{ code }}">
         <br>
-        <a href="/identity/pyi/v9/identity-proved.html" role="button" draggable="false" class="govuk-button govuk-button--continue" data-module="govuk-button">
+        <a href="/identity/pyi/v10/identity-proved.html" role="button" draggable="false" class="govuk-button govuk-button--continue" data-module="govuk-button">
           Continue
         </a>
       </form>

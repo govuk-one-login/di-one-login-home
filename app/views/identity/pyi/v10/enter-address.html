@@ -31,50 +31,32 @@
 
         <!-- subBuildingName-->
 
-        {{ govukInput({
-          label: {
-            text: "Flat number"
-          },
-          classes: "govuk-input--width-5",
-          id: "address-flat-number-current",
-          value: data['address-flat-number-current'],
-          name: "address-flat-number-current"
-        }) }}
 
         <!-- buildingNumber-->
 
-        {{ govukInput({
-          label: {
-            text: "House number"
-          },
-          classes: "govuk-input--width-5",
-          id: "address-house-number-current",
-          value: data['address-house-number-current'],
-          name: "address-house-number-current"
-        }) }}
 
         <!-- buildingName-->
 
         {{ govukInput({
           label: {
-            text: "House name"
+            text: "Address line 1"
           },
           classes: "govuk-input--width-20",
-          id: "address-house-name-current",
-          value: data['address-house-name-current'],
-          name: "address-house-name-current"
+          id: "address-line",
+          value: data['address-line'],
+          name: "address-line"
         }) }}
 
         <!-- throughfareName-->
 
         {{ govukInput({
           label: {
-            text: "Street name"
+            text: "Address line 2 (optional)"
           },
           classes: "govuk-input--width-20",
-          id: "address-street-current",
-          value: data['address-street-current'],
-          name: "address-street-current"
+          id: "address-line-2",
+          value: data['address-line-2'],
+          name: "address-line-2"
         }) }}
 
         <!-- postTown-->
