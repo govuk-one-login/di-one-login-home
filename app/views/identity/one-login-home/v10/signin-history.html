@@ -1,0 +1,77 @@
+{% extends "layouts/one-login.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+  
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-breadcrumbs">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="/identity/one-login-home/v9/one-login-homepage.html">Home</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="/identity/one-login-home/v9/security.html">Security</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="#">Sign in history</a>
+        </li>
+      </ol>
+    </div>
+
+    <div>
+      <h1 class="govuk-heading-xl">Sign in history</h1>
+      <p class="govuk-body">If you see something you do not recognise, report it. </p>
+      <div>
+
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Signed in
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <p class="govuk-body govuk-!-font-weight-bold">22 August  2023 at 5:00pm (UK time)</p>
+              <p>You visited Personal tax account.</p>
+              <p class="govuk-body">
+                <a href="/identity/one-login-home/v9/report-event-form.html" class="govuk-link govuk-link--no-visited-state">Report this</a>
+              </p>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Signed in
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <p class="govuk-body govuk-!-font-weight-bold">22 August 2023 at 11:00am (UK time)</p>
+              <p>You visited your GOV.UK One Login.</p>
+              <p class="govuk-body">
+                <a href="/identity/one-login-home/v9/report-already-submitted.html" class="govuk-link govuk-link--no-visited-state">Report this</a>
+              </p>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Signed in
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <p class="govuk-body govuk-!-font-weight-bold">21 August 2023 at 10:00pm (UK time)</p>
+              <p class="govuk-body">You visited:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>Prove your identity</li>
+                  <li>Request a basic DBS check</li>
+                </ul>
+              <p class="govuk-body">
+                <a href="#" class="govuk-link govuk-link--no-visited-state">Report this</a>
+              </p>
+            </dd>
+          </div>
+        </dl>
+
+
+  </div>
+</div>
+{% endblock %}

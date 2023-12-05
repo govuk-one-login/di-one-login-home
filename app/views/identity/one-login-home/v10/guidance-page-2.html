@@ -1,0 +1,132 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Personal tax account
+{% endblock %}
+
+{% block header %}
+{{ govukHeader({
+homepageUrl: "/identity/task-page.html",
+serviceName: "",
+serviceUrl: "/",
+containerClasses: "govuk-width-container"
+}) }}
+{% endblock %}
+
+
+{% block beforeContent %}
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="javascript:void(0)">Home</a>
+    </li>
+  </ol>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      Proving your identity with GOV.UK One Login 
+    </h1>
+
+    <p class="govuk-body">Contents</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li><a class="govuk-link" href="/identity/one-login-home/v9/guidance-page-1.html">Sign in to your GOV.UK One Login</a></li>
+  <li>Proving your identity with GOV.UK One Login</li>
+</ul>
+    </ul>
+
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+    <div>
+      <h2 class="govuk-heading-l">Proving your identity with GOV.UK One Login  </h2>
+      <p class="govuk-body">You’ll need to prove your identity with GOV.UK One Login to use some services. When you do this, your identity information is automatically saved to your GOV.UK One Login. </p>
+      <p class="govuk-body">This means you will not need to prove your identity again next time a service needs to check who you are. </p>
+      <p class="govuk-body">If you’ve already proved your identity with GOV.UK One Login you can <a href="/identity/auth/v9/gov-account.html" class="govuk-link">sign in to see your saved identity information</a>.</p>
+
+    </div>
+
+    <div>
+      <h2 class="govuk-heading-m">
+        Ways to prove your identity
+      </h2>
+
+      <p class="govuk-body">There are 3 ways of proving your identity with GOV.UK One Login:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>with the GOV.UK ID Check app</li>
+        <li>by answering security questions online</li>
+        <li>at a Post Office</li>
+      </ul>
+      <p>The method you use will depend on your device and which identity documents you have.</p>
+    </div>
+
+    <div>
+      <h3 class="govuk-heading-s">With the GOV.UK ID Check app</h3>
+      <p>You’ll need access to a phone with a working camera. It must be an:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>iPhone 7 or newer</li>
+        <li>Android phone (for example, Samsung or Google Pixel)</li>
+      </ul>
+
+      <p>You also need one of the following types of photo ID:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>UK photocard driving licence</li>
+        <li>UK passport</li>
+        <li>Non-UK passport with a biometric chip</li>
+        <li>UK biometric residence permit (BRP)</li>
+      </ul>
+      <p>You’ll get guidance on how to download and use the app.</p>
+
+
+      <h3 class="govuk-heading-s">By answering security questions online</h3>
+      <p>You’ll have to ask some security questions about things like your mobile phone contract, and any bank accounts, credit cards, loans or mortgages you may have.</p>
+      <p>You also need one of the following types of photo ID:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>UK passport</li>
+        <li>UK driving licence</li>
+      </ul>
+
+      <h3 class="govuk-heading-s">At a Post Office</h3>
+      <p>You’ll be asked to:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>enter details from your photo ID on GOV.UK </li>
+        <li>go to <a href="https://www.postoffice.co.uk/identity/in-branch-verification-service#bf-full-widt">a Post Office that offers ‘in branch verification’</a>, where they’ll scan your photo ID and take a photo of you</li>
+      </ul>
+      <p>You’ll get an email about the result of your identity check - usually within a day of going to the Post Office.</p>
+      <br>
+      <p>You need one of the following types of photo ID:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>UK passport</li>
+        <li>non-UK passport</li>
+        <li>UK photocard driving licence</li>
+        <li>- European Union (EU) photocard driving licence</li>
+        <li>a biometric residence permit (BRP)</li>
+        <li>national identity photocard from an EU country, Norway, Iceland or Liechtenstein</li>
+        </li>
+      </ul>
+
+    </div>
+    <br>
+    <nav class="govuk-pagination govuk-pagination--block" role="navigation" aria-label="results">
+      <div class="govuk-pagination__prev">
+        <a class="govuk-link govuk-pagination__link" href="/identity/one-login-home/v10/guidance-page-1.html" rel="prev">
+          <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+            <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+          </svg>
+          <span class="govuk-pagination__link-title">Previous</span><span class="govuk-visually-hidden">:</span>
+          <span class="govuk-pagination__link-label">Sign in to your GOV.UK One Login</span></a>
+      </div>
+    </nav>
+    <a href="#" class="govuk-link govuk-link--no-visited-state">View a printable version of the whole guide</a>
+
+        </div>
+      </div>
+  </div>
+</div>
+
+{% endblock %}
+

@@ -1,0 +1,50 @@
+{% extends "layouts/one-login.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+  
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-breadcrumbs govuk-breadcrumbs--collapse-on-mobile">
+        <ol class="govuk-breadcrumbs__list">
+          <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="/identity/one-login-home/v9/one-login-homepage.html">Home</a>
+          </li>
+          <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="#">Your services</a>
+          </li>
+        </ol>
+      </div>
+      <h1 class="govuk-heading-xl govuk-!-margin-bottom-4">
+        Your services
+      </h1>
+      <p>
+        You’re signed in as <span class="govuk-!-font-weight-bold">{{ data['emailAddress'] or 'your.name@example.com' }}</span> 
+      </p>
+      <h2 class="govuk-heading-m">Your accounts</h2>
+      
+      <div class="service-card--with-title">
+        <div class="service-card-title">
+          <h3 class="govuk-heading-s">Personal tax account</h3>
+        </div>
+        <div class="service-card-body">
+        <p>See and manage your taxes and state pension.</p>
+        <p><a href="/services/pta/pta-home" class="govuk-link--no-visited-state">Go to your personal tax account</a></p>
+        <p class="service-card-date">Last used: 22 August 2023</p>
+        </div>
+      </div>
+
+      <h2 class="govuk-heading-m govuk-!-margin-top-8">Other services you’ve used</h2>
+
+      <div class="service-card--other-task">
+        <p><a href="https://www.gov.uk/request-copy-criminal-record" class="govuk-link--no-visited-state">Request a basic DBS check</a></p>
+        <p class="service-card-date">Last used: 22 August 2023</p>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
