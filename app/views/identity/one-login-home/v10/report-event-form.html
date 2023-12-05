@@ -13,32 +13,46 @@
 <a href="/identity/one-login-home/v9/signin-history.html" class="govuk-back-link">Back</a>
 
 <div>
-<h1 class="govuk-heading-xl">Report an event you do not recognise</h1>
-<p class="govuk-body">If there’s something you do not recognise about this event, report it to the GOV.UK One Login team. </p>
+<h1 class="govuk-heading-xl">Report something you do not recognise</h1>
+<p class="govuk-body">If there’s something you do not recognise about this activity, report it to the GOV.UK One Login team. </p>
 
 <div class="govuk-inset-text">
-  <p class="govuk-body govuk-!-font-weight-bold">Signed in</p>
-  <p class="govuk-body govuk-!-font-weight-bold">22 August  2023 at 5:00pm (UK time)</p>
-  <p class="govuk-body govuk-!-font-weight-regular">You visited Personal tax account.</p>
+  <p class="govuk-body govuk-!-font-weight-bold">12 December  2023 at 1:00pm (UK time)</p>
+  <p class="govuk-body govuk-!-font-weight-regular">You created your GOV.UK One Login.</p>
+  <p class="govuk-body">You visited:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>HMRC services</li>
+  <li>Prove your identity</li>
+  <li>GOV.UK One Login home</li>
+</ul>
 </div>
 
 <div class="govuk-form-group">
-  <h1 class="govuk-label-wrapper">
-    <label class="govuk-label govuk-label--m" for="more-detail">
-      Is there anything else you’d like to tell us about the event ? (optional)
-    </label>
-  </h1>
-  <div id="more-detail-hint" class="govuk-hint">
-    For example, tell us if you do not recognise the date of the event or the services it says you visited.
-  </div>
-  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+  <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+    <h2 class="govuk-heading-m">What do you want to report?</h2>
+    <div id="waste-hint" class="govuk-hint">
+      Select all the things you do not recognise about this activity.
+    </div>
+    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+        <label class="govuk-label govuk-checkboxes__label" for="waste">
+          Time or date
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+          Services you visited
+        </label>
+      </div>
+    </div>
+  </fieldset>
 </div>
-<div id="more-detail-hint" class="govuk-hint">
-  You have 1,200 characters remaining
-</div>
-<p class="govuk-body govuk-!-font-weight-regular">The GOV.UK One Login team will reply to you within 2 working days on <a class="govuk-body govuk-!-font-weight-bold">email@example.com</a>.</p>
 
-<a href="/identity/one-login-home/v9/event-reported-success.html" role="button" draggable="false" class="govuk-button govuk-button--continue" data-module="govuk-button">
+<p class="govuk-body govuk-!-font-weight-regular"> The GOV.UK One Login team will investigate and reply to you on <a class="govuk-body govuk-!-font-weight-bold">email@example.com</a>.</p>
+
+<a href="/identity/one-login-home/v10/event-reported-success.html" role="button" draggable="false" class="govuk-button govuk-button--continue" data-module="govuk-button">
   Report
 </a>
 
