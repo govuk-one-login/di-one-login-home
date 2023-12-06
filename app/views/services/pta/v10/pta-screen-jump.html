@@ -7,7 +7,7 @@
 
 {% block header %}
 {{ govukHeader({
-homepageUrl: "/identity/task-page-2.html",
+homepageUrl: "/identity/task-page.html",
 serviceName: "Personal tax account",
 serviceUrl: "/",
 containerClasses: "govuk-width-container"
@@ -20,22 +20,16 @@ containerClasses: "govuk-width-container"
   <div class="govuk-grid-column-two-thirds">
 
     <h1 class="govuk-heading-xl">
-      Enter your National Insurance number
+      Screen jump...
     </h1>
-    
-    <div class="govuk-form-group">
-      <div id="event-name-hint" class="govuk-hint">
-        It’s on your National Insurance card, benefit letter, payslip or P60. For example, QQ123456C.
-      </div>
-      <input class="govuk-input" id="event-name" name="event-name" type="text" aria-describedby="event-name-hint">
-    </div>
 
-    <p><a href="#">I do not have a National Insurance number, or have lost or forgotten it</p>
-
+    <p>For this research session. we’ve removed  some of the steps to set up a Personal tax account.</p>
+    <p>Imagine that you’ve provided all the information needed and are on the last step.</p>
+  
 
       {{ govukButton({
         text: "Continue",
-        href: "/services/pta/v10/pta-screen-jump.html"
+        href: "/services/pta/v10/pta-home.html"
       }) }}
   
 
