@@ -60,492 +60,823 @@
   }
 }
 
-    // service cards with titles
-    .id-info {
+// service cards with titles
+.id-info {
+    border: 1px solid #b1b4b6;
+    padding: 15px;
+  
+  }
+  
+  // childcare account cards
+  
+  .pta-card-container {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 40px;
+    }
+    
+    .pta-card {
+      margin-right: 20px;
+      flex: 33%;
+      max-width: 290px;
+    }
+    
+    .pta-card:last-child {
+      margin-right: 0px;
+    }
+    
+    @media (max-width: 500px) {
+      .pta-card-container {
+        flex-direction: column;
+      }
+      .pta-card {
+        margin-bottom: 20px;
+      }
+    }
+  
+  // account home
+  
+  
+      // service cards with titles
+  
+      .service-card--with-title {
+          border: 1px solid 	#b1b4b6;
+          margin-bottom: 20px;
+      }
+  
+      .service-card-title {
+          padding: 20px;
+          padding-bottom: 5px;
+          background-color: #f3f2f1;
+      }
+  
+      .service-card-body {
+          padding: 20px;
+      }
+  
+      .service-card-date {
+          color: #505A5F;
+          margin-bottom: 0px;
+      }
+  
+      // service cards without titles
+  
+      .service-card--no-title {
+          border: 1px solid 	#b1b4b6;
+          border-top: 4px solid #b1b4b6;
+          padding: 20px;
+          margin-bottom: 20px;
+      }
+  
+      // other task cards
+  
+      .service-card--other-task {
         border: 1px solid #b1b4b6;
         padding: 15px;
-      
+        margin-bottom: 20px;
+    }
+  
+      // account blurb
+  
+      .account-blurb {
+          padding: 20px;
+          margin-top: 40px;
+          margin-bottom: 20px;
+          background-color: #f3f2f1;
       }
-      
-      // childcare account cards
-      
-      .pta-card-container {
-          display: flex;
-          flex-direction: row;
-          margin-bottom: 40px;
-        }
-        
-        .pta-card {
-          margin-right: 20px;
-          flex: 33%;
-          max-width: 290px;
-        }
-        
-        .pta-card:last-child {
-          margin-right: 0px;
-        }
-        
-        @media (max-width: 500px) {
-          .pta-card-container {
-            flex-direction: column;
-          }
-          .pta-card {
-            margin-bottom: 20px;
-          }
-        }
-      
-      // account home
-      
-      
-          // service cards with titles
-      
-          .service-card--with-title {
-              border: 1px solid 	#b1b4b6;
-              margin-bottom: 20px;
-          }
-      
-          .service-card-title {
-              padding: 20px;
-              padding-bottom: 5px;
-              background-color: #f3f2f1;
-          }
-      
-          .service-card-body {
-              padding: 20px;
-          }
-      
-          .service-card-date {
-              color: #505A5F;
-              margin-bottom: 0px;
-          }
-      
-          // service cards without titles
-      
-          .service-card--no-title {
-              border: 1px solid 	#b1b4b6;
-              border-top: 4px solid #b1b4b6;
-              padding: 20px;
-              margin-bottom: 20px;
-          }
-      
-          // other task cards
-      
-          .service-card--other-task {
-            border: 1px solid #b1b4b6;
-            padding: 15px;
-            margin-bottom: 20px;
-        }
-      
-          // account blurb
-      
-          .account-blurb {
-              padding: 20px;
-              margin-top: 40px;
-              margin-bottom: 20px;
-              background-color: #f3f2f1;
-          }
-      
-          // account header
-      
-      
-          @media only screen and (min-width: 770px){
-            .govuk-header--service-nav-mobile {
-              display: none;
-            }
-          }
-      
-          @media only screen and (max-width: 770px){
-            .govuk-header--service-nav-desktop {
-              display: none;
-            }
-          }
-      
-          .govuk-header__content--service-nav .govuk-header__navigation.govuk-header__navigation--service-nav .govuk-header__navigation-item  {
-            margin-left: 0px;
-          }
-      
-          .account-menu-icon {
-            margin-left: 5px;
-            position: relative;
-            top: 1px;
-          }
-      
-           .account-menu-icon-toggle {
-             rotate: 180deg;
-           }
-      
-           // account header identity round overrides
-      
-      
-           .account-header-identity-list {
-            list-style: none;
-            padding-top: 15px;
-            padding-left: 0;
-            margin-top: 0;
-           }
-      
-           .account-header-identity-item {
-            display: inline;
-            margin-right: 20px;
-            padding-bottom: 13px;
-            padding-left: 5px;
-            padding-right: 5px;
-           }
-      
-           .account-header-identity-link {
-            text-decoration: none;
-            color: #505A5F;
-           }
-      
-           .account-header-identity-item--active {
-            border-bottom: 5px solid #1d70b8;
-           }
-      
-           // settings and security
-      
-           .activity-card {
-            border: solid 1px #b1b4b6;
-            padding-left: 15px;
-            padding-right: 15px;
-            padding-top: 20px;
-            padding-bottom: 20px;
-           }
-         
-           // Activity log
-      
-      .govuk-accordion-filter .govuk-accordion__controls{
-        display: none;
-       }
-       
-       // Activity cards
-       
-       .activity-card {
-       border: 1px solid #b1b4b6;
-       padding-left: 15px;
-       padding-right: 15px;
-       padding-top: 20px;
-       padding-bottom: 20px;
-       margin-bottom: 20px;
-       }
-       
-       .activity-card-location {
-         color: #505A5F;
-         margin-bottom: 1em;
-       }
-       
-       .activity-card-date {
-         color: #505A5F;
-         margin-bottom: 0px;
-       }
-       
-           // Device activity-card
-       
-           .activity-card--device {
-             margin-bottom: 20px;
-         }
-       
-         .activity-card--device h3 {
-           padding-top: 1em;
-       }
-      
-      // service header
-      
-      .header-link {
-        color: white;
-      }
-      
-      .header-link-account {
-        display: inline;
-        color: white;
-      }
-      
-      .service-header__navigation {
-        display: inline;
-        float: right;
-        cursor: pointer;
-        padding-left: 0px;
-        padding-right: 0px;
-      }
-      
-      .govuk-header__navigation-item {
-        padding-left: 10px;
-        padding-right: 10px;
-      }
-      
-      @media (max-width: 856px) {
-        /*.govuk-header{
-          padding-right: 0px;
-          border-bottom: 0px;
-        }*/
-        .govuk-service-header{
-          display: flex;
-          .govuk-header__logo{
-            padding-right: 0px;
-          }
-        }
-        .service-header-service-name-mobile{
-          background-color: black;
-          padding-left: 30px;
-          padding-right: 30px;
-          border-bottom: 10px solid #1d70b8;
-        }
-        .account-exposed-menu{
-          display: grid;
-        }
-        .one-login-desktop{
-          display: none;
-        }
-        .govuk-header__navigation-item {
-          padding-left: 5px;
-          padding-right: 5px;
-        }
-        .service-header-service-name{
-          display: none;
-        }
-        /*.govuk-header__container{
-          border-bottom: none;
-          margin-bottom: 0px;
-        }*/
-      }
-      
-      @media (min-width: 856px) {
-        .service-header-service-name-mobile{
-          display: none;
-        }
-        .one-login-mobile{
-          display: none;
-        }
-      }
-      
-      .service-header__navigation-open {
-        background-color: #f3f2f1;
-        color: #1d70b8;
-        box-shadow: 0px 29px #f3f2f1;
-      }
-      
-      
-      
-      .service-header__navigation-open .expand-icon-fill {
-        rotate: 180deg;
-        color: #1d70b8;
-        fill: #1d70b8;
-      }
-      
-      .service-header__navigation-open :hover {
-        color: #1d70b8;
-      }
-      
-      .expand-icon-fill {
-        rotate: 0deg;
-        fill: white;
-      }
-      
-      .service-header__navigation-open .person-icon-bg {
-        fill: #1d70b8;
-      }
-      
-      .person-icon-bg {
-        fill: white;
-      }
-      
-      .service-header__navigation-open .person-icon-fg {
-        fill: white;
-      }
-      
-      .person-icon-fg {
-        fill: #1d70b8;
-      }
-      
-      .person-icon {
-        top: .3em;
-        margin-left: 10px;
-        margin-right: 5px;
-        position: relative;
-      }
-      
-      .service-header {
-        background-color: #f3f2f1;
-        top: -10px;
-        position: relative;
-      }
-      
-      .service-header-link {
-        float: left;
-        width: 30%;
-        margin-top: 30px;
-        margin-bottom: 40px;
-      }
-      
-      @media (max-width: 856px) {
-        .service-header-link {
-          margin-top: 10px;
-          margin-bottom: 10px;
-        }
-        }
-      
-      
-      .account-header-onelogin {
-        font-weight: lighter;
-        font-size: 24px;
-        margin-left: 5px;
-      }
-      
-      .govuk-table__cell {
-        width: 200px;
-      }
-      
-      .govuk-header__logo-onelogin {
-        padding-right: 0px;
-      }
-      
-      // service header v1
-      
-      .govuk-header--service-nav-v1 {
-        background-color: #D2E2F1;
-        font-size: 16px;
-      }
-      
-      .govuk-header--service-nav-v1-desktop .govuk-header--service-nav-v1-email {
-        float: left;
-        padding-top: 5px;
-      }
-      
-      .govuk-header--service-nav-v1-desktop .service-nav-v1--list {
-        float: right;
-      }
-      
+  
+      // account header
+  
+  
       @media only screen and (min-width: 770px){
-        .govuk-header--service-nav-v1-mobile {
+        .govuk-header--service-nav-mobile {
           display: none;
         }
       }
-      
+  
       @media only screen and (max-width: 770px){
-        .govuk-header--service-nav-v1-desktop {
+        .govuk-header--service-nav-desktop {
           display: none;
         }
       }
-      
-      
-      .govuk-header__content--service-nav .govuk-header__navigation.govuk-header__navigation--service-nav .govuk-header__navigation-item .v1 {
+  
+      .govuk-header__content--service-nav .govuk-header__navigation.govuk-header__navigation--service-nav .govuk-header__navigation-item  {
         margin-left: 0px;
       }
-      
-      
+  
       .account-menu-icon {
         margin-left: 5px;
         position: relative;
         top: 1px;
       }
-      
-       .account-menu-icon-toggle {
-         rotate: 180deg;
-       }
-      
-       // service header v2
-      
-      .govuk-header__logo-onelogin-v2 {
-        @media (max-width: 770px){
-          width: 60%;
-          float: left;
+  
+        .account-menu-icon-toggle {
+          rotate: 180deg;
         }
-      }
-      
-      .govuk-header--service-nav-v2 {
-        background-color: #f3f2f1;
-        font-size: 16px;
-      }
-      
-      .service-nav-v2--list {
-        padding-top: 10px;
-      }
-      
-      .govuk-header--service-nav-v2-desktop .govuk-header--service-name-v2 {
-        float: left;
-        padding-top: 10px
-      }
-      
-      .govuk-header--service-name-v2 {
-        margin-bottom: 0px;
-      }
-      
-      .govuk-header__navigation-list-v2 {
-        float: right;
-        margin-top: -5px;
-      }
-      
-      .govuk-header__navigation-item-v2 {
-        padding-left: 30px;
-        border-left: solid 1px #b1b4b6;
-      }
-      
-      .govuk-header--service-nav-v2-desktop .service-nav-v2--list {
-        float: right;
-      }
-      
-      .govuk-header__navigation--service-nav-v2 {
-        min-height: 50px;
-      }
-      
-      @media only screen and (min-width: 771px){
-        .govuk-header--service-nav-v2-mobile {
-          display: none;
+  
+        // account header identity round overrides
+  
+  
+        .account-header-identity-list {
+        list-style: none;
+        padding-top: 15px;
+        padding-left: 0;
+        margin-top: 0;
         }
-      }
-      
-      @media only screen and (max-width: 770px){
-        .govuk-header--service-nav-v2-desktop {
-          display: none;
+  
+        .account-header-identity-item {
+        display: inline;
+        margin-right: 20px;
+        padding-bottom: 13px;
+        padding-left: 5px;
+        padding-right: 5px;
         }
-        .service-nav-v2--menu-link {
-          padding-top: 10px;
+  
+        .account-header-identity-link {
+        text-decoration: none;
+        color: #505A5F;
+        }
+  
+        .account-header-identity-item--active {
+        border-bottom: 5px solid #1d70b8;
+        }
+  
+        // settings and security
+  
+        .activity-card {
+        border: solid 1px #b1b4b6;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 20px;
+        padding-bottom: 20px;
         }
       
-        .govuk-header--service-nav-v2-mobile {
-          .service-header__navigation {
-            display: block;
-            float: none;
-          }
-      
-          .one-login-mobile {
-            font-size: inherit;
-            float: right;
-            font-weight: bold;
-            margin: 0;
-            padding: 0;
-            border: 0;
-            color: #ffffff;
-            background: none;
-            cursor: pointer;
-          }
-      
-          .govuk-header__navigation-list {
-            clear: both;
-          }
-        }
+        // Activity log
+  
+  .govuk-accordion-filter .govuk-accordion__controls{
+    display: none;
+    }
+    
+    // Activity cards
+    
+    .activity-card {
+    border: 1px solid #b1b4b6;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    }
+    
+    .activity-card-location {
+      color: #505A5F;
+      margin-bottom: 1em;
+    }
+    
+    .activity-card-date {
+      color: #505A5F;
+      margin-bottom: 0px;
+    }
+    
+        // Device activity-card
+    
+        .activity-card--device {
+          margin-bottom: 20px;
       }
-      
-      
-      .govuk-header__content--service-nav .govuk-header__navigation.govuk-header__navigation--service-nav .govuk-header__navigation-item .v2 {
-        margin-left: 0px;
+    
+      .activity-card--device h3 {
+        padding-top: 1em;
+    }
+  
+  // service header
+  
+  .header-link {
+    color: white;
+  }
+  
+  .header-link-account {
+    display: inline;
+    color: white;
+  }
+  
+  .service-header__navigation {
+    display: inline;
+    float: right;
+    cursor: pointer;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  
+  .govuk-header__navigation-item {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  @media (max-width: 856px) {
+    /*.govuk-header{
+      padding-right: 0px;
+      border-bottom: 0px;
+    }*/
+    .govuk-service-header{
+      display: flex;
+      .govuk-header__logo{
+        padding-right: 0px;
       }
-      
-      
-      // profiles
-      
-      @media only screen and (max-width: 720px) {
-        .img-profiles {
-            width: 100%;
-        }
-      }
-      
-      .img-profiles {
+    }
+    .service-header-service-name-mobile{
+      background-color: black;
+      padding-left: 30px;
+      padding-right: 30px;
+      border-bottom: 10px solid #1d70b8;
+    }
+    .account-exposed-menu{
+      display: grid;
+    }
+    .one-login-desktop{
+      display: none;
+    }
+    .govuk-header__navigation-item {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+    .service-header-service-name{
+      display: none;
+    }
+    /*.govuk-header__container{
+      border-bottom: none;
+      margin-bottom: 0px;
+    }*/
+  }
+  
+  @media (min-width: 856px) {
+    .service-header-service-name-mobile{
+      display: none;
+    }
+    .one-login-mobile{
+      display: none;
+    }
+  }
+  
+  .service-header__navigation-open {
+    background-color: #f3f2f1;
+    color: #1d70b8;
+    box-shadow: 0px 29px #f3f2f1;
+  }
+  
+  
+  
+  .service-header__navigation-open .expand-icon-fill {
+    rotate: 180deg;
+    color: #1d70b8;
+    fill: #1d70b8;
+  }
+  
+  .service-header__navigation-open :hover {
+    color: #1d70b8;
+  }
+  
+  .expand-icon-fill {
+    rotate: 0deg;
+    fill: white;
+  }
+  
+  .service-header__navigation-open .person-icon-bg {
+    fill: #1d70b8;
+  }
+  
+  .person-icon-bg {
+    fill: white;
+  }
+  
+  .service-header__navigation-open .person-icon-fg {
+    fill: white;
+  }
+  
+  .person-icon-fg {
+    fill: #1d70b8;
+  }
+  
+  .person-icon {
+    top: .3em;
+    margin-left: 10px;
+    margin-right: 5px;
+    position: relative;
+  }
+  
+  .service-header {
+    background-color: #f3f2f1;
+    top: -10px;
+    position: relative;
+  }
+  
+  .service-header-link {
+    float: left;
+    width: 30%;
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+  
+  @media (max-width: 856px) {
+    .service-header-link {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    }
+  
+  
+  .account-header-onelogin {
+    font-weight: lighter;
+    font-size: 24px;
+    margin-left: 5px;
+  }
+  
+  .govuk-table__cell {
+    width: 200px;
+  }
+  
+  .govuk-header__logo-onelogin {
+    padding-right: 0px;
+  }
+  
+  // service header v1
+  
+  .govuk-header--service-nav-v1 {
+    background-color: #D2E2F1;
+    font-size: 16px;
+  }
+  
+  .govuk-header--service-nav-v1-desktop .govuk-header--service-nav-v1-email {
+    float: left;
+    padding-top: 5px;
+  }
+  
+  .govuk-header--service-nav-v1-desktop .service-nav-v1--list {
+    float: right;
+  }
+  
+  @media only screen and (min-width: 770px){
+    .govuk-header--service-nav-v1-mobile {
+      display: none;
+    }
+  }
+  
+  @media only screen and (max-width: 770px){
+    .govuk-header--service-nav-v1-desktop {
+      display: none;
+    }
+  }
+  
+  
+  .govuk-header__content--service-nav .govuk-header__navigation.govuk-header__navigation--service-nav .govuk-header__navigation-item .v1 {
+    margin-left: 0px;
+  }
+  
+  
+  .account-menu-icon {
+    margin-left: 5px;
+    position: relative;
+    top: 1px;
+  }
+  
+    .account-menu-icon-toggle {
+      rotate: 180deg;
+    }
+  
+    // service header v2
+  
+  .govuk-header__logo-onelogin-v2 {
+    @media (max-width: 770px){
+      width: 60%;
+      float: left;
+    }
+  }
+  
+  .govuk-header--service-nav-v2 {
+    background-color: #f3f2f1;
+    font-size: 16px;
+  }
+  
+  .service-nav-v2--list {
+    padding-top: 10px;
+  }
+  
+  .govuk-header--service-nav-v2-desktop .govuk-header--service-name-v2 {
+    float: left;
+    padding-top: 10px
+  }
+  
+  .govuk-header--service-name-v2 {
+    margin-bottom: 0px;
+  }
+  
+  .govuk-header__navigation-list-v2 {
+    float: right;
+    margin-top: -5px;
+  }
+  
+  .govuk-header__navigation-item-v2 {
+    padding-left: 30px;
+    border-left: solid 1px #b1b4b6;
+  }
+  
+  .govuk-header--service-nav-v2-desktop .service-nav-v2--list {
+    float: right;
+  }
+  
+  .govuk-header__navigation--service-nav-v2 {
+    min-height: 50px;
+  }
+  
+  @media only screen and (min-width: 771px){
+    .govuk-header--service-nav-v2-mobile {
+      display: none;
+    }
+  }
+  
+  @media only screen and (max-width: 770px){
+    .govuk-header--service-nav-v2-desktop {
+      display: none;
+    }
+    .service-nav-v2--menu-link {
+      padding-top: 10px;
+    }
+  
+    .govuk-header--service-nav-v2-mobile {
+      .service-header__navigation {
         display: block;
+        float: none;
+      }
+  
+      .one-login-mobile {
+        font-size: inherit;
+        float: right;
+        font-weight: bold;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        color: #ffffff;
+        background: none;
+        cursor: pointer;
+      }
+  
+      .govuk-header__navigation-list {
+        clear: both;
+      }
+    }
+  }
+  
+  
+  .govuk-header__content--service-nav .govuk-header__navigation.govuk-header__navigation--service-nav .govuk-header__navigation-item .v2 {
+    margin-left: 0px;
+  }
+  
+  
+  // profiles
+  
+  @media only screen and (max-width: 720px) {
+    .img-profiles {
+        width: 100%;
+    }
+  }
+  
+  .img-profiles {
+    display: block;
+  }
+
+  //logged in sevice header
+  .account-header-onelogin {
+    font-weight: lighter;
+    font-size: 24px;
+    margin-left: 5px;
+  }
+
+// start HMRC secondary nav styles for PTA pages
+// copy/pasted from live PTA account so not particularly tidy
+
+// previously provided by govuk-template, no equivalent in govuk-frontend
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+// dirty, dirty, dirty
+// Necessary as there's a specificity problem on the <li>'s in the mobile menu
+.hidden,
+.no-js .js-visible,
+.js-enabled .js-hidden,
+.js .js-hidden {
+  display: none !important;
+}
+
+$hmrc-account-menu-grey-1: #4a4a4a;
+$hmrc-account-menu-yellow-1: #ffbf47;
+$hmrc-account-menu-blue-1: #005ea5;
+$hmrc-account-menu-transition-time: 0.3s;
+$hmrc-transition-type: "all";
+
+.hmrc-account-icon {
+  background-repeat: no-repeat;
+}
+
+.hmrc-account-icon--home {
+  padding-left: 22px;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyBkYXRhLW5hbWU9IkxheWVyIDEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDI0IDI0IiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaW5ZTWlkIj48dGl0bGU+aWNvbi1ob21lPC90aXRsZT48cGF0aCBkPSJNMTIgMkwxIDEyLjVoMy4xOXY5LjM4aDUuNDR2LTcuMTNoNC41djcuMTNoNS40NFYxMi41SDIzTDEyIDJ6Ii8+PC9zdmc+");
+  background-position: left -1px;
+  background-size: 19px;
+}
+
+.hmrc-account-menu {
+  @include govuk-font($size: 16);
+  @include govuk-clearfix;
+
+  position: relative;
+  z-index: 0;
+  margin-bottom: 0;
+  transition: #{$hmrc-transition-type} $hmrc-account-menu-transition-time ease-in-out;
+  border-bottom: 1px solid govuk-colour("mid-grey");
+  background-color: govuk-colour("white");
+}
+
+.is-smaller.hmrc-account-menu {
+  margin-bottom: 0;
+  transition: none;
+  border-bottom: 1px solid govuk-colour("mid-grey");
+
+  &.main-nav-menu-is-open {
+    margin-bottom: 5em;
+  }
+
+  li:last-of-type {
+    a:last-of-type {
+      padding-right: 0;
+    }
+  }
+}
+
+.hmrc-account-menu__link {
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 12px 16px 8px;
+  border-bottom: 4px solid transparent;
+  color: $hmrc-account-menu-grey-1;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.25;
+  text-decoration: none;
+  text-transform: none;
+
+  &:visited {
+    color: $hmrc-account-menu-grey-1;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    border-bottom-width: 4px;
+    border-bottom-style: solid;
+    color: $govuk-link-hover-colour;
+    border-bottom-color: $govuk-link-hover-colour;
+  }
+
+  &:focus {
+    background-color: $govuk-focus-colour;
+    color: $govuk-focus-text-colour;
+  }
+
+  .hmrc-notification-badge {
+    // otherwise the line height is slightly larger than the menu items and we
+    // get a small gap under menu items without a notification badge.
+    line-height: inherit;
+  }
+}
+
+.is-smaller .hmrc-account-menu__link {
+  padding-left: 10px;
+  color: govuk-colour("black");
+}
+
+.hmrc-account-menu__link--home {
+  padding: 12px 18px 8px 0;
+  float: left;
+}
+
+/* stylelint-disable no-descending-specificity */
+.is-smaller .hmrc-account-menu__link--home,
+.is-smaller .hmrc-account-menu__link--menu {
+  padding-left: 0;
+}
+
+body:not(.js-enabled) .hmrc-account-menu__link--menu {
+  display: none;
+}
+
+.hmrc-account-menu__link--menu {
+  padding: 12px 20px 8px 0;
+  float: right;
+  border-bottom: 4px solid transparent;
+}
+
+.hmrc-account-menu__link--active,
+.hmrc-account-menu__link--active:visited {
+  border-bottom: 4px solid $govuk-brand-colour;
+  color: govuk-colour("black");
+}
+
+.hmrc-account-menu__main {
+  z-index: 995;
+  margin: 0;
+  float: right;
+
+  li {
+    display: inline-block;
+    margin-bottom: 0;
+  }
+}
+
+.is-smaller {
+  .hmrc-account-menu__main {
+    padding: 0;
+    float: none;
+    clear: both;
+    background-color: govuk-colour("light-grey");
+
+    &.main-nav-is-open {
+      position: relative;
+      border-top: 1px solid govuk-colour("mid-grey");
+
+      &::before,
+      &::after {
+        content: " ";
+        position: absolute;
+        right: 4px;
+        bottom: 100%;
+        width: 0;
+        height: 0;
+        border: solid transparent;
+        pointer-events: none;
       }
 
-      //logged in sevice header
-      .account-header-onelogin {
-        font-weight: lighter;
-        font-size: 24px;
-        margin-left: 5px;
+      &::before {
+        right: 3px;
+        border-width: 7px;
+        border-bottom-color: govuk-colour("mid-grey");
       }
+
+      &::after {
+        margin-left: -6px;
+        border-width: 6px;
+        border-bottom-color: $govuk-body-background-colour;
+      }
+    }
+
+    li {
+      display: block;
+      overflow: hidden;
+      border-bottom: 1px solid govuk-colour("mid-grey");
+
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+
+    .hmrc-account-menu__link {
+      border-bottom: 0;
+      display: block;
+
+      &:hover {
+        border-bottom: 0;
+      }
+    }
+  }
+
+  .hmrc-account-menu__link--back {
+    padding-left: 20px;
+    border-bottom: 1px solid govuk-colour("light-grey");
+    background-image: url("https://www.tax.service.gov.uk/personal-account/hmrc-frontend/assets/components/account-menu/images/icon-chevron-left.svg");
+    background-repeat: no-repeat;
+    background-position: 10px;
+    background-size: 12px;
+
+    .hmrc-account-menu__link {
+      padding: 12px 8px 8px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
+
+.js-enabled .hmrc-account-menu__link--menu,
+.js-enabled .is-smaller .hmrc-account-menu__link--more {
+  background-image: url("https://www.tax.service.gov.uk/personal-account/hmrc-frontend/assets/components/account-menu/images/icon-chevron-right.svg");
+  background-repeat: no-repeat;
+  background-position: right 4px center;
+  background-size: 12px;
+}
+
+.js-enabled .hmrc-account-home--account--is-open,
+.js-enabled .is-smaller .hmrc-account-menu__link--more-expanded,
+.js-enabled .hmrc-account-menu__link--more {
+  background-image: url("https://www.tax.service.gov.uk/personal-account/hmrc-frontend/assets/components/account-menu/images/icon-chevron-down.svg");
+  background-position: right 4px center;
+  background-size: 12px;
+}
+
+.js-enabled .hmrc-account-menu__link--more {
+  position: relative;
+  padding-right: 31px;
+  background-image: url("https://www.tax.service.gov.uk/personal-account/hmrc-frontend/assets/components/account-menu/images/icon-chevron-down.svg");
+  background-position: right 14px center;
+  background-size: 12px;
+
+  &::before,
+  &::after {
+    content: none;
+  }
+
+  &.hmrc-account-menu__link--more-expanded {
+    &::before,
+    &::after {
+      content: " ";
+      position: absolute;
+      right: 14px;
+      bottom: -5px;
+      width: 0;
+      height: 0;
+      border: solid transparent;
+      pointer-events: none;
+    }
+
+    &::before {
+      right: 13px;
+      border-width: 7px;
+      border-bottom-color: govuk-colour("mid-grey");
+    }
+
+    &::after {
+      margin-left: -6px;
+      border-width: 6px;
+      border-bottom-color: govuk-colour("light-grey");
+    }
+  }
+}
+
+.is-smaller .hmrc-account-menu__link--more-expanded {
+  display: none;
+}
+
+.no-js {
+  .hmrc-account-menu__main {
+    li {
+      display: inline;
+    }
+  }
+}
+
+$hmrc-banner-blue: #005ea5;
+
+.hmrc-full-width-banner {
+  display: block;
+  position: relative;
+  z-index: 999;
+  color: govuk-colour("white");
+  background-color: $hmrc-banner-blue;
+}
+
+.hmrc-full-width-banner__container {
+  position: relative;
+  padding: 20px 0.78947em;
+}
+
+.hmrc-full-width-banner a {
+  color: govuk-colour("white");
+}
+
+.hmrc-full-width-banner__title {
+  @include govuk-font($size: 19);
+
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.hmrc-full-width-banner__close {
+  @include govuk-font($size: 14);
+
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  color: govuk-colour("white");
+}
+
+@include mq(tablet) {
+  .hmrc-full-width-banner__close {
+    right: 35px;
+  }
+
+  .hmrc-full-width-banner__container {
+    padding: 20px 30px 10px;
+  }
+}
+
+// end HMRC secondary nav styles for PTA pages
