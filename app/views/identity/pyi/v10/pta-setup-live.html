@@ -25,7 +25,9 @@
           Name
         </dt>
         <dd class="govuk-summary-list__value">
-          Sarah Philips
+          <p>
+            {{ data['first-name'] }} {{ data['surname']  or "Joe Bloggs"}}
+          </p>
         </dd>
       </div>
       <div class="govuk-summary-list__row">
@@ -33,7 +35,7 @@
           Date of birth
         </dt>
         <dd class="govuk-summary-list__value">
-          5 January 1978
+          {{ data['dob-day'] }}/{{ data['dob-month'] }}/{{ data['dob-year'] or "01/01/1980"}}
         </dd>
       </div>
       <div class="govuk-summary-list__row">
@@ -41,10 +43,37 @@
           Current home address
         </dt>
         <dd class="govuk-summary-list__value">
-          72 Guild Street<br>London<br>SE23 6FH
+
+          {% if data['address-line-1'] %}
+
+            {% if data['address-line-1'] %}
+              {{ data['address-line-1'] }},<br>
+            {% endif %}
+
+            {% if data['address-line-2'] %}
+              {{ data['address-line-2'] }}
+            {% endif %}, <br>
+
+            {% if data['town-or-city'] %}
+              {{ data['town-or-city'] }},<br>
+            {% endif %}
+
+            {% if data['post-code'] %}
+            {{ data['post-code'] }},<br>
+          {% endif %}
+
+          {% else %}
+            Office 14, <br>
+            New Station St, <br>
+            Leeds, <br>
+            LS1 5DL
+          {% endif %}
+
         </dd>
       </div>
     </dl>
+
+
 
     <details class="govuk-details" data-module="govuk-details">
       <summary class="govuk-details__summary">

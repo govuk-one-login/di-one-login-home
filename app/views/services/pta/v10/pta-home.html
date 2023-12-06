@@ -22,7 +22,8 @@ containerClasses: "govuk-width-container"
 
     <header class="hmrc-page-heading">      
       <p class="hmrc-caption govuk-caption-xl"><span class="govuk-visually-hidden">This section is </span>Personal tax account home</p>
-      <h1 class="govuk-heading-xl">{{ data['first-name'] }}</h1>
+      <h1 class="govuk-heading-xl">{{ data['first-name'] }} {{ data['surname']  or "Joe Bloggs"}}
+      </h1>
     </header>
     
     <div class="pta-card-container">
