@@ -42,9 +42,9 @@
             text: "Address line 1"
           },
           classes: "govuk-input--width-20",
-          id: "address-line",
+          id: "address-line-1",
           value: data['address-line'],
-          name: "address-line"
+          name: "address-line-1"
         }) }}
 
         <!-- throughfareName-->
@@ -66,9 +66,9 @@
             text: "Town or city"
           },
           classes: "govuk-input--width-20",
-          id: "address-city-current",
-          value: data['address-city-current'],
-          name: "address-city-current"
+          id: "town-or-city",
+          value: data['town-or-city'],
+          name: "town-or-city"
         }) }}
 
         {{ govukInput({
@@ -76,9 +76,9 @@
             text: "Postcode"
           },
           classes: "govuk-input--width-10",
-          id: "address-postcode",
-          value: data['address-postcode'],
-          name: "address-postcode",
+          id: "post-code",
+          value: data['post-code'],
+          name: "post-code",
           autocomplete: "postal-code"
         }) }}
 

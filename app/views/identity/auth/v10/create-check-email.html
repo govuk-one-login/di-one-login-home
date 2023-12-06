@@ -22,7 +22,7 @@ containerClasses: "govuk-width-container"
     </h1>
 
     <div class="govuk-inset-text">
-      <p>We have sent an email to: <strong>{{ data['emailAddress'] or 'email@address.com' }}</strong> </p>
+      <p>We have sent an email to: <strong>{{ data['email-address'] or 'email@address.com' }}</strong> </p>
     </div>
 
     <p>The email contains a 6 digit security code.</p>
@@ -49,7 +49,7 @@ containerClasses: "govuk-width-container"
             Problems with the code?          </span>
         </summary>
         <div class="govuk-details__text">
-          <p>We can <a href=""> send the code again</a> or you can <a href="/identity/auth/v9/create-email.html">use a different email address</a>.</p>
+          <p>We can <a href="/identity/auth/v10/create-check-email"> send the code again</a> or you can <a href="/identity/auth/v10/create-email.html">use a different email address</a>.</p>
         </div>
       </details>
     </form>
