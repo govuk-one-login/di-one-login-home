@@ -6,7 +6,7 @@
 
 {% block header %}
 {{ govukHeader({
-homepageUrl: "/identity/task-page.html",
+homepageUrl: "/identity/task-page-2.html",
 serviceName: "",
 serviceUrl: "/",
 containerClasses: "govuk-width-container"
@@ -20,12 +20,13 @@ containerClasses: "govuk-width-container"
     <a href="/identity/auth/v9/create-email-sniffer" class="govuk-back-link">Back</a>
     <h1 class="govuk-heading-l">You already have a GOV.UK One Login</h1>
     <p class="govuk-body">There's already a GOV.UK One Login for
-      <strong>{{ data['emailAddress'] or 'your.name@example.com' }}</strong>
+      <strong>{{ data['email-address'] or 'email@address.com' }}</strong>
     </p>
 
     <div>
       <h3 class="govuk-heading-m">Using your GOV.UK One Login</h3>
-      <p>Blurb tbc</p>
+      <p>GOV.UK One Login is new. At the moment you can only use it to access some government services.</p>
+      <p>In the future, you’ll be able to use GOV.UK One Login to access all services on GOV.UK.</p>
             
       </div>
     
