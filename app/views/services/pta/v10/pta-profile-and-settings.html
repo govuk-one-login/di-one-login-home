@@ -1,0 +1,142 @@
+{% extends "layouts/pta.html" %}
+
+{% block content %}
+<a href="#" class="govuk-back-link">Back</a>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">Profile and settings</h1>
+    <h2 class="govuk-heading-m">Profile</h2>
+
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['first-name'] }} {{ data['surname']  or "Joe Bloggs"}}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">
+            Change<span class="govuk-visually-hidden"> name</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          National Insurance number
+        </dt>
+        <dd class="govuk-summary-list__value">
+          123456
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">
+            Change<span class="govuk-visually-hidden"> date of birth</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Main address
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {% if data['address-line-1'] %}
+
+              {% if data['address-line-1'] %}
+                {{ data['address-line-1'] }}<br>
+              {% endif %}
+
+              {% if data['address-line-2'] %}
+                {{ data['address-line-2'] }}
+              {% endif %} <br>
+
+              {% if data['town-or-city'] %}
+                {{ data['town-or-city'] }}<br>
+              {% endif %}
+
+              {% if data['post-code'] %}
+              {{ data['post-code'] }}<br>
+            {% endif %}
+
+            {% else %}
+              Office 14<br>
+              New Station St <br>
+              Leeds<br>
+              LS1 5DL
+            {% endif %}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">
+            Change<span class="govuk-visually-hidden"> address</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Postal address
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <p class="govuk-body">Office 14<br>
+            New Station St <br>
+            Leeds<br>
+            LS1 5DL</p>
+          <p class="govuk-body">All letters will be sent to this address.</p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">
+            Change<span class="govuk-visually-hidden"> address</span>
+          </a>
+        </dd>
+      </div>
+    </dl>
+
+    <h2 class="govuk-heading-m">Settings</h2>
+
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Contact preferences
+        </dt>
+        <dd class="govuk-summary-list__value">
+          By email
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">
+            Change<span class="govuk-visually-hidden"> name</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+         Sign in details
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Change the details you use to sign in, including your password.
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">
+            Change (opens in a new tab)<span class="govuk-visually-hidden"> date of birth</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Trusted helpers contact 
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Ask for help from family or friends and manage contacts.
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">
+            Manage<span class="govuk-visually-hidden"> address</span>
+          </a>
+        </dd>
+      </div>
+    </dl>
+    <p class="govuk-body">
+      <a href="#" class="govuk-link govuk-link--no-visited-state">Is this page not working properly? (opens in a new tab)</a>
+    </p>  </div>
+
+</div>
+{% endblock %}
