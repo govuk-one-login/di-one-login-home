@@ -1,4 +1,4 @@
-{% extends "layouts/one-login.html" %}
+{% extends "layouts/one-login-2.html" %}
 
 {% block pageTitle %}
   GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
@@ -10,7 +10,7 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-xl">Your GOV.UK One Login</h1>
-    <p class="govuk-body">You're signed in as <strong>name@example.com</strong></p>
+    <p class="govuk-body">You're signed in as <strong>{{ data['email-address'] or 'email@address.com' }}</strong></p>
 
   
       <div class="activity-card govuk-!-margin-bottom-6">
@@ -37,7 +37,7 @@
         </h3>
         <p class="govuk-body">GOV.UK One Login is new. At the moment you can only use it to access some government services.</p>
         <p class="govuk-body">In the future, you'll be able to use GOV.UK One Login to access all services on GOV.UK.</p>
-        <p class="govuk-!-margin-bottom-0"><a href="https://www.gov.uk/using-your-gov-uk-one-login" class="govuk-link--no-visited-state">Read more about GOV.UK One Login and the services you can use with it. </a></p>
+        <p class="govuk-!-margin-bottom-0"><a href="/identity/one-login-home/v10/guidance-page-1.html" class="govuk-link--no-visited-state">Read more about GOV.UK One Login and the services you can use with it. </a></p>
 
       </div>
   
