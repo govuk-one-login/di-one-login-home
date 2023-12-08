@@ -8,24 +8,39 @@
 {% block content %}
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
+  <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-xl">Your GOV.UK One Login</h1>
-    <p class="govuk-body">You're signed in as <strong>{{ data['email-address'] or 'email@address.com' }}</strong></p>
+    <p class="govuk-body">You're signed in as <strong>name@example.com</strong></p>
+
   
-    <div class="one-login-home-cards__container">
-      <div class="one-login-home-cards__card">
-          <h3 class="govuk-heading-s"><a href="/identity/one-login-home/v10/your-services-task-1.html">Your services</a></h3>
-          <p class="govuk-body">See and access the services you've used with your GOV.UK One Login.</p>
+      <div class="activity-card govuk-!-margin-bottom-6">
+        <h2 class="govuk-heading-m">Your services</h2>    
+    <p>See and access the services you’ve used with your GOV.UK One Login.</p>
+    <p class="govuk-!-margin-bottom-0"><a href="/identity/one-login-home/v10/your-services-task-1.html" class="govuk-link--no-visited-state">See the services you’ve used </a></p>
       </div>
-      <div class="one-login-home-cards__card">
-          <h3 class="govuk-heading-s"><a href="/identity/one-login-home/v10/security-task-1.html">Security</a></h3>
-          <p class="govuk-body">Update your sign in details, see your sign in history or delete your GOV.UK One Login.</p>
+
+      <div class="activity-card govuk-!-margin-bottom-6">
+        <h2 class="govuk-heading-m">Security</h2>    
+    <p>Update your sign in details, see your sign in history or delete your GOV.UK One Login. </p>
+    <p class="govuk-!-margin-bottom-0"><a href="/identity/one-login-home/v10/security-task-1.html" class="govuk-link--no-visited-state">Go to security </a></p>
       </div>
-      <div class="one-login-home-cards__card">
-          <h3 class="govuk-heading-s"><a href="#">Contact us</a></h3>
-          <p class="govuk-body">Contact us to report a problem with your GOV.UK One Login or give feedback.</p>
+
+      <div class="activity-card govuk-!-margin-bottom-6">
+        <h2 class="govuk-heading-m">Contact us</h2>    
+    <p>Contact us to report a problem with your GOV.UK One Login or give feedback.</p>
+    <p class="govuk-!-margin-bottom-0"><a href="https://home.account.gov.uk/contact-gov-uk-one-login?fromURL=https%3A%2F%2Fhome.account.gov.uk%2Fyour-services%3F_ga%3D2.74737490.1562553744.1698932296-636000474.1677756439" class="govuk-link--no-visited-state">Contact the GOV.UK One Login team </a></p>
       </div>
-    </div>
+  
+      <div class="information-box">
+        <h3 class="govuk-heading-m">
+          About GOV.UK One Login
+        </h3>
+        <p class="govuk-body">GOV.UK One Login is new. At the moment you can only use it to access some government services.</p>
+        <p class="govuk-body">In the future, you'll be able to use GOV.UK One Login to access all services on GOV.UK.</p>
+        <p class="govuk-!-margin-bottom-0"><a href="https://www.gov.uk/using-your-gov-uk-one-login" class="govuk-link--no-visited-state">Read more about GOV.UK One Login and the services you can use with it. </a></p>
+
+      </div>
+  
   </div>
 </div>
 {% endblock %}
