@@ -86,95 +86,87 @@ const formatData = (data, currentPage) => {
           break;
       newRow.name = row.name
       newRow.href = row.href
-      //     ? "signedIn"
-      //     : null;
-      // if (!newRow.eventType)
-      //     continue;
-      // newRow.sessionId = row.session_id;
-      // newRow.time = (0, prettifyDate_1.prettifyDate)(Number(row["timestamp"]), {
-      //     month: "long",
-      //     day: "numeric",
-      //     year: "numeric",
-      //     hour: "numeric",
-      //     minute: "numeric",
-      //     hourCycle: "h12",
-      //     timeZone: "GB",
-      // });
-      // newRow.visitedServices =
-      //     row.activities?.length &&
-      //         row.activities.filter((activity) => types_1.allowedTxmaEvents.includes(activity.type));
-      // newRow.visitedServicesIds = newRow.visitedServices?.map((obj) => obj["client_id"]);
-      // newRow.visitedServicesEventIds = newRow.visitedServices?.map((obj) => obj["event_id"]);
       formattedData.push(newRow);
   }
   return formattedData;
 };
 
+const data = [
+  { name: "Apply for an advance tariff ruling", href: "#" },
+  { name: "Register for Aggregates Levy", href: "#" },
+  { name: "Register as an alcohol wholesaler or producer: Alcohol Wholesaler Registration Scheme (AWRS)", href: "#" },
+  { name: "View your annual tax summary", href: "#" },
+  { name: "Register or update your money laundering supervision with HMRC", href: "#" },
+  { name: "Register as a bingo promotor", href: "#" },
+  { name: "Send your Bingo Duty return online", href: "#" },
+  { name: "Breathing Space: Debt Respite scheme", href: "#" },
+  { name: "Sign in to your HMRC business tax account", href: "#" },
+  { name: "Calculate your public service pension adjustment", href: "#" },
+  { name: "Report and pay your Capital Gains Tax", href: "#" },
+  { name: "Change your VAT registration details", href: "#" },
+  { name: "Register for VAT", href: "#" },
+  { name: "Register your charity", href: "#" },
+  { name: "Check your State Pension forecast ", href: "#" },
+  { name: "Claim Child Benefit", href: "#" },
+  { name: "Child Benefit when your child turns 16", href: "#" },
+  { name: "Report changes to family circumstances affecting Child Benefit", href: "#" },
+  { name: "Report changes to your child's circumstances that may affect Child Benefit", href: "#" },
+  { name: "Find a Child Trust Fund", href: "#" },
+  { name: "Sign in to your childcare account", href: "#" },
+  { name: "Apply for 30 hours free childcare", href: "#" },
+  { name: "Apply for Tax-Free Childcare", href: "#" },
+  { name: "Get a refund on tax overpayments", href: "#" },
+  { name: "Pay Class 2 National Insurance", href: "#" },
+  { name: "Check or update your company car tax", href: "#" },
+  { name: "Subscribe to the Customs Declaration Service", href: "#" },
+  { name: "Pay for imports declared using the Custom Declaration Service", href: "#" },
+  { name: "Tell HMRC about underpaid tax from previous years", href: "#" },
+  { name: "Get an EORI number", href: "#" },
+  { name: "Using PAYE online", href: "#" },
+  { name: "Apply for the Fulfilment House Due Diligence Scheme", href: "#" },
+  { name: "Register for Gaming Duty", href: "#" },
+  { name: "Pay Gaming or Bingo Duty", href: "#" },
+  { name: "Register to pay for road fuel gas duty", href: "#" },
+  { name: "Report the excise duty due on gas for use as fuel in a road vehicle", href: "#" },
+  { name: "Register for the Goods Vehicle Movement Service", href: "#" },
+  { name: "Sign in to your Help to Save account", href: "#" },
+  { name: "Register for Insurance Premium Tax", href: "#" },
+  { name: "Register as a lottery promoter", href: "#" },
+  { name: "Send your Lottery Duty return", href: "#" },
+  { name: "Apply for an exemption from Making Tax Digital for VAT", href: "#" },
+  { name: "Sign up as an individual for Making Tax Digital for Income Tax ", href: "#" },
+  { name: "Apply for Marriage Allowance online", href: "#" },
+  { name: "Log in and file your Stamp Duty Land Tax return", href: "#" },
+  { name: "Check if you have to pay tax on your pension savings", href: "#" },
+  { name: "Check your State Pension forecast ", href: "#" },
+  { name: "Personal tax account", href: "https://www.gov.uk/personal-tax-account" },
+  { name: "Protect your pension lifetime allowance", href: "#" },
+  { name: "Apply for EU VAT refunds if you trade from Northern Ireland", href: "#" },
+  { name: "Register to report a cross-border arrangement (MDR)", href: "#" },
+  { name: "Return to your claim for the Self Employment Income Support Scheme", href: "#" },
+  { name: "Tell HMRC and pay back a Self Employment Income Support Scheme grant", href: "#" },
+  { name: "File your Self Assessment tax return online", href: "https://www.gov.uk/log-in-file-self-assessment-tax-return" },
+  { name: "Check how to register for Self Assessment", href: "https://www.gov.uk/register-for-self-assessment" },
+  { name: "Pay your Self Assessment tax bill", href: "https://www.gov.uk/pay-self-assessment-tax-bill" },
+  { name: "Register for the Soft Drinks Industry Levy", href: "#" },
+  { name: "VAT online account", href: "#" },
+  { name: "Business tax account", href: "#" },
+  { name: "Manage your tax credits", href: "#" },
+  { name: "Report changes that affect your tax credits", href: "#" },
+  { name: "Apply for a National Insurance number", href: "#" },
+  { name: "Find a lost National Insurance number", href: "#" },
+  { name: "Get your National Insurance number", href: "#" },
+  { name: "Check your National Insurance record", href: "#" },
+  { name: "Pay voluntary Class 3 National Insurance", href: "#" },
+  { name: "Apply for Marriage Allowance online", href: "#" },
+  { name: "Claim a VAT refund as an organisation not registered for VAT", href: "#" },
+  { name: "Submit your One Stop Shop VAT Return", href: "#" },
+  { name: "Check and challenge your business rates valuation", href: "#" },
+]
+
 router.get('/identity/one-login-home/v10/services-search', function(req, res) {
   const servicesPerPage = 10;
-  const data = [
-    { name:"Advance Tariff Registration", href: "#"},
-    { name:"Aggregates Levy", href: "#"},
-    { name:"Alcohol Wholesaler Registration Scheme (AWRS)", href: "#"},
-    { name:"Annual Tax Summary (ATS)", href: "#"},
-    { name:"Anti-Money Laundering Supervision (AMLS)", href: "#"},
-    { name:"Bingo Duty", href: "#"},
-    { name:"Breathing Space", href: "#"},
-    { name:"Business Tax Account (BTA)", href: "#"},
-    { name:"Calculating Public Pension Adjustment (McCloud)", href: "#"},
-    { name:"Capital Gains Tax Property Disposal", href: "#"},
-    { name:"Change VAT registration details", href: "#"},
-    { name:"Charities Registration Service", href: "#"},
-    { name:"Check Your State Pension (CYSP/NISP)", href: "#"},
-    { name:"Child Benefit", href: "#"},
-    { name:"Child Trust Fund", href: "#"},
-    { name:"Childcare Services (CSS)", href: "#"},
-    { name:"Claim a Tax Refund (CTR)", href: "#"},
-    { name:"Class 2 National Insurance (C2NI)", href: "#"},
-    { name:"Company Car", href: "#"},
-    { name:"Customs Declaration Service", href: "#"},
-    { name:"Digital Disclosure Service (DDS)", href: "#"},
-    { name:"Economic Operators Registraion and Identification (EORI)", href: "#"},
-    { name:"Employee Expenses (EE)", href: "#"},
-    { name:"FHDDS (Fulfilment Houses Due Dilligence Service) ", href: "#"},
-    { name:"Gaming Duty", href: "#"},
-    { name:"Gas for use as Road Fuel", href: "#"},
-    { name:"Goods Vehicle Movement System", href: "#"},
-    { name:"Help to Save (HtS) NS&I", href: "#"},
-    { name:"Insurance Premium Tax", href: "#"},
-    { name:"Lottery Duty", href: "#"},
-    { name:"Making Tax Digital - VAT", href: "#"},
-    { name:"Making Tax Digital Income Tax", href: "#"},
-    { name:"Marriage Allowance (MA)", href: "#"},
-    { name:"Modernising Stamp Duty (Org) - File Stamp Duty Land Tax returns ", href: "#"},
-    { name:"Notification of Vehicle Arrivals", href: "#"},
-    { name:"Pension Annual Allowance Calculator (PAAC)", href: "#"},
-    { name:"Pension Online Digital Service", href: "#"},
-    { name:"Personal Tax Account", href: "#"},
-    { name:"Protect your Pensions Lifetime Allowance", href: "#"},
-    { name:"Refund of VAT", href: "#"},
-    { name:"Report a DAC6 cross border arrangement", href: "#"},
-    { name:"Self Employment Income Support Scheme (SEISS)", href: "#"},
-    { name:"Self-Assessment (SA)", href: "#"},
-    { name:"Soft Drinks Industry Levy", href: "#"},
-    { name:"Submit VAT Returns", href: "#"},
-    { name:"Tax Account for Individuals (TAI)", href: "#"},
-    { name:"Tax Conditionality Standard Offering (HEC)", href: "#"},
-    { name:"Tax Credits Services (TCS)", href: "#"},
-    { name:"Tax Enrolment National Insurance Number (TEN)", href: "#"},
-    { name:"Tell us about your imports from Ireland", href: "#"},
-    { name:"Trade Credit", href: "#"},
-    { name:"Trader Services customs trader service ", href: "#"},
-    { name:"Transferable Allowance for Married Couples (TAMC)", href: "#"},
-    { name:"VAT 126 reclaim", href: "#"},
-    { name:"EC Sales List (ECSL)", href: "#"},
-    { name:"VAT EU Refunds", href: "#"},
-    { name:"VAT One Stop Shop Union Scheme", href: "#"},
-    { name:"VAT Reverse Charge Sales List (RCSL)", href: "#"},
-    { name:"VAT VAR", href: "#"},
-    { name:"VOA Check and Challenge & Appeal Your Business Rates Valuation", href: "#"},
-    { name:"MTD VAT", href: "#"}
-  ]
+
   let finalData = data;
   const searchQuery = req.query.search;
   const currentPage = req.query.page;
@@ -192,3 +184,15 @@ router.get('/identity/one-login-home/v10/services-search', function(req, res) {
     pagination: pagination
   });
 })
+
+router.post('/identity/one-login-home/v10/services-search', function(req, res){
+  const searchQuery = req.body.search;
+  const finalData = data.filter((item) => {
+    return item.name.toUpperCase().match(searchQuery.toUpperCase());
+  });
+
+  res.render("/identity/one-login-home/v10/services-search.html", {
+    searchQuery: searchQuery,
+    data: finalData
+  });
+});
