@@ -162,13 +162,26 @@ const data = [
   { name: "Claim a VAT refund as an organisation not registered for VAT", href: "#" },
   { name: "Submit your One Stop Shop VAT Return", href: "#" },
   { name: "Check and challenge your business rates valuation", href: "#" },
+  {name: "Apply for a vehicle operator licence", href: "https://www.gov.uk/apply-vehicle-operator-licence" },
+  {name: "Apply to become a registered social worker in England", href: "https://www.socialworkengland.org.uk/registration/apply-for-registration/" },
+  {name: "Claim compensation if you were the victim of a violent crime", href: "https://www.gov.uk/claim-compensation-criminal-injury/make-claim" },
+  {name: "Connect families to support", href: "https://www.connect-families-to-support.education.gov.uk/" },
+  {name: "Find and apply for a grant", href: "https://www.gov.uk/guidance/find-government-grants" },
+  {name: "Find a UK market conformity assessment body", href: "https://find-a-conformity-assessment-body.service.gov.uk/" },
+  {name: "GOV.UK email subscriptions", href: "https://www.gov.uk/email/manage/authenticate" },
+  {name: "Manage apprenticeships", href: "https://www.gov.uk/sign-in-apprenticeship-service-account" },
+  {name: "Manage family support services and accounts", href: "https://manage-family-support-services-and-accounts.education.gov.uk/" },
+  {name: "Modern slavery statement registry", href: "https://www.gov.uk/guidance/add-your-modern-slavery-statement-to-the-statement-registry" },
+  {name: "Ofqual subject matter specialist account", href: "https://www.gov.uk/guidance/subject-matter-specialists-for-ofqual" },
+  {name: "Request a basic DBS check", href: "https://www.gov.uk/request-copy-criminal-record" },
+  {name: "Sign your mortgage deed", href: "https://sign-your-mortgage-deed.landregistry.gov.uk/" },
 ]
+
 
 router.get('/identity/one-login-home/v10/services-search-task-1', function(req, res) {
   const servicesPerPage = 10;
 
-  let finalData = data;
-  const searchQuery = req.query.search;
+  let finalData = data.sort((a, b) => a.name.toUpperCase().localeCompare(b.name.toUpperCase()));
   const currentPage = req.query.page;
   const dataLength = finalData.length;
 
@@ -187,7 +200,9 @@ router.get('/identity/one-login-home/v10/services-search-task-1', function(req, 
 
 router.post('/identity/one-login-home/v10/services-search-task-1', function(req, res){
   const searchQuery = req.body.search;
-  const finalData = data.filter((item) => {
+  let finalData = data.sort((a, b) => a.name.toUpperCase().localeCompare(b.name.toUpperCase()));
+
+  finalData = finalData.filter((item) => {
     return item.name.toUpperCase().match(searchQuery.toUpperCase());
   });
 
