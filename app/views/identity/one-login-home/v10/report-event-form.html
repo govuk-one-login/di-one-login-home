@@ -50,7 +50,7 @@
   </fieldset>
 </div>
 
-<p class="govuk-body govuk-!-font-weight-regular"> The GOV.UK One Login team will investigate and reply to you on <a class="govuk-body govuk-!-font-weight-bold">email@example.com</a>.</p>
+<p class="govuk-body govuk-!-font-weight-regular"> The GOV.UK One Login team will investigate and reply to you on <a class="govuk-body govuk-!-font-weight-bold">{{ data['email-address'] or 'email@address.com' }}</a>.</p>
 
 <a href="/identity/one-login-home/v10/event-reported-success.html" role="button" draggable="false" class="govuk-button govuk-button--continue" data-module="govuk-button">
   Report

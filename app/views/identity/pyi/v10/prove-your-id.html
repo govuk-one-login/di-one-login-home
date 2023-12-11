@@ -1,15 +1,7 @@
-{% extends "layouts/main.html" %}
+{% extends "/layouts/govuk-and-sign-out.html" %}
+{% set serviceName = nil %}
 
-{% block pageTitle %}
-  Prove your identity
-{% endblock %}
-
-{% block header %}
-{{ govukHeader({
-homepageUrl: "/identity/task-page-2.html",serviceName: "",
-serviceUrl: "/",
-containerClasses: "govuk-width-container"
-}) }}
+{% block beforeContent %}
 {% endblock %}
 
 {% block content %}
@@ -23,7 +15,7 @@ containerClasses: "govuk-width-container"
      <p>You’ll need:</p>
       <ul class="govuk-list govuk-list--bullet">
         <li>
-          Your photo ID
+          your photo ID
         </li>
         <li>
           your current address (you might also need your previous address if you’ve recently moved)
