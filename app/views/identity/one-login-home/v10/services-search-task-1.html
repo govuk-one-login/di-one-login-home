@@ -7,12 +7,10 @@ Personal tax account
 {% endblock %}
 
 {% block header %}
-{{ govukHeader({
-homepageUrl: "/identity/task-page-2.html",
-serviceName: "",
-serviceUrl: "/",
-containerClasses: "govuk-width-container"
-}) }}
+  {{ govukHeader({
+    homepageUrl: "/identity/task-page-2.html",
+    productName: "One Login"
+  }) }}
 {% endblock %}
 
 
@@ -32,7 +30,7 @@ containerClasses: "govuk-width-container"
   <div class="govuk-grid-column-two-thirds">
 
     <h1 class="govuk-heading-xl">
-      Services you can use with GOV.UK One Login {{searchQuery}}
+      Services you can use with GOV.UK One Login
     </h1>
 
    <p>You can only use GOV.UK One Login to access some government services.</p>
@@ -40,7 +38,7 @@ containerClasses: "govuk-width-container"
    
    <h2 class="govuk-heading-m">Search</h2>
     <div>
-      <form style="display: flex;" action="/identity/one-login-home/v10/services-search" method="post">
+      <form style="display: flex;" action="/identity/one-login-home/v10/services-search-task-1" method="post">
       <input aria-controls="js-search-results-info" enterkeyhint="search" class="gem-c-search__item gem-c-search__input js-class-toggle focus" id="finder-keyword-search" name="search" title="Search" type="search">
       <div>
         <button class="gem-c-search__submit" type="submit" data-module="gem-track-click" enterkeyhint="search" data-gem-track-click-module-started="true">

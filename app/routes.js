@@ -164,7 +164,7 @@ const data = [
   { name: "Check and challenge your business rates valuation", href: "#" },
 ]
 
-router.get('/identity/one-login-home/v10/services-search', function(req, res) {
+router.get('/identity/one-login-home/v10/services-search-task-1', function(req, res) {
   const servicesPerPage = 10;
 
   let finalData = data;
@@ -177,7 +177,7 @@ router.get('/identity/one-login-home/v10/services-search', function(req, res) {
     finalData = formatData(data, pagination.currentPage);
   } 
 
-  res.render("/identity/one-login-home/v10/services-search.html", {
+  res.render("/identity/one-login-home/v10/services-search-task-1.html", {
     test: "testing",
     page: req.query.page,
     data: finalData,
@@ -185,13 +185,13 @@ router.get('/identity/one-login-home/v10/services-search', function(req, res) {
   });
 })
 
-router.post('/identity/one-login-home/v10/services-search', function(req, res){
+router.post('/identity/one-login-home/v10/services-search-task-1', function(req, res){
   const searchQuery = req.body.search;
   const finalData = data.filter((item) => {
     return item.name.toUpperCase().match(searchQuery.toUpperCase());
   });
 
-  res.render("/identity/one-login-home/v10/services-search.html", {
+  res.render("/identity/one-login-home/v10/services-search-task-1.html", {
     searchQuery: searchQuery,
     data: finalData
   });
