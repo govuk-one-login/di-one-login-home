@@ -1,0 +1,61 @@
+{% extends "layouts/one-login-2.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+  
+{% endblock %}
+
+
+{% block content %}
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a href="/identity/one-login-home/v10/activity-history.html" class="govuk-back-link">Back</a>    </li>
+</div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-panel govuk-panel--confirmation">
+        <h1 class="govuk-panel__title">
+          You’ve reported activity you do not recognise
+        </h1>
+        <div class="govuk-panel__body">
+          Your report number is<br><strong>HDJ2123F</strong>
+        </div>
+      </div>
+<br>
+
+<div>
+<p class="govuk-body">You've reported the following activity:</p>
+
+<div class="govuk-inset-text">
+  <p class="govuk-body govuk-!-font-weight-bold">12 December  2023 at 1:00pm (UK time)</p>
+  <p class="govuk-body govuk-!-font-weight-regular">You created your GOV.UK One Login.</p>
+  <p class="govuk-body">You visited:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>HMRC services</li>
+  <li>Prove your identity</li>
+  <li>GOV.UK One Login home</li>
+</ul>
+</div>
+
+<h3 class="govuk-heading-s">Keep your GOV.UK One Login secure</h3>
+<p class="govuk-body">
+  We recommend that you <a href="/identity/one-login-home/v10/security-task-2.html" class="govuk-link">change your password</a>.
+</p>
+<p>This is to help keep your GOV.UK One Login secure.</p>
+
+<h3 class="govuk-heading-s">What happens next</h3>
+<p class="govuk-body govuk-!-font-weight-regular"> A confirmation email has been sent to  <a class="govuk-body govuk-!-font-weight-bold">{{ data['email-address'] or 'email@address.com' }}</a>.</p>
+<p>The GOV.UK One Login team will investigate and reply to you by email. We might ask for more information about the activity you’ve reported.</p>
+<p>We’ll always include your report number when we email you.</p>
+
+<h3 class="govuk-heading-s">If you need to contact us</h3>
+<p class="govuk-body">
+  You can <a href="https://home.account.gov.uk/contact-gov-uk-one-login?fromURL=https%3A%2F%2Fhome.account.gov.uk%2Fyour-services%3F_ga%3D2.74737490.1562553744.1698932296-636000474.1677756439" class="govuk-link" rel="noreferrer noopener" target="_blank">contact the GOV.UK One Login team (opens in new tab)</a>.
+</p>
+
+
+
+</div>
+{% endblock %}

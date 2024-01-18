@@ -1,0 +1,39 @@
+{% extends "layouts/one-login-2.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+  
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      Enter your current password 
+    </h1>
+    <p class="govuk-body">We need to make sure it’s you before you can change your password.</p>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="weight">
+        Enter your password
+      </label>
+      <div class="govuk-input__wrapper"><input class="govuk-input" id="weight" name="weight" type="text" spellcheck="false">
+        <div class="govuk-input__suffix" aria-hidden="true" href="">Show</div>
+      </div>
+    </div>
+
+    <a href="/identity/one-login-home/v11/enter-new-password.html" role="button" draggable="false" class="govuk-button govuk-button--continue" data-module="govuk-button">
+      Continue
+    </a>
+
+    <p class="govuk-body">
+      <a href="/identity/one-login-home/v11/security.html" class="govuk-link govuk-link--no-visited-state"> I do not want to change my password</a>
+    </p>
+
+
+  </div>
+</div>
+
+{% endblock %}

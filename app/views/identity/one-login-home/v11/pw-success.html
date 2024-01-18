@@ -1,0 +1,27 @@
+{% extends "layouts/one-login-2.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+  
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <div class="govuk-panel govuk-panel--confirmation">
+      <h1 class="govuk-panel__title">
+        You’ve changed your password
+      </h1>
+    </div>
+
+    <a href="/identity/one-login-home/v11/security.html" role="button" draggable="false" class="govuk-button govuk-button--continue" data-module="govuk-button">
+      Back to security
+    </a>
+
+
+  </div>
+</div>
+
+{% endblock %}
