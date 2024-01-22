@@ -1,0 +1,35 @@
+{% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
+
+{% block header %}
+  {{ govukHeader({
+    homepageUrl: "/identity/task-page-2.html",
+    productName: "One Login",
+    classes: "govuk-header--with-account-navigation"
+  }) }}
+
+{% set active = activeNav if activeNav else "security" %}
+{% set navigationItems = [{
+    active: true if (active == "your-services") else false,
+    href: "/identity/one-login-home/v11/your-services-hmrc-card",
+    text: "Your services"
+  },{
+    active: true if (active == "security") else false,
+    href: "/identity/one-login-home/v11/security",
+    text: "Security"
+  },{
+    active: true if (active == "sign-out") else false,
+    href: "#",
+    text: "Sign out"
+  }]
+%}
+
+<nav aria-label="Account navigation" class="account-navigation">
+  <div class="govuk-width-container">
+    <ul class="account-navigation__list">
+      {% for item in navigationItems %}
+        <li class="account-navigation__list-item {{ 'account-navigation__list-item--active' if item.active else '' }}"><a class="account-navigation__link" href="{{item.href}}">{{item.text}}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</nav>
+{% endblock %}
