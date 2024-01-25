@@ -7,7 +7,7 @@
   "dependencies": {
     "@govuk-prototype-kit/common-templates": "1.2.1",
     "govuk-frontend": "4.7.0",
-    "govuk-one-login-service-header": "github:alphagov/di-govuk-one-login-service-header",
+    "govuk-one-login-service-header": "github:govuk-one-login/di-govuk-one-login-service-header",
     "govuk-prototype-kit": "13.10.0"
   }
 }
