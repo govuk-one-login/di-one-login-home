@@ -1,0 +1,87 @@
+{% extends "layouts/main.html" %}
+
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block header %}
+{{ govukHeader({
+homepageUrl: "/identity/task-page-2.html",
+serviceName: "",
+serviceUrl: "/",
+containerClasses: "govuk-width-container"
+
+}) }}
+
+
+
+{% endblock %}
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="/identity/auth/v11/gov-account-via-gp" method="post" class="form">
+      <a href="/identity/auth/v11/gov-account-via-gp" class="govuk-back-link">Back</a>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="signIn-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Sign into HMRC
+            </h1>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="signIn" name="signIn" type="radio" value="government-gateway" aria-describedby="signIn-item-hint">
+              <label class="govuk-label govuk-radios__label" for="signIn">
+                GOV.UK One Login
+              </label>
+              <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+                You’ll have a user ID if you’ve registered for Self Assessment or filed a tax return online before.
+              </div>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="signIn-2" name="signIn" type="radio" value="govuk-one-login" aria-describedby="signIn-2-item-hint">
+              <label class="govuk-label govuk-radios__label" for="signIn-2">
+                Government Gateway
+              </label>
+              <div id="signIn-2-item-hint" class="govuk-hint govuk-radios__hint">
+                If you Government Gateway, sign in with your user ID.
+              </div>
+            </div>
+            <div class="govuk-radios__divider">or</div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="whereDoYouLive-6" name="whereDoYouLive" type="radio" value="abroad">
+        <label class="govuk-label govuk-radios__label" for="whereDoYouLive-6">
+          Create new sign in details
+        </label>
+        <div id="signIn-2-item-hint" class="govuk-hint govuk-radios__hint">
+          We’ll ask you some questions to find out how you need to access this service
+        </div>
+          </div>
+        </fieldset>
+      </div>
+        <!--
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">About GOV.UK accounts</span>
+        </summary>
+        <div class="govuk-details__text">
+          <p>GOV.UK accounts are new. At the moment you can only use your GOV.UK account with a few services.</p>
+          <p>GOV.UK accounts are currently separate from other government accounts (for example Government Gateway).</p>
+          <p>In future, you'll be able to use your GOV.UK account to sign in to most services on GOV.UK.</p>
+        </div>
+      </details>
+      -->
+    </form>
+    {{ govukButton({
+      text: "Continue",
+      classes: "govuk-button--primary",
+      href: "/identity/auth/v11/gov-account-via-gp"
+    }) }}
+  </div>
+</div>
+
+{% endblock %}
