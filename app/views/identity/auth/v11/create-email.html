@@ -1,0 +1,38 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{{ govukHeader({
+homepageUrl: "/identity/task-page-2.html",
+serviceName: "",
+serviceUrl: "/",
+containerClasses: "govuk-width-container"
+}) }}
+{% endblock %}
+
+
+{% block content %}
+
+<a href="/identity/auth/v10/gov-account.html" class="govuk-back-link">Back</a>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">
+      Enter your email address
+    </h1>
+    <form class="form" action="/identity/auth/v10/create-check-email" method="post">
+      {{ govukInput({
+        name: 'email-address'
+    }) }}
+      
+
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+      <input class="govuk-input" name="signin" type="hidden" value="create">
+    </form>
+  </div>
+</div>
+
+{% endblock %}

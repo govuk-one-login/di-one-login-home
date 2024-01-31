@@ -1,0 +1,59 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{{ govukHeader({
+homepageUrl: "/identity/task-page-2.html",
+serviceName: "",
+serviceUrl: "/",
+containerClasses: "govuk-width-container"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <a href="/identity/auth/v9/create-email-sniffer" class="govuk-back-link">Back</a>
+    <h1 class="govuk-heading-l">You already have a GOV.UK One Login</h1>
+    <p class="govuk-body">There's already a GOV.UK One Login for
+      <strong>{{ data['email-address'] or 'email@address.com' }}</strong>
+    </p>
+
+    <div>
+      <h3 class="govuk-heading-m">Using your GOV.UK One Login</h3>
+      <p>GOV.UK One Login is new. At the moment you can only use it to access some government services.</p>
+      <p>In the future, you’ll be able to use GOV.UK One Login to access all services on GOV.UK.</p>
+            
+      </div>
+    
+    <h3 class="govuk-heading-m" >Enter your password</h3>
+
+    <form class="form" action="signin-check-phone" method="post">
+
+      <div>
+
+        <div class="gem-c-show-password" data-module="show-password" data-disable-form-submit-check="false" data-show-text="Show" data-hide-text="Hide" data-show-full-text="Show password" data-hide-full-text="Hide password" data-announce-show="Your password is shown" data-announce-hide="Your password is hidden">
+          <div class="govuk-form-group">
+            <label for="password" class="gem-c-label govuk-label">Enter your password to sign in</label>
+            <div class="gem-c-show-password__input-wrapper">
+              <input name="password[login]" class="gem-c-input govuk-input gem-c-input--with-password govuk-!-width-two-thirds" id="password" type="password" spellcheck="false" autocomplete="off" aria-describedby="password-hint">
+              <span class="govuk-visually-hidden" aria-live="polite">Your password is hidden</span>
+            </div> <!-- /. gem-c-show-password__input-wrapper -->
+          </div> <!-- /. govuk-form-group -->
+        </div> <!-- /. gem-c-show-password -->
+
+      </div>
+
+      <p><a href="#">I've forgotten my password</a></p>
+
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+    </form>
+  </div>
+</div>
+
+{% endblock %}
