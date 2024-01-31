@@ -1,0 +1,121 @@
+{% extends "/layouts/govuk-and-sign-out.html" %}
+{% set serviceName = nil %}
+
+
+{% block content %}
+<a class="govuk-back-link" href="address-picker-current">Back</a>
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="address-check" method="post">
+
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <h1 class="govuk-fieldset__heading">
+            Enter your address
+          </h1>
+        </legend>
+        
+        <!-- removed postcode lookup
+        <p>
+          <span class="govuk-!-margin-bottom-1 govuk-!-display-block">Postcode</span>
+          <strong>{{ data['address-postcode-current'] or 'LS1 3BE'}}</strong>
+          <a href="address-postcode-current" class="govuk-!-margin-left-5">
+            Change
+            <span class="govuk-visually-hidden">your postcode</span>
+          </a>
+        </p>
+        -->
+
+        <!-- subBuildingName-->
+
+
+        <!-- buildingNumber-->
+
+
+        <!-- buildingName-->
+
+        {{ govukInput({
+          label: {
+            text: "Address line 1"
+          },
+          classes: "govuk-input--width-20",
+          id: "address-line-1",
+          value: data['address-line'],
+          name: "address-line-1"
+        }) }}
+
+        <!-- throughfareName-->
+
+        {{ govukInput({
+          label: {
+            text: "Address line 2 (optional)"
+          },
+          classes: "govuk-input--width-20",
+          id: "address-line-2",
+          value: data['address-line-2'],
+          name: "address-line-2"
+        }) }}
+
+        <!-- postTown-->
+
+        {{ govukInput({
+          label: {
+            text: "Town or city"
+          },
+          classes: "govuk-input--width-20",
+          id: "town-or-city",
+          value: data['town-or-city'],
+          name: "town-or-city"
+        }) }}
+
+        {{ govukInput({
+          label: {
+            text: "Postcode"
+          },
+          classes: "govuk-input--width-10",
+          id: "post-code",
+          value: data['post-code'],
+          name: "post-code",
+          autocomplete: "postal-code"
+        }) }}
+
+        <!-- yearFrom-->
+
+        {{ govukDateInput({
+          id: "address-date-current",
+          namePrefix: "address-year-current",
+          fieldset: {
+            legend: {
+              text: "When did you start living here?",
+              isPageHeading: false,
+              classes: "govuk-fieldset__legend--s"
+            }
+          },
+          hint: {
+            text: "Enter the year you started living at this address, for example 2017"
+          },
+          items: [
+            {
+              name: "year",
+              value: data['address-year-current-year'],
+              classes: "govuk-input--width-4"
+            }
+          ]
+        }) }}
+
+
+      </fieldset>
+
+      <button class="govuk-button" type="submit" data-module="govuk-button">
+        Continue
+      </button>
+
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}
