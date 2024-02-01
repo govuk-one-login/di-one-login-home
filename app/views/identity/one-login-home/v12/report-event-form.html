@@ -1,4 +1,4 @@
-{% extends "layouts/one-login.html" %}
+{% extends "layouts/one-login-home-v12-OL.html" %}
 
 {% block pageTitle %}
   GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
@@ -10,19 +10,17 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-<a href="/identity/one-login-home/v10/activity-history" class="govuk-back-link">Back</a>
+<a href="/identity/one-login-home/v12/activity-history" class="govuk-back-link">Back</a>
 
 <div>
 <h1 class="govuk-heading-xl">Report something you do not recognise</h1>
 <p class="govuk-body">If there’s something you do not recognise about this activity, report it to the GOV.UK One Login team. </p>
 
 <div class="govuk-inset-text">
-  <p class="govuk-body govuk-!-font-weight-bold">12 December  2023 at 1:00pm (UK time)</p>
-  <p class="govuk-body govuk-!-font-weight-regular">You created your GOV.UK One Login.</p>
+  <p class="govuk-body govuk-!-font-weight-bold">13 February 2024 at 7:00pm (UK time)</p>
   <p class="govuk-body">You visited:</p>
 <ul class="govuk-list govuk-list--bullet">
-  <li>HMRC services</li>
-  <li>Prove your identity</li>
+  <li>a service run by HM Revenue and Customs (HMRC)</li>
   <li>GOV.UK One Login home</li>
 </ul>
 </div>
@@ -31,7 +29,7 @@
   <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
     <h2 class="govuk-heading-m">What do you want to report?</h2>
     <div id="waste-hint" class="govuk-hint">
-      Select all the things you do not recognise about this activity.
+      Select all that apply.
     </div>
     <div class="govuk-checkboxes" data-module="govuk-checkboxes">
       <div class="govuk-checkboxes__item">
@@ -52,7 +50,7 @@
 
 <p class="govuk-body govuk-!-font-weight-regular"> The GOV.UK One Login team will investigate and reply to you on <a class="govuk-body govuk-!-font-weight-bold">{{ data['email-address'] or 'email@address.com' }}</a>.</p>
 
-<a href="/identity/one-login-home/v10/event-reported-success.html" role="button" draggable="false" class="govuk-button govuk-button--continue" data-module="govuk-button">
+<a href="/identity/one-login-home/v12/event-reported-success.html" role="button" draggable="false" class="govuk-button govuk-button--continue" data-module="govuk-button">
   Report
 </a>
 
