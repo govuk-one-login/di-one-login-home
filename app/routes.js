@@ -139,7 +139,7 @@ const data = [
   { name: "Log in and file your Stamp Duty Land Tax return", href: "#" },
   { name: "Check if you have to pay tax on your pension savings", href: "#" },
   { name: "Check your State Pension forecast ", href: "#" },
-  { name: "Personal tax account", href: "https://www.gov.uk/personal-tax-account" },
+  { name: "Personal tax account", href: "/services/pta/v12/pta-signin-up-OL-journey" },
   { name: "Protect your pension lifetime allowance", href: "#" },
   { name: "Apply for EU VAT refunds if you trade from Northern Ireland", href: "#" },
   { name: "Register to report a cross-border arrangement (MDR)", href: "#" },
