@@ -1,5 +1,9 @@
 {% extends "layouts/pta-3.html" %}
 
+{% block pageTitle %}
+Personal tax account home
+{% endblock %}
+
 {% block content %}
 
 <div class="govuk-grid-row">
@@ -55,7 +59,7 @@
   {{ govukButton({
     text: "Return to task page",
     classes: "govuk-button--secondary",
-    href: "/identity/task-pages/v11-task-page.html"
+    href: "/identity/end-of-task-pages/v11-task-page"
   }) }}
 
 

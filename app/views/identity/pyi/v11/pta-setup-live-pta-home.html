@@ -1,6 +1,10 @@
 {% extends "/layouts/govuk-and-sign-out.html" %}
 {% set serviceName = nil %}
 
+{% block pageTitle %}
+You have already proved your identity
+{% endblock %}
+
 {% block beforeContent %}
 {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
 

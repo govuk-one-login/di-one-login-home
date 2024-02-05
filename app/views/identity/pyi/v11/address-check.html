@@ -1,5 +1,10 @@
 {% extends "/layouts/govuk-and-sign-out.html" %}
 {% set serviceName = nil %}
+
+{% block pageTitle %}
+Confirm your address
+{% endblock %}
+
 {% block beforeContent %}
 {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
 
@@ -10,6 +15,7 @@
   html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
 }) }}
 {% endblock %}
+
 {% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
