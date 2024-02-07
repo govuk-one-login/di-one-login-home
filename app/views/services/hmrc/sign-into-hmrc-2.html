@@ -1,0 +1,99 @@
+{% extends "layouts/main.html" %}
+
+
+{% block pageTitle %}
+Sign into HMRC
+{% endblock %}
+
+
+{% block header %}
+{{ govukHeader({
+homepageUrl: "/identity/task-pages/v11-task-page.html",
+serviceName: "",
+serviceUrl: "/",
+containerClasses: "govuk-width-container"
+
+}) }}
+
+
+
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+{% endblock %}
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="/identity/auth/v11/gov-account-via-gp" method="post" class="form">
+      <a href="/services/pta/v12/pta-signin-up-OL-journey" class="govuk-back-link">Back</a>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="signIn-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Sign in to HMRC
+            </h1>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="signIn" name="signIn" type="radio" value="government-gateway" aria-describedby="signIn-item-hint">
+              <label class="govuk-label govuk-radios__label" for="signIn">
+                GOV.UK One Login
+              </label>
+              <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+                If you’ve already created a GOV.UK One Login, sign in with your email address.              </div>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="signIn-2" name="signIn" type="radio" value="govuk-one-login" aria-describedby="signIn-2-item-hint">
+              <label class="govuk-label govuk-radios__label" for="signIn-2">
+                Government Gateway
+              </label>
+              <div id="signIn-2-item-hint" class="govuk-hint govuk-radios__hint">
+                If you Government Gateway, sign in with your user ID.
+              </div>
+            </div>
+            <div class="govuk-radios__divider">or</div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="whereDoYouLive-6" name="whereDoYouLive" type="radio" value="abroad">
+        <label class="govuk-label govuk-radios__label" for="whereDoYouLive-6">
+          Create new sign in details
+        </label>
+        <div id="signIn-2-item-hint" class="govuk-hint govuk-radios__hint">
+          We’ll ask you some questions to find out how you need to access this service
+        </div>
+          </div>
+        </fieldset>
+      </div>
+        <!--
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">About GOV.UK accounts</span>
+        </summary>
+        <div class="govuk-details__text">
+          <p>GOV.UK accounts are new. At the moment you can only use your GOV.UK account with a few services.</p>
+          <p>GOV.UK accounts are currently separate from other government accounts (for example Government Gateway).</p>
+          <p>In future, you'll be able to use your GOV.UK account to sign in to most services on GOV.UK.</p>
+        </div>
+      </details>
+      -->
+    </form>
+    {{ govukButton({
+      text: "Continue",
+      classes: "govuk-button--primary",
+      href: "/identity/pyi/v11/spinner-screen-placeholder-2"
+    }) }}
+  </div>
+</div>
+
+{% endblock %}
