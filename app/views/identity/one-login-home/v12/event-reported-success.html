@@ -12,32 +12,30 @@ You’ve reported activity you do not recognise
       <a href="/identity/one-login-home/v12/activity-history.html" class="govuk-back-link">Back to activity history</a>    </li>
 </div>
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-      <div class="govuk-panel govuk-panel--confirmation">
-        <h1 class="govuk-panel__title">
-          You’ve reported activity you do not recognise
-        </h1>
-      </div>
-   
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-panel govuk-panel--confirmation">
+      <h1 class="govuk-panel__title">
+        You’ve reported activity you do not recognise
+      </h1>
+    </div>
+    <br>
+    <p class="govuk-body">
+      Thanks for reporting this activity. A confirmation email with your report number has been sent to <strong>{{ data['email-address'] or 'email@address.com' }}</strong>
+    </p>
+    <h2 class="govuk-heading-l">Change your password</h2>
+    <p><a href="/identity/one-login-home/v12/enter-current-pw-2" class="govuk-link">Change your password</a> if you have not done this already.</p>
+    <p>Changing your password is the best way to keep your GOV.UK One Login secure.</p>
 
-<br>
 
-<div>
-  <h1 class="govuk-heading-l">What happens next</h1>
-  <p class="govuk-body govuk-!-font-weight-regular"> A confirmation email with your report number has been sent to  <a class="govuk-body govuk-!-font-weight-bold">{{ data['email-address'] or 'email@address.com' }}</a>.</p>
-  <p>The GOV.UK One Login team will investigate and reply to you by email. We might ask for more information about the activity you’ve reported.</p>
-  <p>We’ll always include your report number when we email you.</p>
+    <h2 class="govuk-heading-l">What happens next</h2>
+    <p>The GOV.UK One Login team will investigate your report.</p>
+    <p>We’ll only email you again if you need to do something to help protect your GOV.UK One Login. We’ll always include your report number when we email you.</p>
 
-  <h2 class="govuk-heading-m">Change your password</h2>
-  <p><a href="/identity/one-login-home/v12/enter-current-pw-2" class="govuk-link">Change your password </a>if you have not done this already.</p>
-  <p>This is to help keep your GOV.UK One Login secure.</p>
-
-  <h2 class="govuk-heading-m">If you need to contact us</h2>
-  <p class="govuk-body">
-    You can <a href="https://home.account.gov.uk/contact-gov-uk-one-login?fromURL=https%3A%2F%2Fhome.account.gov.uk%2Fyour-services%3F_ga%3D2.74737490.1562553744.1698932296-636000474.1677756439" class="govuk-link" rel="noreferrer noopener" target="_blank">contact the GOV.UK One Login team (opens in a new tab)</a>
-  </p>
-</div>
+    <h2 class="govuk-heading-m">If you need to contact us</h2>
+    <p class="govuk-body">
+      You can <a href="https://home.account.gov.uk/contact-gov-uk-one-login?fromURL=https%3A%2F%2Fhome.account.gov.uk%2Fyour-services%3F_ga%3D2.74737490.1562553744.1698932296-636000474.1677756439" class="govuk-link" rel="noreferrer noopener" target="_blank">contact the GOV.UK One Login team (opens in a new tab)</a>.
+    </p>
  </div>
-  </div>
+</div>
 {% endblock %}
