@@ -1,0 +1,77 @@
+{% extends "layouts/cross-service-header.html" %}
+{% set serviceName = nil %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+  <div class="summary-list-container govuk-!-margin-bottom-4">
+    <h1 class="govuk-heading-l">Are you sure you want to update the name saved in your GOV.UK One Login?</h1>
+    <p class="govuk-body">At the moment, updating the name saved in your GOV.UK One Login can take up to 5 working days.</p>
+    <p>You’ll need to contact the GOV.UK One Login team using an online form. </p>
+    <p>They will delete your identity information and you’ll need to prove your identity again. </p>
+
+    <div class="govuk-inset-text">
+      You need to have a UK passport or driving licence under your new name to change it in your GOV.UK One Login.
+    </div>
+
+    <div>
+      <h2 class="govuk-heading-m">If you need to use the service now</h2>
+      <p>GOV.UK One Login can still confirm your identity and you can access the service without updating your name.</p>
+      <p>However, the service will be given the name currently saved in your GOV.UK One Login.</p>
+    </div>
+
+    <div>
+      <h2 class="govuk-heading-m">Do you want to update your name?</h2>
+      {{ govukButton({
+        text: "Yes, contact the GOV.UK One Login team to update your name",
+        href: "/identity/pyi/v9/update-form.html",
+        classes: "govuk-button--secondary"
+        
+      }) }}
+      
+      {{ govukButton({
+        text: "No, cancel and go back",
+        href: "/identity/pyi/v9/share-id-info.html",
+        classes: "govuk-button--secondary"
+      }) }}
+    
+    </div>
+
+
+</div>
+  <!--
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+        <h2 class="govuk-heading-m">
+          Do you want to continue with this information?
+        </h2>
+      </legend>
+      <div class="govuk-radios" data-module="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="sign-in" name="sign-in" type="radio" value="government-gateway" aria-describedby="sign-in-item-hint">
+          <label class="govuk-label govuk-radios__label" for="sign-in">
+            Yes, share this information with Personal tax account
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
+          <label class="govuk-label govuk-radios__label" for="sign-in-2">
+            No, contact the GOV.UK One Login team to update this information
+          </label>
+          <div id="sign-in-2-item-hint" class="govuk-hint govuk-radios__hint">
+            Your information will be deleted and you’ll need to prove your identity again.
+        </div>
+      </div>
+    </fieldset>
+  </div>
+-->
+  
+  
+</div>
+
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
+
+{% block header %}
+  {{ govukHeader({
+    homepageUrl: "/identity/task-pages/v13-task-page.html",
+    productName: "",
+    classes: "govuk-header--with-sign-out-link",
+    navigation: [
+      {
+        href: "/sign-out",
+        text: "Sign out"
+      }
+    ]
+  }) }}
+  
+{% endblock %}
+
+
+

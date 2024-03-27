@@ -1,0 +1,71 @@
+{% extends "layouts/govuk-and-sign-out-v13.html" %}
+{% set serviceName = nil %}
+
+{% block pageTitle %}
+Prove your identity online
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "Beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+{% endblock %}
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+  <div class="summary-list-container">
+    <h1 class="govuk-heading-l">Prove your identity online </h1>
+  </div>
+  <p class="govuk-body">You can prove your identity online if you:</p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>have a UK driving licence (full or provisional) or a UK passport</li>
+    <li>can answer some security questions</li>
+  </ul>
+  <p>We use security questions to stop anyone who might have your details from pretending to be you</p>
+  <p>It takes 10 minutes to prove your identity this way.</p>
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+        <h2 class="govuk-fieldset__heading">
+          How do you want to continue?
+        </h2>
+      </legend>
+      <div class="govuk-radios" data-module="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
+          <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+            Enter your UK passport details and answer security questions online
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
+          <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+            Enter your UK photocard driving licence details and answer security questions online
+          </label>
+        </div>
+        <div class="govuk-radios__divider">or</div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="whereDoYouLive-6" name="whereDoYouLive" type="radio" value="abroad">
+          <label class="govuk-label govuk-radios__label" for="whereDoYouLive-6">
+            Prove your identity another way
+          </label>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
+  
+  <form class="form" action="/identity/pyi/v13/passport-details" method="post">
+      
+    <button class="govuk-button" data-module="govuk-button">Continue</button>
+  </form>
+</div>
+</div>
+{% endblock %}

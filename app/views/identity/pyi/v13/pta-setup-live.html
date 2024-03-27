@@ -1,0 +1,122 @@
+{% extends "/layouts/govuk-and-sign-out-v11.html" %}
+{% set serviceName = nil %}
+
+{% block pageTitle %}
+You have already proved your identity
+{% endblock %}
+
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "Beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">
+      You have already proved your identity
+    </h1>
+
+    <p>You have already proved your identity with GOV.UK One Login. You would have done this online or in person at the Post Office.</p>
+    <p>You can now continue to the service you need to use.</p>
+
+    <h2 class="govuk-heading-m">Check your details</h2>
+    <p>You submitted the following details when you proved your identity. You might want to check your details are still correct if you’ve not signed in to GOV.UK One Login in a while.</p>
+    <p>Some of these details might be used to automatically fill in the forms within the service you need to use.</p>
+
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <p>
+            {{ data['first-name'] }} {{ data['surname']  or "Joe Bloggs"}}
+          </p>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Date of birth
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['dob-day'] }}/{{ data['dob-month'] }}/{{ data['dob-year'] or "01/01/1980"}}
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Current home address
+        </dt>
+        <dd class="govuk-summary-list__value">
+
+          {% if data['address-line-1'] %}
+
+            {% if data['address-line-1'] %}
+              {{ data['address-line-1'] }},<br>
+            {% endif %}
+
+            {% if data['address-line-2'] %}
+              {{ data['address-line-2'] }}
+            {% endif %}, <br>
+
+            {% if data['town-or-city'] %}
+              {{ data['town-or-city'] }},<br>
+            {% endif %}
+
+            {% if data['post-code'] %}
+            {{ data['post-code'] }},<br>
+          {% endif %}
+
+          {% else %}
+            Office 14, <br>
+            New Station St, <br>
+            Leeds, <br>
+            LS1 5DL
+          {% endif %}
+
+        </dd>
+      </div>
+    </dl>
+
+
+
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          How to update your details
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        You can contact the <a href="https://home.account.gov.uk/contact-gov-uk-one-login?fromURL=https%3A%2F%2Fhome.account.gov.uk%2Fyour-services%3F_ga%3D2.74737490.1562553744.1698932296-636000474.1677756439" class="govuk-link" rel="noreferrer noopener" target="_blank">GOV.UK One Login team (opens in new tab)</a> to update your details.
+      </div>
+    </details>
+
+      {{ govukButton({
+        text: "Continue",
+        href: "/services/pta/v12/what-is-your-ni.html"
+      }) }}
+  
+
+      </div>
+          </div>
+  
+        </div>
+      </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+
+    <!-- The Related items component is not part of GOV.UK Frontend but will be styled if used in the Prototype Kit -->
+
+
+
+  </div>
+</div>
+{% endblock %}

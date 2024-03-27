@@ -1,0 +1,40 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Returning you to the service
+{% endblock %}
+
+{% block header %}
+{{ govukHeader({
+homepageUrl: "/identity/task-page-2.html",
+serviceName: "",
+serviceUrl: "/",
+containerClasses: "govuk-width-container"
+}) }}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+  <div class="summary-list-container govuk-!-margin-bottom-4">
+    <h1 class="govuk-heading-l">Returning you to [service]
+    </h1>
+
+    <div class="loader"></div>
+    <br>
+    <p class="govuk-body">
+      <a href="/identity/pyi/v11/pta-setup-live-pta-home" class="govuk-link govuk-link--no-visited-state">Continue</a>
+    </p>
+
+  
+
+</div>
+
+  
+  
+</div>
+
+{% endblock %}
