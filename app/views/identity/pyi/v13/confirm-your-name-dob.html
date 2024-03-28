@@ -1,0 +1,71 @@
+{% extends "/layouts/govuk-and-sign-out-v13.html" %}
+{% set serviceName = nil %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+  <div class="summary-list-container govuk-!-margin-bottom-4">
+    <h1 class="govuk-heading-l">You need to confirm your name and date of birth</h1>
+    <p>To keep your GOV.UK One Login secure, you need to confirm the name and date of birth you gave us when you proved your identity.</p>
+    
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Joe Bloggs
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Date of birth
+        </dt>
+        <dd class="govuk-summary-list__value">
+          5 January 1978
+        </dd>
+      </div>
+    </dl>
+   
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h2 class="govuk-fieldset__heading">
+            Are these details correct?
+          </h2>
+        </legend>
+        <div class="govuk-radios" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
+            <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+              Yes
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
+            <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+              No - I need to update my name or date of birth
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+  <div>
+    {{ govukButton({
+      text: "Continue",
+      href: "/identity/pyi/v13/confirm-address.html"
+    }) }}
+  </div>
+</div>
+
+  
+  
+</div>
+</div>
+
+{% endblock %}

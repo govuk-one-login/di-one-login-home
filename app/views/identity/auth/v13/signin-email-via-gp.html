@@ -6,7 +6,7 @@ Enter your email address
 
 {% block header %}
 {{ govukHeader({
-homepageUrl: "/identity/task-pages/v11-task-page.html",
+homepageUrl: "/identity/task-pages/v13-task-page.html",
 serviceName: "",
 serviceUrl: "/",
 containerClasses: "govuk-width-container"
@@ -24,11 +24,12 @@ containerClasses: "govuk-width-container"
     </span>
   </p>
 </div>
+
+<a href="/identity/auth/v13/gov-account-via-gp" class="govuk-back-link">Back</a>
+
 {% endblock %}
 
 {% block content %}
-
-<a href="/identity/auth/v11/gov-account-via-gp" class="govuk-back-link">Back</a>
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
@@ -40,7 +41,7 @@ containerClasses: "govuk-width-container"
       /auth/mvp/signin-checking
     -->
 
-    <form class="form" action="/identity/auth/v11/signin-password-via-gp" method="post">
+    <form class="form" action="/identity/auth/v13/signin-password-via-gp" method="post">
 
       <div class="govuk-form-group">
 

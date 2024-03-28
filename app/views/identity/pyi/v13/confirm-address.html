@@ -1,0 +1,178 @@
+{% extends "/layouts/govuk-and-sign-out-v13.html" %}
+{% set serviceName = nil %}
+
+{% block pageTitle %}
+Confirm your address
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "Beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">You need to confirm your address</h1>
+    <p>To keep your GOV.UK One Login secure, you need to confirm the address you gave us when you proved your identity.</p>
+
+    <form action="kbv-start" method="post" class="form">
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Current home address
+          </dt>
+          <dd class="govuk-summary-list__value">
+
+            {% if data['address-line-1'] %}
+
+              {% if data['address-line-1'] %}
+                {{ data['address-line-1'] }},<br>
+              {% endif %}
+
+              {% if data['address-line-2'] %}
+                {{ data['address-line-2'] }}
+              {% endif %}, <br>
+
+              {% if data['town-or-city'] %}
+                {{ data['town-or-city'] }},<br>
+              {% endif %}
+
+              {% if data['post-code'] %}
+              {{ data['post-code'] }},<br>
+            {% endif %}
+
+            {% else %}
+              Office 14, <br>
+              New Station St, <br>
+              Leeds, <br>
+              LS1 5DL
+            {% endif %}
+
+          </dd>
+        </div>
+        
+
+        {% if data['address-city-prev'] %}
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Previous address
+          </dt>
+          <dd class="govuk-summary-list__value">
+
+            {% if data['address-city-prev'] %}
+
+              {% if data['address-flat-number-prev'] %}
+              {{ data['address-flat-number-prev'] }},<br>
+              {% endif %}
+
+              {% if data['address-house-number-prev'] %}
+              {{ data['address-house-number-prev'] }}
+              {% endif %}
+
+              {% if data['address-house-name-prev'] %}
+              {{ data['address-house-name-prev'] }},<br>
+              {% endif %}
+
+              {{ data['address-street-prev'] }},<br>
+              {{ data['address-city-prev'] }},<br>
+              {{ data['address-postcode-prev'] or 'LS1 3BE' }}
+
+            {% else %}
+              Office 14, <br>
+              New Station St, <br>
+              Leeds, <br>
+              LS1 5DL
+            {% endif %}
+
+          </dd>
+        </div>
+
+        {% endif %}
+
+      </dl>
+
+      {% if data.prototype['needPrevAddress'] === 'true' %}
+
+      {% if not data['address-postcode-prev'] %}
+
+        {{ govukRadios({
+          classes: "govuk-radios--inline",
+          idPrefix: "lived-3",
+          name: "lived-3",
+          fieldset: {
+            legend: {
+              text: "Have you lived here for more than 3 months?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--s"
+            }
+          },
+          hint: {
+            text: "We'll need to ask you where you lived before if you've recently moved to this address."
+          },
+          items: [
+            {
+              value: "yes",
+              text: "Yes"
+            },
+            {
+              value: "no",
+              text: "No"
+            }
+          ]
+        }) }}
+
+      {% endif %}
+
+      {% else %}
+      <input class="govuk-input" id="lived" name="lived-3" type="hidden" value="yes">
+      {% endif %}
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h2 class="govuk-fieldset__heading">
+              Is this your current home address?
+            </h2>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
+              <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
+              <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+                No - I need to update it
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      
+
+      {{ govukButton({
+        text: "Continue",
+        href: "/identity/pyi/v13/enter-address"
+      }) }}
+
+    </form>
+
+    
+
+  </div>
+</div>
+
+{% endblock %}
