@@ -1,12 +1,12 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-Personal tax account
+Using your GOV.UK One Login
 {% endblock %}
 
 {% block header %}
 {{ govukHeader({
-homepageUrl: "/identity/task-page.html",
+homepageUrl: "",
 serviceName: "",
 serviceUrl: "/",
 containerClasses: "govuk-width-container"
@@ -19,7 +19,7 @@ containerClasses: "govuk-width-container"
 <div class="govuk-breadcrumbs">
   <ol class="govuk-breadcrumbs__list">
     <li class="govuk-breadcrumbs__list-item">
-      <a class="govuk-breadcrumbs__link" href="/identity/task-page-2.html">Home</a>
+      <a class="govuk-breadcrumbs__link" href="https://www.gov.uk/">Home</a>
     </li>
 </div>
 
@@ -30,24 +30,26 @@ containerClasses: "govuk-width-container"
       Using your GOV.UK One Login
     </h1>
 
-    <p class="govuk-body">Contents</p>
-<ul class="govuk-list">
+    <p class="govuk-body-s">Contents</p>
+<ul class="govuk-list govuk-body-s">
   <li> — Sign in to your GOV.UK One Login</li>
-  <li><a class="govuk-link" href="/identity/one-login-home/v10/guidance-page-2.html"> — Proving your identity with GOV.UK One Login</a></li>
+  <li><a class="govuk-link" href="/identity/one-login-home/v13/guidance-page-2.html"></a> — Services you can use with GOV.UK One Login</li>
+  <li><a class="govuk-link" href="/identity/one-login-home/v10/guidance-page-3.html"> — Proving your identity with GOV.UK One Login</a></li>
 </ul>
 
     <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
     <h2 class="govuk-heading-l">Sign in to your GOV.UK One Login</h2>
     <p>You can use your GOV.UK One Login to access some government services.</p>
-    <p class="govuk-body">See the <a href="/identity/one-login-home/v10/services-search-task-1.html" class="govuk-link"> services you can use with GOV.UK One Login</a>.</p>
-    <p class="govuk-body">You currently need to use different accounts to <a href="https://www.gov.uk/sign-in" class="govuk-link"> sign in to other government services</a>, such as Universal Credit. </p>
+    <p>It does not work with all <a href="https://www.gov.uk/sign-in">government accounts and services </a> yet (for example Universal Credit).</p>
+    <p>Over time, GOV.UK One Login will replace all other ways to sign in to services on GOV.UK, including Government Gateway.    </p>
+    <p class="govuk-body">See the <a href="/identity/one-login-home/v13/guidance-page-2.html" class="govuk-link"> services you can use with GOV.UK One Login</a>.</p>
 
-    <p>In the future, you'll be able to use your GOV.UK One Login to access all services on GOV.UK.</p>
     <div class="govuk-inset-text">
-      If  you need a GOV.UK One Login to use a service, and you do not already have one, you’ll be able to create one when you first use that service.
+      This service is also available in <a href="">Welsh (Cymraeg)</a>.
     </div>
 
+    <p>If you need a GOV.UK One Login to use a service, and you do not already have one, you’ll be able to create one when you first use that service.</p>
     <p>Sign in to:</p>
     <ul class="govuk-list govuk-list--bullet">
       <li>change your sign in details (email address, password or how you get security codes)</li>
@@ -57,13 +59,15 @@ containerClasses: "govuk-width-container"
 
 {{ govukButton({
   text: "Sign in",
-  href: "/identity/auth/v10/gov-account-via-gp.html",
+  href: "/identity/auth/v13/gov-account",
   isStartButton: true
 }) }}
 
 <h2 class="govuk-heading-m">Report a problem or give feedback</h2>
 <p class="govuk-body">To report a problem with your GOV.UK One Login or give feedback <a href="https://home.account.gov.uk/contact-gov-uk-one-login?fromURL=https%3A%2F%2Fhome.account.gov.uk%2Fyour-services%3F_ga%3D2.74737490.1562553744.1698932296-636000474.1677756439" class="govuk-link">contact the GOV.UK One Login team</a>.</p>
 
+<h2 class="govuk-heading-m">How GOV.UK One Login uses your information</h2>
+<p>To find out how your information is stored and used when you use GOV.UK One Login, see the <a href="https://signin.account.gov.uk/privacy-notice?_ga=2.199070319.1992640437.1712137227-669254218.1708941790">GOV.UK One Login privacy notice</a>.</p>
 
 <nav class="govuk-pagination govuk-pagination--block" role="navigation" aria-label="results">
   
@@ -71,7 +75,7 @@ containerClasses: "govuk-width-container"
     <a class="govuk-link govuk-pagination__link" href="/identity/one-login-home/v10/guidance-page-2.html" rel="next"> <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
         <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
       </svg> <span class="govuk-pagination__link-title">Next</span><span class="govuk-visually-hidden">:</span>
-      <span class="govuk-pagination__link-label">Proving your identity with GOV.UK One Login</span></a>
+      <span class="govuk-pagination__link-label">Services you can use with GOV.UK One Login      </span></a>
   </div>
 </nav>
 
