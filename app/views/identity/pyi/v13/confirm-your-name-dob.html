@@ -2,7 +2,19 @@
 {% set serviceName = nil %}
 
 {% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
 {% endblock %}
+
 
 {% block content %}
 <div class="govuk-grid-row">
@@ -18,7 +30,7 @@
           Name
         </dt>
         <dd class="govuk-summary-list__value">
-          Joe Bloggs
+          {{ data['first-name'] }} {{ data['surname']  or "Joe Bloggs"}}
         </dd>
       </div>
       <div class="govuk-summary-list__row">
@@ -26,7 +38,8 @@
           Date of birth
         </dt>
         <dd class="govuk-summary-list__value">
-          5 January 1978
+          {{ data['dob-day'] }}/{{ data['dob-month'] }}/{{ data['dob-year'] or "01/01/1980"}}
+
         </dd>
       </div>
     </dl>
