@@ -28,7 +28,8 @@ Security
       Your identity information
     </h1>
     <p>You’ve proved your identity with GOV.UK One Login. </p>
-    <p>Your GOV.UK One Login shares your identity information when a service needs to check who you are so you do not need to enter it again.</p>
+    <p>Your GOV.UK One Login shares your identity information with a service when it needs to check who you are.
+    </p>
 
     <div class="activity-card govuk-!-margin-bottom-6">
       <h2 class="govuk-heading-m">Your identity information</h2>
@@ -39,7 +40,7 @@ Security
         </dt>
         <dd class="govuk-summary-list__value">
           <p class="govuk-body">{{ data['first-name'] }} {{ data['surname']  or "Joe Bloggs"}}</p>
-          <p class="gem-c-hint govuk-hint govuk-!-margin-bottom-3">Saved on 20 June 2023</p> 
+          <p class="gem-c-hint govuk-hint govuk-!-margin-bottom-3">Saved on 25 October 2023</p> 
         </dd>
       </div>
     </dl>
@@ -51,7 +52,7 @@ Security
         </dt>
         <dd class="govuk-summary-list__value">
           <p>{{ data['dob-day'] }} {{ data['dob-month'] }} {{ data['dob-year'] or "01 January 1973"}}</p>
-          <p class="gem-c-hint govuk-hint govuk-!-margin-bottom-3">Saved on 20 June 2023</p> 
+          <p class="gem-c-hint govuk-hint govuk-!-margin-bottom-3">Saved on 25 October 2023</p> 
         </dd>
       </div>
     </dl>
@@ -90,20 +91,17 @@ Security
             {% endif %}
     
           </p>
-          <p class="gem-c-hint govuk-hint govuk-!-margin-bottom-3">Saved on 15 January 2024</p> 
-    
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="#">
-            Update your current address<span class="govuk-visually-hidden"> name</span>
-          </a>
+          <p class="gem-c-hint govuk-hint govuk-!-margin-bottom-3">Saved on 16 April 2024</p> 
+          <p class="govuk-body">
+            <a href="#" class="govuk-link govuk-link--no-visited-state">Update your current address</a>
+          </p>
         </dd>
       </div>
     </dl>
     </div>
 
     <h2 class="govuk-heading-l">
-      Your identity information
+      Keeping your identity information up to date
     </h2>
     <p>When you sign in, we’ll sometimes ask you to confirm the saved information is still correct. </p>
     <p class="govuk-body">This helps us:</p>
