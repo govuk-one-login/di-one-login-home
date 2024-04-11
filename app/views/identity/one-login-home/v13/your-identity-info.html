@@ -65,24 +65,24 @@ Security
         <dd class="govuk-summary-list__value">
           <p>
     
-            {% if data['address-city-current'] %}
-    
-              {% if data['address-flat-number-current'] %}
-                {{ data['address-flat-number-current'] }},<br>
+            {% if data['address-line-1'] %}
+
+              {% if data['address-line-1'] %}
+                {{ data['address-line-1'] }},<br>
               {% endif %}
-    
-              {% if data['address-house-number-current'] %}
-                {{ data['address-house-number-current'] }}
+
+              {% if data['address-line-2'] %}
+                {{ data['address-line-2'] }}
+              {% endif %}, <br>
+
+              {% if data['town-or-city'] %}
+                {{ data['town-or-city'] }},<br>
               {% endif %}
-    
-              {% if data['address-house-name-current'] %}
-                {{ data['address-house-name-current'] }},<br>
-              {% endif %}
-    
-              {{ data['address-street-current'] }},<br>
-              {{ data['address-city-current'] }},<br>
-              {{ data['address-postcode'] or 'LS1 3BE' }}
-    
+
+              {% if data['post-code'] %}
+              {{ data['post-code'] }},<br>
+            {% endif %}
+
             {% else %}
               Office 14, <br>
               New Station St, <br>
