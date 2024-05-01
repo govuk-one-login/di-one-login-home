@@ -94,7 +94,7 @@ Enter your passport details
           </div>
 
         </fieldset>
-
+        
 
         {{ govukDateInput({
         id: "dob",
@@ -105,7 +105,7 @@ Enter your passport details
           }
         },
         hint: {
-          text: "For example, 5 9 1973"
+          text: "For example, 5 January 1973"
         },
         items: [
           {
@@ -115,9 +115,11 @@ Enter your passport details
             autocomplete: "bday-day"
           },
           {
+            
+            
             name: "month",
             value: data['dob-month'],
-            classes: "govuk-input--width-2",
+            classes: "govuk-input--width-6",
             autocomplete: "bday-month"
           },
           {
@@ -129,18 +131,42 @@ Enter your passport details
         ]
       }) }}
 
-        {{ govukDateInput({
+      {{ govukDateInput({
         id: "passport-issued",
-        namePrefix: "passport-expires",
+        namePrefix: "dob",
         fieldset: {
           legend: {
-            text: "Passport expiry date"
+            text: " Passport expiry date"
           }
         },
         hint: {
-          text: "For example, 27 5 2029"
-        }
+          text: "For example, 25 April 2030"
+        },
+        items: [
+          {
+            name: "day",
+            value: data['expiry-day'],
+            classes: "govuk-input--width-2",
+            autocomplete: "expiry-day"
+          },
+          {
+            
+            
+            name: "month",
+            value: data['expiry-month'],
+            classes: "govuk-input--width-6",
+            autocomplete: "expiry-month"
+          },
+          {
+            name: "year",
+            value: data['expiry-year'],
+            classes: "govuk-input--width-4",
+            autocomplete: "expiry-year"
+          }
+        ]
       }) }}
+
+    
 
         {% if data['errorcode'] %}
         <input class="govuk-input" id="errorcode" name="errorcode" type="hidden" value="{{ data['errorcode'] }}">

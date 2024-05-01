@@ -1,0 +1,107 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Using your GOV.UK One Login
+{% endblock %}
+
+{% block header %}
+{{ govukHeader({
+homepageUrl: "/identity/task-pages/v14-task-page.html",
+serviceName: "",
+serviceUrl: "/",
+containerClasses: "govuk-width-container"
+}) }}
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="https://www.gov.uk/">Home</a>
+    </li>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      Using your GOV.UK One Login
+    </h1>
+
+    <p class="govuk-body-s">Contents</p>
+<ul class="govuk-list govuk-body-s">
+  <li><a class="govuk-link" href="/identity/one-login-home/v14/guidance-page-1-task3.html"> — Sign in to your GOV.UK One Login</a></li>
+  <li> — Services you can use with GOV.UK One Login</li>
+  <li><a class="govuk-link" href="/identity/one-login-home/v14/guidance-page-3-task3.html"> — Proving your identity with GOV.UK One Login</a></li>
+</ul>
+
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+    <h2 class="govuk-heading-l">Services you can use with GOV.UK One Login    </h2>
+    <p>At the moment, you can only use GOV.UK One Login to access some government services. In the future, you’ll be able to use it to access all services on GOV.UK.    </p>
+    
+    <p>The services you can currently access with GOV.UK One Login include: </p>
+    <p class="govuk-body">You can buy:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li><a href="">apply for an HM Armed Forces Veteran Card</a></li>
+      <li><a href="">apply for a vehicle operator licence</a></li>
+      <li><a href="">apply to become a registered social worker in England</a></li>
+      <li><a href="">apprenticeship assessment service</a></li>
+      <li><a href="">apprenticeship provider and assessment register (APAR)</a></li>
+      <li><a href="">claim compensation if you were the victim of a violent crime</a></li>
+      <li><a href="">connect families to support</a></li>
+      <li><a href="">early years child development training</a></li>
+      <li><a href="">find and apply for a grant</a></li>
+      <li><a href="">find a UK market conformity assessment body</a></li>
+      <li><a href="">GOV.UK email subscriptions</a></li>
+      <li><a href="">manage apprenticeships</a></li>
+      <li><a href="">manage family support services and accounts</a></li>
+      <li><a href="">modern slavery statement registry</a></li>
+      <li><a href="">Ofqual subject matter specialist account</a></li>
+      <li><a href="">request a basic DBS check</a></li>
+      <li><a href="">sign your mortgage deed</a></li>
+    </ul>
+
+    <div class="govuk-inset-text">
+      You currently need to use different accounts to <a href="https://www.gov.uk/sign-in">sign in to other government services</a>.
+    </div>
+
+<h2 class="govuk-heading-m">How to create your GOV.UK One Login</h2>
+<p>If you need a GOV.UK One Login to use a service, you will be able to create one when you first use that service.</p>
+
+<nav class="govuk-pagination govuk-pagination--block" aria-label="Pagination">
+  <div class="govuk-pagination__prev">
+    <a class="govuk-link govuk-pagination__link" href="/identity/one-login-home/v14/guidance-page-1-task3.html" rel="prev">
+      <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+        <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+      </svg>
+      <span class="govuk-pagination__link-title">
+        Previous<span class="govuk-visually-hidden"> page</span>
+      </span>
+      <span class="govuk-visually-hidden">:</span>
+      <span class="govuk-pagination__link-label">Sign in to your GOV.UK One Login</span>
+    </a>
+  </div>
+  <div class="govuk-pagination__next">
+    <a class="govuk-link govuk-pagination__link" href="/identity/one-login-home/v14/guidance-page-3-task3.html" rel="next">
+      <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+        <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+      </svg>
+      <span class="govuk-pagination__link-title">
+        Next<span class="govuk-visually-hidden"> page</span>
+      </span>
+      <span class="govuk-visually-hidden">:</span>
+      <span class="govuk-pagination__link-label">Proving your identity with GOV.UK One Login</span>
+    </a>
+  </div>
+</nav>
+
+<a href="#" class="govuk-link govuk-link--no-visited-state">View a printable version of the whole guide</a>
+  
+        </div>
+      </div>
+  </div>
+</div>
+{% endblock %}
