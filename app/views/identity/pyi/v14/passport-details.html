@@ -97,74 +97,72 @@ Enter your passport details
         
 
         {{ govukDateInput({
-        id: "dob",
-        namePrefix: "dob",
-        fieldset: {
-          legend: {
-            text: " Date of birth"
-          }
-        },
-        hint: {
-          text: "For example, 5 January 1973"
-        },
-        items: [
-          {
-            name: "day",
-            value: data['dob-day'],
-            classes: "govuk-input--width-2",
-            autocomplete: "bday-day"
+          id: "dob",
+          namePrefix: "dob",
+          fieldset: {
+            legend: {
+              text: " Date of birth"
+            }
           },
-          {
-            
-            
-            name: "month",
-            value: data['dob-month'],
-            classes: "govuk-input--width-6",
-            autocomplete: "bday-month"
+          hint: {
+            text: "For example, 5 April 1973"
           },
-          {
-            name: "year",
-            value: data['dob-year'],
-            classes: "govuk-input--width-4",
-            autocomplete: "bday-year"
-          }
-        ]
-      }) }}
-
-      {{ govukDateInput({
-        id: "passport-issued",
-        namePrefix: "dob",
-        fieldset: {
-          legend: {
-            text: " Passport expiry date"
-          }
-        },
-        hint: {
-          text: "For example, 25 April 2030"
-        },
-        items: [
-          {
-            name: "day",
-            value: data['expiry-day'],
-            classes: "govuk-input--width-2",
-            autocomplete: "expiry-day"
-          },
-          {
-            
-            
-            name: "month",
-            value: data['expiry-month'],
-            classes: "govuk-input--width-6",
-            autocomplete: "expiry-month"
-          },
-          {
-            name: "year",
-            value: data['expiry-year'],
-            classes: "govuk-input--width-4",
-            autocomplete: "expiry-year"
-          }
-        ]
-      }) }}
+          items: [
+            {
+              name: "day",
+              value: data['dob-day'],
+              classes: "govuk-input--width-2",
+              autocomplete: "bday-day"
+            },
+            {
+              name: "month",
+              value: data['dob-month'],
+              classes: "govuk-input--width-6",
+              autocomplete: "bday-month"
+            },
+            {
+              name: "year",
+              value: data['dob-year'],
+              classes: "govuk-input--width-4",
+              autocomplete: "bday-year"
+            }
+          ]
+        }) }}
+  
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+              <p>Passport expiry date</p>
+            <div id="passport-issued-hint" class="govuk-hint">
+              For example, 27 3 2007
+            </div>
+            <div class="govuk-date-input" id="passport-issued">
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                    Day
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+                </div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                    Month
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-6" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+                </div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                    Year
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
 
     
 
