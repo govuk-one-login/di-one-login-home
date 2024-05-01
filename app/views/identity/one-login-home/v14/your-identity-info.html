@@ -28,19 +28,42 @@ Security
       Your identity information
     </h1>
     <p>You’ve proved your identity with GOV.UK One Login. </p>
-    <p>Your GOV.UK One Login shares your identity information with a service when it needs to check who you are.
+    <p>When you sign in, we’ll sometimes ask you to confirm the saved information is still correct. 
     </p>
 
+        <p class="govuk-body">This helps us:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>share the correct identity information with services</li>
+      <li>keep your GOV.UK One Login secure</li>
+    </ul>
+
     <div class="activity-card govuk-!-margin-bottom-6">
-      <h2 class="govuk-heading-m">Your identity information</h2>
+      <h2 class="govuk-heading-l">Your identity information</h2>
+      <p>Your GOV.UK One Login shares your identity information when a service needs to check who you are.</p>
     <dl class="govuk-summary-list govuk-!-margin-bottom-0">
       <div class="govuk-summary-list__row" style="border-top: 1px solid #b1b4b6; padding-top:10px">
         <dt class="govuk-summary-list__key">
-          Name  on your UK passport
+          <h2 class="govuk-heading-m">Name  on your UK passport</h2>
         </dt>
         <dd class="govuk-summary-list__value">
-          <p class="govuk-body">{{ data['first-name'] }} {{ data['surname']  or "Joe Bloggs"}}</p>
-          <p class="gem-c-hint govuk-hint govuk-!-margin-bottom-3">Saved on 25 October 2023</p> 
+          <h2 class="govuk-heading-s">Given names</h2>
+          <p class="govuk-body">{{ data['first-name']  or "Joe"}}</p>
+          <h2 class="govuk-heading-s">Last name</h2>
+          <p class="govuk-body">{{ data['surname']  or "Bloggs"}}</p>
+          <p class="gem-c-hint govuk-hint govuk-!-margin-bottom-3">Saved on 25 November 2023</p> 
+          <details class="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                How to update your name
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              <p class="govuk-body">
+                If you only need to update your given names or your last name, you can <a href="#" class="govuk-link">update your name yourself</a>. You’ll need to prove your identity again using a photo ID under your new name.
+              </p>
+              <p>If you need to update you entire name (both your given names and last name), <a href="#" class="govuk-link">contact the GOV.UK One Login team (opens in new tab)</a>. They’ll delete your saved identity information and ask you to prove your identity again with your new name.</p>
+            </div>
+          </details>
         </dd>
       </div>
     </dl>
@@ -48,11 +71,23 @@ Security
     <dl class="govuk-summary-list govuk-!-margin-bottom-0">
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Date of birth
+          <h2 class="govuk-heading-m">Date of birth</h2>
         </dt>
         <dd class="govuk-summary-list__value">
           <p>{{ data['dob-day'] }} {{ data['dob-month'] }} {{ data['dob-year'] or "01 January 1973"}}</p>
           <p class="gem-c-hint govuk-hint govuk-!-margin-bottom-3">Saved on 25 October 2023</p> 
+          <details class="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                How to update your date of birth
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              <p class="govuk-body">
+                If your date of birth is wrong, <a href="#" class="govuk-link">contact the GOV.UK One Login team (opens in new tab)</a>. They’ll delete your saved identity information and ask you to prove your identity again with the right details.
+              </p>
+            </div>
+          </details>
         </dd>
       </div>
     </dl>
@@ -60,7 +95,7 @@ Security
     <dl class="govuk-summary-list govuk-!-margin-bottom-0">
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Current address
+          <h2 class="govuk-heading-m">Current address</h2>
         </dt>
         <dd class="govuk-summary-list__value">
           <p>
@@ -99,29 +134,6 @@ Security
       </div>
     </dl>
     </div>
-
-    <h2 class="govuk-heading-m">
-      Keeping your identity information up to date
-    </h2>
-    <p>When you sign in, we’ll sometimes ask you to confirm the saved information is still correct. </p>
-    <p class="govuk-body">This helps us:</p>
-<ul class="govuk-list govuk-list--bullet">
-  <li>share the correct identity information  with services</li>
-  <li>keep your GOV.UK One Login secure</li>
-</ul>
-
-<h3 class="govuk-heading-m">
-  Updating your name or date of birth
-</h3>
-<p class="govuk-body"> If you need to update your name or date of birth you need to
-  <a href="https://home.account.gov.uk/contact-gov-uk-one-login?_ga=2.47735463.1201735138.1712234533-669254218.1708941790" class="govuk-link" rel="noreferrer noopener" target="_blank">contact the GOV.UK One Login team (opens in new tab)</a>.
-</p>
-<p>They’ll delete your saved identity information and ask you to prove your identity again with your new details. </p>
-
-
-    
-    
-
   </div>
 </div>
 
