@@ -1,0 +1,140 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Task page
+{% endblock %}
+
+
+{% block header %}
+{{ govukHeader({
+homepageUrl: "/",
+serviceName: "",
+serviceUrl: "/",
+containerClasses: "govuk-width-container"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div>
+    <h1 class="govuk-heading-xl">
+      Tasks
+    </h1>
+    <h2 class="govuk-heading-m">7 May - 9 May 2024</h2>
+  </div>
+
+ 
+    <h2 class="govuk-heading-m">Task 1</h2>
+    {{ govukButton({
+      text: "Start",
+      href: "/services/dbs/v14/request-dbs-check.html"
+    }) }}
+
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Links
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <ul class="govuk-list govuk-list--bullet">
+          <li><a href="/services/dbs/v13/request-dbs-check" class="govuk-link govuk-link--no-visited-state">Request a basic DBS check</a></li>
+          <li><a href="/services/dbs/v13/pyi-for-dbs" class="govuk-link govuk-link--no-visited-state">Prove your identity with GOV.UK One Login</a></li>
+          <br>
+          <li><a href="/identity/auth/v13/gov-account" class="govuk-link govuk-link--no-visited-state">Create your GOV.UK One Login or sign in</a></li>
+          <li><a href="/identity/auth/v13/create-email" class="govuk-link govuk-link--no-visited-state">Enter your email address</a></li>
+          <li><a href="/identity/auth/v13/create-check-email" class="govuk-link govuk-link--no-visited-state">Check your email</a></li>
+          <li><a href="/identity/auth/v13/create-password" class="govuk-link govuk-link--no-visited-state">Create your password</a></li>
+          <li><a href="/identity/auth/v13/create-choose-otp-method" class="govuk-link govuk-link--no-visited-state">Choose how to get security codes</a></li>
+          <li><a href="/identity/auth/v13/create-enter-mobile" class="govuk-link govuk-link--no-visited-state">Enter your mobile phone number</a></li>
+          <li><a href="/identity/auth/v13/create-check-sms" class="govuk-link govuk-link--no-visited-state">Check your phone</a></li>
+          <li><a href="/identity/auth/v13/create-success" class="govuk-link govuk-link--no-visited-state">You’ve created your GOV.UK One Login</a></li>
+          <br>
+          <li><a href="/identity/pyi/v13/how-to-pyi" class="govuk-link govuk-link--no-visited-state">How would you like to prove your identity?</a></li>
+          <li><a href="/identity/pyi/v13/pyi-online" class="govuk-link govuk-link--no-visited-state">Prove your identity online</a></li>
+          <li><a href="/identity/pyi/v13/passport-details" class="govuk-link govuk-link--no-visited-state">Enter your details exactly as they appear on your UK passport</a></li>
+          <li><a href="/identity/pyi/v13/enter-address" class="govuk-link govuk-link--no-visited-state">Enter your address </a>         </li>
+          <li><a href="/identity/pyi/v13/address-check" class="govuk-link govuk-link--no-visited-state">Confirm your address</a>          </li>
+          <li><a href="/identity/pyi/v13/fraud-check-task1" class="govuk-link govuk-link--no-visited-state">We need to check your details</a>          </li>
+          <li><a href="/identity/pyi/v13/kbv-start" class="govuk-link govuk-link--no-visited-state">Answer security questions</a>          </li>
+          <li><a href="/identity/pyi/v13/kbv-question-3" class="govuk-link govuk-link--no-visited-state">When did you open your current account?</a>          </li>
+          <li><a href="/identity/pyi/v13/kbv-question-4" class="govuk-link govuk-link--no-visited-state">When did you take out your mobile phone contract?</a>          </li>
+          <li><a href="/identity/pyi/v13/kbv-question-1" class="govuk-link govuk-link--no-visited-state">How much did you borrow when you first took out your mortgage?</a>          </li>
+          <li><a href="/identity/pyi/v13/identity-proved" class="govuk-link govuk-link--no-visited-state">Continue to the service you want to use</a>          </li>
+          <br>
+          <li><a href="/services/dbs/v13/apply-for-dbs-check" class="govuk-link govuk-link--no-visited-state">Apply for a basic DBS check</a>          </li>
+          <li><a href="/identity/v13-end-of-task-1" class="govuk-link govuk-link--no-visited-state">End of task 1 </a>         </li>
+        </ul>
+      </div>
+    
+    </details>
+
+    <h2 class="govuk-heading-m">Task 2</h2>
+    {{ govukButton({
+      text: "Start",
+      href: "/services/state-pension/v14/check-state-pension-forecast.html"
+    }) }}
+
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Links
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <ul class="govuk-list govuk-list--bullet">
+          <li><a href="/services/state-pension/check-state-pension-forecast" class="govuk-link govuk-link--no-visited-state">Check your State Pension forecast          </a></li>
+          <br>
+          <li><a href="/identity/auth/v13/gov-account-via-gp" class="govuk-link govuk-link--no-visited-state">Create your GOV.UK One Login or sign in <a></li>
+          <li><a href="/identity/auth/v13/signin-email-via-gp" class="govuk-link govuk-link--no-visited-state">Enter your email address to sign in to your GOV.UK One Login          </a></li>
+          <li><a href="/identity/auth/v13/signin-password-via-gp" class="govuk-link govuk-link--no-visited-state">Enter your password          </a></li>
+          <li><a href="/identity/auth/v13/signin-check-phone-via-gp" class="govuk-link govuk-link--no-visited-state">Check your phone          </a></li>
+          <br>
+          <li><a href="/identity/pyi/v13/confirm-your-name-dob" class="govuk-link govuk-link--no-visited-state">Confirm your name and date of birth         </a></li>
+          <li><a href="/identity/pyi/v13/confirm-address" class="govuk-link govuk-link--no-visited-state">Confirm your address         </a></li>
+          <li><a href="/identity/pyi/v13/enter-address-task2" class="govuk-link govuk-link--no-visited-state">Enter your address          </a></li>
+          <li><a href="/identity/pyi/v13/fraud-check-task2" class="govuk-link govuk-link--no-visited-state">We need to check your details</a></li>
+          <li><a href="/identity/pyi/v13/continue-to-service-task2" class="govuk-link govuk-link--no-visited-state">Continue to the service you need to use          </a></li>
+          <br>
+          <li><a href="/services/state-pension/what-is-your-ni" class="govuk-link govuk-link--no-visited-state">Enter your National Insurance number         </a>          </li>
+          <li><a href="/services/state-pension/state-pension-summary" class="govuk-link govuk-link--no-visited-state">Your State Pension summary         </a>          </li>
+        </ul>
+      </div>
+    
+    </details>
+
+    <h2 class="govuk-heading-m">Task 3</h2>
+    {{ govukButton({
+      text: "Start",
+      href: "/services/state-pension/state-pension-summary.html"
+    }) }}
+
+    <details class="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Links
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <ul class="govuk-list govuk-list--bullet">
+          <li><a href="/services/state-pension/state-pension-summary" class="govuk-link govuk-link--no-visited-state">Your State Pension summary</a></li>
+          <li><a href="/identity/one-login-home/v13/one-login-homepage" class="govuk-link govuk-link--no-visited-state">Your GOV.UK One Login</a></li>
+          <li><a href="/identity/one-login-home/v13/enter-password" class="govuk-link govuk-link--no-visited-state">Enter your password</a></li>
+          <li><a href="/identity/one-login-home/v13/your-identity-info" class="govuk-link govuk-link--no-visited-state">Your identity information</a></li>
+          <li><a href="/identity/one-login-home/v13/security" class="govuk-link govuk-link--no-visited-state">Security</a></li>
+          <li><a href="/identity/one-login-home/v13/activity-history" class="govuk-link govuk-link--no-visited-state">Activity history</a></li>
+        </ul>
+      </div>
+    </details>
+    
+  </div>
+
+  
+</div>
+
+
+
+
+{% endblock %}

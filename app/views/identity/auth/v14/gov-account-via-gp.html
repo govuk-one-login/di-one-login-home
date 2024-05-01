@@ -1,0 +1,82 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Create or sign in
+{% endblock %}
+
+{% block header %}
+{{ govukHeader({
+homepageUrl: "/identity/task-pages/v14-task-page.html",
+serviceName: "",
+serviceUrl: "/",
+containerClasses: "govuk-width-container"
+}) }}
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="/auth/v14/signin-email-via-gp" method="post" class="form">
+      
+      <h1 class="govuk-heading-l">Create your GOV.UK One Login or sign in</h1>
+       <p>You can use your GOV.UK One Login to access some government services.</p>
+       <p>In the future, you’ll be able to use it to access all services on GOV.UK.</p>
+
+      <p>You'll need:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>an email address</li>
+        <li>a way to get security codes - this can be a UK mobile phone number or an authenticator app</li>
+      </ul>
+
+      <div class="govuk-inset-text">
+        <p>GOV.UK One Login is also available <a href=""> in Welsh (Cymraeg)</a>.</p>
+      </div>
+
+        <div class="govuk-button-group">
+          {{ govukButton({
+            text: "Create your GOV.UK One Login",
+            href: ""
+          }) }}
+
+          {{ govukButton({
+            text: "Sign in",
+            classes: "govuk-button--secondary",
+            href: "/identity/auth/v14/signin-email-via-gp"
+          }) }}
+        </div>
+        
+        <p class="govuk-body">
+          <a href="/identity/one-login-home/v14/guidance-page-2" class="govuk-link" rel="noreferrer noopener" target="_blank">Services you can use with GOV.UK One Login (opens in a new tab)</a>
+        </p>
+        
+        <!--
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">About GOV.UK accounts</span>
+        </summary>
+        <div class="govuk-details__text">
+          <p>GOV.UK accounts are new. At the moment you can only use your GOV.UK account with a few services.</p>
+          <p>GOV.UK accounts are currently separate from other government accounts (for example Government Gateway).</p>
+          <p>In future, you'll be able to use your GOV.UK account to sign in to most services on GOV.UK.</p>
+        </div>
+      </details>
+      -->
+    </form>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,66 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Check your email
+{% endblock %}
+
+{% block header %}
+{{ govukHeader({
+homepageUrl: "/identity/task-pages/v14-task-page.html",
+serviceName: "",
+serviceUrl: "/",
+containerClasses: "govuk-width-container"
+}) }}
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">
+      Check your email 
+    </h1>
+    <div class="govuk-inset-text">
+      <p>We have sent an email to: <strong>{{ data['email-address'] or 'email@address.com' }}</strong> </p>
+    </div>
+    <p>The email contains a 6 digit security code.</p>
+<!--    <p>Open the email to get the security code, then enter it below.</p>-->
+    <p>Your email might take a few minutes to arrive. If you do not get an email, check your spam folder.</p>
+    <p>The code will expire after 2 hours.</p>
+
+    <form class="form" action="/identity/auth/v14/create-password" method="post">
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="otp">Enter the 6 digit security code</label>
+        <input class="govuk-input govuk-input--width-5" id="otp" name="create-email-otp" type="text" autocomplete="one-time-code" inputmode="numeric" spellcheck="false" >
+      </div>
+
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Problems with the code?          </span>
+          </summary>
+        <div class="govuk-details__text">
+          <p>We can <a href="/identity/auth/v14/create-check-email"> send the code again</a> or you can <a href="/identity/auth/v14/create-email.html">use a different email address</a>.</p>
+        </div>
+      </details>
+    </form>
+  </div>
+</div>
+
+
+
+{% endblock %}

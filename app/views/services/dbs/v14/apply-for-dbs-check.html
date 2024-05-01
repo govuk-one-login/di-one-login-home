@@ -1,0 +1,80 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Apply for a basic DBS check
+{% endblock %}
+
+
+{% block header %}
+{{ govukHeader({
+homepageUrl: "/identity/task-pages/v14-task-page.html",
+serviceName: "Basic criminal record check",
+serviceUrl: "/",
+containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="/identity/v14-end-of-task-1" method="post" class="form">
+
+      <h1 class="govuk-heading-l">
+        Apply for a basic DBS check
+      </h1>
+
+      <p>This takes about 15 to 20 minutes. </p>
+
+      <p>You’ll be asked to provide personal information, such as:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>all your addresses for the last 5 years and the dates you lived there</li>
+        <li>your National Insurance number</li>
+        <li>your driving licence (if you have one)</li>
+      </ul>
+
+      <p>Some of the information you provided as part of proving your identity may be reused so you do not have to give the same details again.</p>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                By continuing you agree that you have read and understood the <a href="#" class="govuk-link">basic DBS check privacy policy (opens in a new tab)</a> . I understand how the DBS will process my personal data when I’m applying online, before my application has been submitted.
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+    <a href="/identity/v14-end-of-task-1" role="button" draggable="false" class="govuk-button govuk-button--continue" data-module="govuk-button">
+      Continue
+    </a>
+
+    
+
+
+    </form>
+
+  </div>
+
+</div>
+
+{% endblock %}

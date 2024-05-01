@@ -1,0 +1,57 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Enter your National Insurance Number
+{% endblock %}
+
+
+{% block header %}
+{{ govukHeader({
+homepageUrl: "/identity/task-pages/v14-task-page.html",
+serviceName: "State Pension forecast",
+serviceUrl: "/",
+containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      Enter your National Insurance Number
+    </h1>
+    
+    <div class="govuk-form-group">
+      <div id="event-name-hint" class="govuk-hint">
+        It’s on your National Insurance card, benefit letter, payslip or P60. For example, QQ123456C.
+      </div>
+      <input class="govuk-input" id="event-name" name="event-name" type="text" aria-describedby="event-name-hint">
+    </div>
+
+    <p><a href="#">I do not have a National Insurance number, or have lost or forgotten it</p>
+
+
+      {{ govukButton({
+        text: "Continue",
+        href: "/services/state-pension/v14/state-pension-summary"
+      }) }}
+  
+
+      </div>
+          </div>
+  
+        </div>
+      </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+
+    <!-- The Related items component is not part of GOV.UK Frontend but will be styled if used in the Prototype Kit -->
+
+
+
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends "/layouts/v14-cross-service-header-w-links.html" %}
+
+{% block pageTitle %}
+  {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">Your State Pension summary</h1>
+    <p class="govuk-body-l">{{ data['first-name'] }} {{ data['surname']  or "Joe Bloggs"}}</p>
+
+    <div class="govuk-panel govuk-panel--confirmation">
+      <h1 class="govuk-panel__title">
+        You can get your State Pension on 1 January 2063
+      </h1>
+      <div class="govuk-panel__body">
+        Your forecast is XXXX a week, XXXX a month and XXXX a year
+      </div>
+    </div>
+
+    <p class="govuk-body">Your forecast</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>is not a guarantee and is based on the current law</li>
+      <li>is based on your National Insurance record up to 5 April 2022</li>
+      <li>assumes that you’ll contribute another 30 years</li>
+      <li>does not include any increase due to inflation</li>
+    </ul>
+    <p class="govuk-body">You currently have XX years on your record and you need at least XX years to get any State Pension.</p>
+
+
+    <div class="govuk-inset-text">
+      <p class="govuk-body">
+        <a href="#" class="govuk-link" rel="noreferrer noopener" target="_blank">If you have lived or worked overseas (opens in new tab)</a>, your time abroad may help you make up the 10 years you need to get any State Pension.
+      </p>
+    </div>
+
+    <h2 class="govuk-heading-m">£X is the most you can get</h2>
+    <p class="govuk-body">You cannot improve your forecast any further, unless you choose to put off claiming.</p>
+    <p class="govuk-body">If you’re working you may still need to pay National Insurance contributions until 20 February 20XX as they fund other state benefits and the NHS.</p>
+
+    <p class="govuk-body">
+      <a href="#" class="govuk-link govuk-link--no-visited-state">View your National Insurance record</a>
+    </p>
+
+    <p class="govuk-body">Your forecast may be different if there are any changes to your National Insurance information. There is more about this in the <a>terms and conditions</a>.</p>
+    <p class="govuk-body">
+      <a href="#" class="govuk-link govuk-link--no-visited-state">Print your State Pension summary</a>
+    </p>
+
+
+  </div>
+</div>
+
+{% endblock %}

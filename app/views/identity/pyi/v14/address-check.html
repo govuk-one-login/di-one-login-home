@@ -1,0 +1,179 @@
+{% extends "/layouts/v14-one-login-plus-signout.html" %}
+
+{% block pageTitle %}
+Confirm your address
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "Beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">Confirm your details</h1>
+
+    {{ govukWarningText({
+    text: "Make sure your details are correct before you continue. You will not be able to change them later.",
+    iconFallbackText: "Warning"
+  }) }}
+
+    <form action="kbv-start" method="post" class="form">
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Current address
+          </dt>
+          <dd class="govuk-summary-list__value">
+
+            {% if data['address-line-1'] %}
+
+              {% if data['address-line-1'] %}
+                {{ data['address-line-1'] }},<br>
+              {% endif %}
+
+              {% if data['address-line-2'] %}
+                {{ data['address-line-2'] }}
+              {% endif %}, <br>
+
+              {% if data['town-or-city'] %}
+                {{ data['town-or-city'] }},<br>
+              {% endif %}
+
+              {% if data['post-code'] %}
+              {{ data['post-code'] }},<br>
+            {% endif %}
+
+            {% else %}
+              Office 14, <br>
+              New Station St, <br>
+              Leeds, <br>
+              LS1 5DL
+            {% endif %}
+
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="/identity/pyi/v14/enter-address">
+              Change<span class="govuk-visually-hidden"> current address</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Year you started living at this address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['address-year-current-year'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="/identity/pyi/v14/enter-address">
+              Change<span class="govuk-visually-hidden"> year</span>
+            </a>
+          </dd>
+        </div>
+
+
+
+        {% if data['address-city-prev'] %}
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Previous address
+          </dt>
+          <dd class="govuk-summary-list__value">
+
+            {% if data['address-city-prev'] %}
+
+              {% if data['address-flat-number-prev'] %}
+              {{ data['address-flat-number-prev'] }},<br>
+              {% endif %}
+
+              {% if data['address-house-number-prev'] %}
+              {{ data['address-house-number-prev'] }}
+              {% endif %}
+
+              {% if data['address-house-name-prev'] %}
+              {{ data['address-house-name-prev'] }},<br>
+              {% endif %}
+
+              {{ data['address-street-prev'] }},<br>
+              {{ data['address-city-prev'] }},<br>
+              {{ data['address-postcode-prev'] or 'LS1 3BE' }}
+
+            {% else %}
+              Office 14, <br>
+              New Station St, <br>
+              Leeds, <br>
+              LS1 5DL
+            {% endif %}
+
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="address-manual-prev">
+              Change<span class="govuk-visually-hidden"> previous address</span>
+            </a>
+          </dd>
+        </div>
+
+        {% endif %}
+
+      </dl>
+
+      {% if data.prototype['needPrevAddress'] === 'true' %}
+
+      {% if not data['address-postcode-prev'] %}
+
+        {{ govukRadios({
+          classes: "govuk-radios--inline",
+          idPrefix: "lived-3",
+          name: "lived-3",
+          fieldset: {
+            legend: {
+              text: "Have you lived here for more than 3 months?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--s"
+            }
+          },
+          hint: {
+            text: "We'll need to ask you where you lived before if you've recently moved to this address."
+          },
+          items: [
+            {
+              value: "yes",
+              text: "Yes"
+            },
+            {
+              value: "no",
+              text: "No"
+            }
+          ]
+        }) }}
+
+      {% endif %}
+
+      {% else %}
+      <input class="govuk-input" id="lived" name="lived-3" type="hidden" value="yes">
+      {% endif %}
+
+      {{ govukButton({
+        text: "I confirm my details are correct",
+        href: "/identity/pyi/v14/fraud-check-task1"
+      }) }}
+
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}

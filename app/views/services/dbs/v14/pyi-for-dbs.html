@@ -1,0 +1,65 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Prove your identity with GOV.UK One Login
+{% endblock %}
+
+{% block header %}
+{{ govukHeader({
+homepageUrl: "/identity/task-pages/v14-task-page.html",
+serviceName: "",
+serviceUrl: "/",
+containerClasses: "govuk-width-container"
+}) }}
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="/service/verify/v1/verify-start" method="post" class="form">
+
+      <h1 class="govuk-heading-l">
+        Prove your identity with GOV.UK One Login
+      </h1>
+
+          <p class="govuk-body">You’ll need:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>a GOV.UK One Login – we’ll ask you to sign in or create one when you continue</li>
+      <li>your photo ID</li>
+      <li>your current home address (you might also need your previous address if you’ve recently moved)</li>
+    </ul>
+
+    <div class="govuk-inset-text">
+      <p>This service is also available in <a href=""> in Welsh (Cymraeg)</a>.</p>
+    </div>
+
+    <a href="/identity/auth/v14/gov-account.html" role="button" draggable="false" class="govuk-button govuk-button--continue" data-module="govuk-button">
+      Continue
+    </a>
+
+    
+
+
+    </form>
+
+  </div>
+
+</div>
+
+{% endblock %}
