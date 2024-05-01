@@ -1,0 +1,211 @@
+{% extends "layouts/one-login.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+  
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <div class="govuk-breadcrumbs govuk-breadcrumbs--collapse-on-mobile">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="/identity/one-login-home/v9/one-login-homepage.html">Home</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="#">Personal details</a>
+        </li>
+      </ol>
+    </div>
+
+    <h1 class="govuk-heading-xl">
+      Personal details
+    </h1>
+    <div class="activity-card govuk-!-margin-bottom-6">
+      <h2 class="govuk-heading-m">Your preferred name</h2>
+      <p>This is the name you’d like GOV.UK One Login and services to use when communicating with you.</p>
+      
+    <dl class="govuk-summary-list govuk-!-margin-bottom-0">
+      <div class="govuk-summary-list__row" style="border-top: 1px solid #b1b4b6; padding-top:10px">
+        <dt class="govuk-summary-list__key">
+          Name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <p>
+            {{ data['preferred-name'] or "No preferred name" }}
+        </p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">
+            Change<span class="govuk-visually-hidden"> name</span>
+          </a>
+        </dd>
+      </div>
+    </dl>
+    <br>
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          How your preferred name is used
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        When you use your GOV.UK One Login to access some services, you can choose if you want to share your preferred name. If you do, the service will use it when communicating with you.
+      </div>
+    </details>
+  </div>
+
+  <div class="activity-card govuk-!-margin-bottom-6">
+    <h2 class="govuk-heading-m">Contact details</h2>
+    <p>At the moment, these will always be the same as the details you use to sign in. You can <a href="/identity/one-login-home/v9/security.html">change your email address or phone number in Security</a>.</p>
+    
+  <dl class="govuk-summary-list govuk-!-margin-bottom-0">
+    <div class="govuk-summary-list__row" style="border-top: 1px solid #b1b4b6; padding-top:10px">
+      <dt class="govuk-summary-list__key">
+        Email address
+      </dt>
+      <dd class="govuk-summary-list__value">
+        <p>
+          {{ data['email-address'] or "name@email.com"}}
+      </p> 
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="#">
+          Change<span class="govuk-visually-hidden"> name</span>
+        </a>
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row" style="border-top: 1px solid #b1b4b6; padding-top:10px">
+      <dt class="govuk-summary-list__key">
+        Phone number
+      </dt>
+      <dd class="govuk-summary-list__value">
+        <p>
+          {{ data['phone-number'] or "07000000000" }}
+      </p> 
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="#">
+          Change<span class="govuk-visually-hidden"> name</span>
+        </a>
+      </dd>
+    </div>
+  </dl>
+  <br>
+  <details class="govuk-details" data-module="govuk-details">
+    <summary class="govuk-details__summary">
+      <span class="govuk-details__summary-text">
+        How your contact details are used
+      </span>
+    </summary>
+    <div class="govuk-details__text">
+      <p>Your GOV.UK One Login shares your email address and phone number with the services you access with it. Services may use these details to communicate with you.</p>
+      <a href="/identity/one-login-home/v9/your-services.html" class="govuk-link govuk-link--no-visited-state">Services you’ve accessed with your GOV.UK One Login</a>
+    </div>
+  </details>
+</div>
+
+<div class="activity-card govuk-!-margin-bottom-6">
+  <h2 class="govuk-heading-m">Information you used to prove your identity</h2>
+  <p>You used this information to prove your identity on <span class="govuk-!-font-weight-bold"> 22 August 2023</span>.</p>
+  <div class="govuk-inset-text">
+    You do not need to keep this information up to date. Your proof of identity stays valid even if your information has changed.   </div>
+<dl class="govuk-summary-list govuk-!-margin-bottom-0">
+  <div class="govuk-summary-list__row" style="border-top: 1px solid #b1b4b6; padding-top:10px">
+    <dt class="govuk-summary-list__key">
+      Name on passport
+    </dt>
+    <dd class="govuk-summary-list__value">
+      <p>{{ data['first-name'] or "Name" }} {{ data['surname'] or "Lastname" }}
+      </p> 
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#">
+        Change<span class="govuk-visually-hidden"> name</span>
+      </a>
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row" style="border-top: 1px solid #b1b4b6; padding-top:10px">
+    <dt class="govuk-summary-list__key">
+      Date of birth
+    </dt>
+    <dd class="govuk-summary-list__value">
+      {{ data['dob-day'] }}/{{ data['dob-month'] }}/{{ data['dob-year'] or "01/01/1980"}}
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#">
+        Change<span class="govuk-visually-hidden"> name</span>
+      </a>
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row" style="border-top: 1px solid #b1b4b6; padding-top:10px">
+    <dt class="govuk-summary-list__key">
+      Address
+    </dt>
+    <dd class="govuk-summary-list__value">
+      <p>Current address</p>
+      <p>
+
+        {% if data['address-city-current'] %}
+
+          {% if data['address-flat-number-current'] %}
+            {{ data['address-flat-number-current'] }},<br>
+          {% endif %}
+
+          {% if data['address-house-number-current'] %}
+            {{ data['address-house-number-current'] }}
+          {% endif %}
+
+          {% if data['address-house-name-current'] %}
+            {{ data['address-house-name-current'] }},<br>
+          {% endif %}
+
+          {{ data['address-street-current'] }},<br>
+          {{ data['address-city-current'] }},<br>
+          {{ data['address-postcode'] or 'LS1 3BE' }}
+
+        {% else %}
+          Office 14, <br>
+          New Station St, <br>
+          Leeds, <br>
+          LS1 5DL
+        {% endif %}
+
+      </p>
+      <p>Previous address 1</p>
+      <p>2 Road<br>Bristol<br>BS5 6LA</p>
+      <p>Previous address 2</p>
+      <p>3 Lane<br>Bristol<br>BS5 6LA</p>
+
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#">
+        Change<span class="govuk-visually-hidden"> name</span>
+      </a>
+    </dd>
+    
+  </div>
+</dl>
+<br>
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      How your identity information is used
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    Your GOV.UK One Login uses this information to confirm your identity when a service needs to check who you are. You’ll be told when a service has asked for these details so you can decide if you want to share them.  </div>
+</details>
+<p>If you want to update this information, you can <a href="/identity/pyi/v9/update-your-name-q">contact the GOV.UK One Login team </a>. They will delete it and you’ll need to prove your identity again. </p>
+
+</div>
+
+</div>
+
+  </div>
+</div>
+
+{% endblock %}
