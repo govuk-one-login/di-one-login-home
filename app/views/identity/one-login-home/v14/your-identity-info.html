@@ -47,10 +47,10 @@ Security
         </dt>
         <dd class="govuk-summary-list__value">
           <h2 class="govuk-heading-s">Given names</h2>
-          <p class="govuk-body">{{ data['first-name']  or "Joe"}}</p>
+          <p class="govuk-body">{{ data['first-name']  or "Joe Stuart"}}</p>
           <h2 class="govuk-heading-s">Last name</h2>
           <p class="govuk-body">{{ data['surname']  or "Bloggs"}}</p>
-          <p class="gem-c-hint govuk-hint govuk-!-margin-bottom-3">Saved on 7 May 2024</p> 
+          <p class="gem-c-hint govuk-hint govuk-!-margin-bottom-3">Saved on 25 November 2023</p> 
           <details class="govuk-details">
             <summary class="govuk-details__summary">
               <span class="govuk-details__summary-text">
@@ -75,7 +75,7 @@ Security
         </dt>
         <dd class="govuk-summary-list__value">
           <p>{{ data['dob-day'] }} {{ data['dob-month'] }} {{ data['dob-year'] or "01 January 1973"}}</p>
-          <p class="gem-c-hint govuk-hint govuk-!-margin-bottom-3">Saved on 7 May 2024</p> 
+          <p class="gem-c-hint govuk-hint govuk-!-margin-bottom-3">Saved on 25 November 2023</p> 
           <details class="govuk-details">
             <summary class="govuk-details__summary">
               <span class="govuk-details__summary-text">
@@ -126,13 +126,119 @@ Security
             {% endif %}
     
           </p>
-          <p class="gem-c-hint govuk-hint govuk-!-margin-bottom-3">Saved on 7 May 2024</p> 
+          <p class="gem-c-hint govuk-hint govuk-!-margin-bottom-3">Saved on 8 May 2024</p> 
           <p class="govuk-body">
             <a href="#" class="govuk-link govuk-link--no-visited-state">Update your current address</a>
           </p>
         </dd>
       </div>
     </dl>
+
+<br>
+<br>
+    <h2 class="govuk-heading-m">Name  on your UK passport</h2>
+    <dl class="govuk-summary-list govuk-summary-list--no-border govuk-!-margin-bottom-0">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Name
+        </dt>
+        <p>
+          Sarah Philips
+        </p>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Date of birth
+        </dt>
+        <p>
+          5 January 1978
+        </p>
+        <p class="gem-c-hint govuk-hint govuk-!-margin-bottom-3">Saved on 8 May 2024</p> 
+        <details class="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              How to update your date of birth
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <p class="govuk-body">
+              If your date of birth is wrong, <a href="#" class="govuk-link">contact the GOV.UK One Login team (opens in new tab)</a>. They’ll delete your saved identity information and ask you to prove your identity again with the right details.
+            </p>
+          </div>
+        </details>
+      </div>
+    </dl>
+
+    <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
+
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-0">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          <h2 class="govuk-heading-m">Date of birth</h2>
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <p>{{ data['dob-day'] }} {{ data['dob-month'] }} {{ data['dob-year'] or "01 January 1973"}}</p>
+          <p class="gem-c-hint govuk-hint govuk-!-margin-bottom-3">Saved on 25 November 2023</p> 
+          <details class="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                How to update your date of birth
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              <p class="govuk-body">
+                If your date of birth is wrong, <a href="#" class="govuk-link">contact the GOV.UK One Login team (opens in new tab)</a>. They’ll delete your saved identity information and ask you to prove your identity again with the right details.
+              </p>
+            </div>
+          </details>
+        </dd>
+      </div>
+    </dl>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-0">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          <h2 class="govuk-heading-m">Current address</h2>
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <p>
+    
+            {% if data['address-line-1'] %}
+
+              {% if data['address-line-1'] %}
+                {{ data['address-line-1'] }},<br>
+              {% endif %}
+
+              {% if data['address-line-2'] %}
+                {{ data['address-line-2'] }}
+              {% endif %}, <br>
+
+              {% if data['town-or-city'] %}
+                {{ data['town-or-city'] }},<br>
+              {% endif %}
+
+              {% if data['post-code'] %}
+              {{ data['post-code'] }},<br>
+            {% endif %}
+
+            {% else %}
+              Office 14, <br>
+              New Station St, <br>
+              Leeds, <br>
+              LS1 5DL
+            {% endif %}
+    
+          </p>
+          <p class="gem-c-hint govuk-hint govuk-!-margin-bottom-3">Saved on 8 May 2024</p> 
+          <p class="govuk-body">
+            <a href="#" class="govuk-link govuk-link--no-visited-state">Update your current address</a>
+          </p>
+        </dd>
+      </div>
+    </dl>
+
+    
     </div>
   </div>
 </div>
