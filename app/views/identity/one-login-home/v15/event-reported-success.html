@@ -1,0 +1,41 @@
+{% extends "layouts/one-login-home-v12-OL.html" %}
+
+{% block pageTitle %}
+You’ve reported activity you do not recognise  
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a href="/identity/one-login-home/v12/activity-history.html" class="govuk-back-link">Back to activity history</a>    </li>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-panel govuk-panel--confirmation">
+      <h1 class="govuk-panel__title">
+        You’ve reported activity you do not recognise
+      </h1>
+    </div>
+    <br>
+    <p class="govuk-body">
+      Thanks for reporting this activity. A confirmation email with your report number has been sent to <strong>{{ data['email-address'] or 'email@address.com' }}</strong>
+    </p>
+    <h2 class="govuk-heading-l">Change your password</h2>
+    <p><a href="/identity/one-login-home/v12/enter-current-pw-2" class="govuk-link">Change your password</a> if you have not done this already.</p>
+    <p>Changing your password is the best way to keep your GOV.UK One Login secure.</p>
+
+
+    <h2 class="govuk-heading-l">What happens next</h2>
+    <p>The GOV.UK One Login team will investigate your report.</p>
+    <p>We’ll only email you again if you need to do something to help protect your GOV.UK One Login. We’ll always include your report number when we email you.</p>
+
+    <h2 class="govuk-heading-m">If you need to contact us</h2>
+    <p class="govuk-body">
+      You can <a href="https://home.account.gov.uk/contact-gov-uk-one-login?fromURL=https%3A%2F%2Fhome.account.gov.uk%2Fyour-services%3F_ga%3D2.74737490.1562553744.1698932296-636000474.1677756439" class="govuk-link" rel="noreferrer noopener" target="_blank">contact the GOV.UK One Login team (opens in a new tab)</a>.
+    </p>
+ </div>
+</div>
+{% endblock %}

@@ -1,0 +1,64 @@
+{% extends "/layouts/v14-one-login-plus-signout.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+  
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/identity/one-login-home/v14/one-login-homepage">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="#">Your services</a>
+    </li>
+  </ol>
+</div>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl govuk-!-margin-bottom-4">
+        Your services
+      </h1>
+      <br>
+      <p class="govuk-body">Go to a government account or service you’ve used with your GOV.UK One Login. </p>
+      
+      <h1 class="govuk-heading-m">Your accounts</h1>
+      <div class="service-card--with-title">
+        <div class="service-card-title">
+          <h3 class="govuk-heading-s">Check your State Pension forecast</h3>
+        </div>
+        <div class="service-card-body">
+        <p>See how much State Pension you could get and when you’ll get it.</p>
+        <p><a href="/services/state-pension/v14/state-pension-summary" class="govuk-link--no-visited-state">Go to your State Pension forecast account</a></p>
+        <p class="service-card-date">Last used: 8 May 2024</p>
+        </div>
+      </div>
+
+      <h1 class="govuk-heading-m">Other services you’ve used</h1>
+      <div class="service-card--other-task">
+        <p><a href="/services/dbs/v14/request-dbs-check" class="govuk-link--no-visited-state">Request a basic DBS check</a></p>
+        <p class="service-card-date">Last used: 25 November 2023</p>
+      </div>
+      
+
+    </div>
+  </div>
+
+{% endblock %}

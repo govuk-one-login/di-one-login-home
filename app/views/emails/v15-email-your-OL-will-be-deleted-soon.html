@@ -4,8 +4,10 @@
 {% block content %}
   <div style="max-width: 600px; margin: 0 auto;">
     <br>
-    <p>Subject line: {{subjectLine | default("Set this with the 'subjectLine' setting on nunjucks") }}</p>
-    <p>From: {{ sender | default('childcareaccount@gov.uk') }}</p>
+    <p>To:             {{ data['email-address'] or "name@email.com"}}
+    </p>
+    <p>Subject line: Your GOV.UK One Login will be deleted soon</p>
+    <p>From: {{ sender | default('GOV.UK One Login') }}</p>
     <header class="govuk-header" data-module="govuk-header">
       <div class="govuk-header__container govuk-width-container">
         <div class="govuk-header__logo">
@@ -31,13 +33,40 @@
 
 {% block emailBody %}
 
-set this with the emailBody block
+<h2 class="govuk-heading-l">Your GOV.UK One Login will be deleted soon </h2>
+<p>You have used GOV.UK One Login to access government services.</p>
+<p>As you have not signed in to your GOV.UK One Login for over 3 years, we’ll delete it soon. </p>
+
+<h2 class="govuk-heading-m">Sign in to keep your GOV.UK One Login</h2>
+<p>To keep your GOV.UK One Login, sign in <strong>before 5 August 2024</strong>:</p>
+<p class="govuk-body">
+  <a href="/identity/auth/v15/signin-email.html" class="govuk-link govuk-link--no-visited-state">https://www.gov.uk/account</a>
+</p>
+
+<h2 class="govuk-heading-m">If you do not sign in</h2>
+<p class="govuk-body">We’ll delete your GOV.UK One Login and all the information saved in it. This means your:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>sign in details</li>
+  <li>identity information (if you’ve proved your identity with GOV.UK One Login)</li>
+  <li>record of the services you’ve accessed with GOV.UK One Login</li>
+  <li>GOV.UK email subscriptions (if you have any)</li>
+</ul>
+
+<p>It will not delete the personal information held by services you’ve used.</p>
+<p>If you need a GOV.UK One Login in the future, you’ll have to create a new one.</p>
+
+<h2 class="govuk-heading-m">If you need help signing in</h2>
+<p class="govuk-body">
+  Read how to change your sign in details: <a href="#" class="govuk-link">https://www.gov.uk/guidance/changing-the-sign-in-details-for-your-govuk-one-login </a>.
+</p>
+<p class="govuk-body">
+  Or contact the GOV.UK One Login team for help: <a href="#" class="govuk-link"> https://signin.account.gov.uk/contact-us?referer=inactiveAccountEmail</a>.
+</p>
+
 {% endblock %}
 <hr style="border: 0; height: 1px; background: #B1B4B6; Margin: 30px 0 30px 0;">
     <p class="govuk-body">
-      This is an automated email, please do not reply as we do not monitor responses.
+      Do not reply to this email – it’s an automatic message from an unmonitored account.
     </p>
-
-    <a href="/index">Back to tasks</a>
 
   {% endblock %}
