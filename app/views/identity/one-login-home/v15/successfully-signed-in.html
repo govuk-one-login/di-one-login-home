@@ -1,0 +1,33 @@
+{% extends "/layouts/v15-one-login-plus-signout.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+  
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <div class="govuk-panel govuk-panel--confirmation">
+      <h1 class="govuk-panel__title">
+        You’ve successfully signed in to <br>keep your <br>GOV.UK One Login
+      </h1>
+    </div>
+  
+    <p>Your GOV.UK One Login will no longer be deleted.</p>
+    <p>We’ll remind you again in 3 years to sign in if you have not done this. </p>
+
+    <a href="/identity/one-login-home/v15/one-login-homepage.html" role="button" draggable="false" class="govuk-button govuk-button--continue" data-module="govuk-button">
+      Go to your GOV.UK One Login
+    </a>
+  </div>
+</div>
+
+{% endblock %}
