@@ -6,7 +6,7 @@
     <br>
     <p>To:             {{ data['email-address'] or "name@email.com"}}
     </p>
-    <p>Subject line: Your GOV.UK One Login will be deleted soon</p>
+    <p>Subject line: Action: sign in to keep your GOV.UK One Login | Gweithredu: mewngofnodwch i gadw eich GOV.UK One Login</p>
     <p>From: {{ sender | default('GOV.UK One Login') }}</p>
     <header class="govuk-header" data-module="govuk-header">
       <div class="govuk-header__container govuk-width-container">
@@ -33,9 +33,8 @@
 
 {% block emailBody %}
 
-<h2 class="govuk-heading-l">Your GOV.UK One Login will be deleted soon </h2>
-<p>You have used GOV.UK One Login to access government services.</p>
-<p>As you have not signed in to your GOV.UK One Login for over 3 years, we’ll delete it soon. </p>
+<p>You’ve used GOV.UK One Login to access government services.</p>
+<p>As you’ve not signed in to your GOV.UK One Login for over 3 years, it will be deleted soon. </p>
 
 <h2 class="govuk-heading-m">Sign in to keep your GOV.UK One Login</h2>
 <p>To keep your GOV.UK One Login, sign in <strong>before 5 August 2024</strong>:</p>
@@ -44,7 +43,7 @@
 </p>
 
 <h2 class="govuk-heading-m">If you do not sign in</h2>
-<p class="govuk-body">We’ll delete your GOV.UK One Login and all the information saved in it. This means your:</p>
+<p class="govuk-body">Your GOV.UK One Login and all the information saved in it will be deleted. This means your:</p>
 <ul class="govuk-list govuk-list--bullet">
   <li>sign in details</li>
   <li>identity information (if you’ve proved your identity with GOV.UK One Login)</li>
@@ -52,15 +51,19 @@
   <li>GOV.UK email subscriptions (if you have any)</li>
 </ul>
 
-<p>It will not delete the personal information held by services you’ve used.</p>
+<p>Any personal information held by services you’ve used will not be deleted.</p>
 <p>If you need a GOV.UK One Login in the future, you’ll have to create a new one.</p>
+
+<p class="govuk-body">
+  You can read more about how long GOV.UK One Login keeps your information, in the privacy notice:  <a href="https://signin.account.gov.uk/privacy-notice" class="govuk-link">https://signin.account.gov.uk/privacy-notice</a>.
+</p>
 
 <h2 class="govuk-heading-m">If you need help signing in</h2>
 <p class="govuk-body">
-  Read how to change your sign in details: <a href="#" class="govuk-link">https://www.gov.uk/guidance/changing-the-sign-in-details-for-your-govuk-one-login </a>.
+  Read how to change your sign in details: <a href="https://www.gov.uk/guidance/changing-the-sign-in-details-for-your-govuk-one-login" class="govuk-link">https://www.gov.uk/guidance/changing-the-sign-in-details-for-your-govuk-one-login </a>.
 </p>
 <p class="govuk-body">
-  Or contact the GOV.UK One Login team for help: <a href="#" class="govuk-link"> https://signin.account.gov.uk/contact-us?referer=inactiveAccountEmail</a>.
+  Or contact the GOV.UK One Login team for help: <a href="https://signin.account.gov.uk/contact-us?referer=inactiveAccountEmail" class="govuk-link"> https://signin.account.gov.uk/contact-us?referer=inactiveAccountEmail</a>.
 </p>
 
 {% endblock %}
