@@ -27,16 +27,11 @@ containerClasses: "govuk-width-container"
     -->
 
     <form class="form" action="/identity/auth/v15/signin-password" method="post">
-
-      <div class="govuk-form-group">
-
-        <input class="govuk-input govuk-!-width-two-thirds" id="email" name="emailAddress" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
-
-      </div>
-
+      {{ govukInput({
+        name: 'email-address'
+    }) }}
       <button class="govuk-button" data-module="govuk-button">Continue</button>
-      <input class="govuk-input" name="signin" type="hidden" value="signin">
-
+      <input class="govuk-input" name="signin" type="hidden" value="create">
     </form>
 
   </div>
