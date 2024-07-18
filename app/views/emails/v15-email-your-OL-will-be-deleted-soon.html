@@ -4,9 +4,13 @@
 {% block content %}
   <div style="max-width: 600px; margin: 0 auto;">
     <br>
-    <p>To:             {{ data['email-address'] or "name@email.com"}}
-    </p>
+    <p>To:             {{ data['email-address'] or "name@email.com"}}</p>
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
     <p>Subject line: Action: sign in to keep your GOV.UK One Login | Gweithredu: mewngofnodwch i gadw eich GOV.UK One Login</p>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
     <p>From: {{ sender | default('GOV.UK One Login') }}</p>
     <header class="govuk-header" data-module="govuk-header">
       <div class="govuk-header__container govuk-width-container">
@@ -33,13 +37,14 @@
 
 {% block emailBody %}
 
+<h2 class="govuk-heading-l">Sign in to keep your GOV.UK One Login</h2>
+
 <p>You’ve used GOV.UK One Login to access government services.</p>
 <p>As you’ve not signed in to your GOV.UK One Login for over 3 years, it will be deleted soon. </p>
 
-<h2 class="govuk-heading-m">Sign in to keep your GOV.UK One Login</h2>
 <p>To keep your GOV.UK One Login, sign in <strong>before 5 August 2024</strong>:</p>
 <p class="govuk-body">
-  <a href="/identity/auth/v15/signin-email.html" class="govuk-link govuk-link--no-visited-state">https://www.gov.uk/account</a>
+  <a href="/identity/auth/v15/gov-account" class="govuk-link govuk-link--no-visited-state">https://www.gov.uk/account</a>
 </p>
 
 <h2 class="govuk-heading-m">If you do not sign in</h2>
