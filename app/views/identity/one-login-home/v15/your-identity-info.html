@@ -1,7 +1,7 @@
 {% extends "/layouts/v15-one-login-plus-signout.html" %}
 
 {% block pageTitle %}
-Security  
+Your identity information
 {% endblock %}
 
 {% block beforeContent %}
@@ -60,30 +60,10 @@ Security
         <p>
           {{ data['surname']  or "Bloggs"}}
         </p>
-        <p class="gem-c-hint govuk-hint govuk-!-margin-bottom-3">Saved on 25 November 2023        </p> 
-        <details class="govuk-details">
-          <summary class="govuk-details__summary">
-            <span class="govuk-details__summary-text">
-              How to update your name
-            </span>
-          </summary>
-          <div class="govuk-details__text">
-            <h3 class="govuk-heading-s">If your name has changed</h3>
-            <p class="govuk-body">
-              If you only need to update either  your given names or your last name, you can <a href="#" class="govuk-link">update your name yourself</a>. You’ll need to prove your identity again using photo ID in your new name.
-            </p>
-            <p class="govuk-body">
-              If you need to update your full name (this is your given names and your last name), <a href="#" class="govuk-link">contact the GOV.UK One Login team (opens in new tab)</a>. You may need to delete your GOV.UK One Login. Then you can create a new one and try to prove your identity again with your new name.
-            </p>
-            <h3 class="govuk-heading-s">If there is a mistake in your name</h3>
-            <p class="govuk-body">
-              <a href="#" class="govuk-link">Contact the GOV.UK One Login team (opens in new tab)</a> if there is a mistake in your name. For example, if your name is missing letters or a hyphen.
-            </p>
-            <p class="govuk-body">
-              Do not try to update your details unless the GOV.UK One Login support team has told you to. 
-            </p>
-          </div>
-        </details>
+        <p class="gem-c-hint govuk-hint govuk-!-margin-bottom-3">Saved on 25 March 2021</p> 
+        <p class="govuk-body">
+          <a href="#" class="govuk-link govuk-link--no-visited-state">Update your name</a>
+        </p>
       </div>
     </dl>
 
@@ -97,19 +77,10 @@ Security
         </dt>
         <dd class="govuk-summary-list__value">
           <p>{{ data['dob-day'] }} {{ data['dob-month'] }} {{ data['dob-year'] or "01 January 1973"}}</p>
-          <p class="gem-c-hint govuk-hint govuk-!-margin-bottom-3">Saved on 25 November 2023</p> 
-          <details class="govuk-details">
-            <summary class="govuk-details__summary">
-              <span class="govuk-details__summary-text">
-                How to update your date of birth
-              </span>
-            </summary>
-            <div class="govuk-details__text">
-              <p class="govuk-body">
-                If your date of birth is wrong, <a href="#" class="govuk-link">contact the GOV.UK One Login team (opens in new tab)</a>. You may need to delete your GOV.UK One Login. Then you can create a new one and try to prove your identity again with the right details.
-              </p>
-            </div>
-          </details>
+          <p class="gem-c-hint govuk-hint govuk-!-margin-bottom-3">Saved on 25 March 2021</p> 
+          <p class="govuk-body">
+            <a href="#" class="govuk-link govuk-link--no-visited-state">Update your date of birth</a>
+          </p>
         </dd>
       </div>
     </dl>
@@ -149,7 +120,7 @@ Security
             {% endif %}
     
           </p>
-          <p class="gem-c-hint govuk-hint govuk-!-margin-bottom-3">Saved on 8 May 2024</p> 
+          <p class="gem-c-hint govuk-hint govuk-!-margin-bottom-3">Saved on 8 June 2021</p> 
           <p class="govuk-body">
             <a href="#" class="govuk-link govuk-link--no-visited-state">Update your current address</a>
           </p>

@@ -1,7 +1,20 @@
-{% extends "/layouts/v15-one-login-plus-signout.html" %}
+{% extends "layouts/main.html" %}
+
 
 {% block pageTitle %}
-  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+Create or sign in
+{% endblock %}
+
+
+{% block header %}
+{{ govukHeader({
+homepageUrl: "/identity/task-pages/v15-task-page.html",
+serviceName: "",
+serviceUrl: "/",
+containerClasses: "govuk-width-container"
+
+}) }}
+
   
 {% endblock %}
 
@@ -32,3 +45,4 @@
 </div>
 
 {% endblock %}
+
