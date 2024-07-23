@@ -4,14 +4,16 @@
 {% block content %}
   <div style="max-width: 600px; margin: 0 auto;">
     <br>
-    <p>To:             {{ data['email-address'] or "name@email.com"}}
-    </p>
+    <p class="govuk-hint">from:</p> <p>{{ sender | default('GOV.UK One Login') }}</p>
     <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
-    <p>Subject line: Your GOV.UK One Login has been deleted | Mae eich GOV.UK One Login wedi'i ddileu</p>
+    <p class="govuk-hint">to:</p>            <p> {{ data['email-address'] or "name@email.com"}}</p>
     <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
-    <p>From: {{ sender | default('GOV.UK One Login') }}</p>
+
+    <p class="govuk-hint">subject: </p> <p>Your GOV.UK One Login has been deleted | Mae eich GOV.UK One Login wedi'i ddileu</p>
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
     <header class="govuk-header" data-module="govuk-header">
       <div class="govuk-header__container govuk-width-container">
         <div class="govuk-header__logo">
@@ -53,7 +55,7 @@
 <p>Any personal information held by services you’ve used will not be deleted.</p>
 
 <p class="govuk-body">
-  You can read more about how long GOV.UK One Login keeps your information, in the privacy notice:<a href="https://signin.account.gov.uk/privacy-notice" class="govuk-link">https://signin.account.gov.uk/privacy-notice </a>.
+  You can read more about how long GOV.UK One Login keeps your information, in the privacy notice: <a href="https://signin.account.gov.uk/privacy-notice" class="govuk-link">https://signin.account.gov.uk/privacy-notice </a>
 </p>
 
 
@@ -79,7 +81,7 @@
 <p>Ni fydd unrhyw wybodaeth bersonol a gedwir gan wasanaethau rydych wedi'u defnyddio yn cael ei dileu.</p>
 
 <p class="govuk-body">
-  Gallwch ddarllen mwy am ba mor hir y mae GOV.UK One Login yn cadw eich gwybodaeth, yn yr hysbysiad preifatrwydd:<a href="https://signin.account.gov.uk/privacy-notice" class="govuk-link">https://signin.account.gov.uk/privacy-notice </a>.
+  Gallwch ddarllen mwy am ba mor hir y mae GOV.UK One Login yn cadw eich gwybodaeth, yn yr hysbysiad preifatrwydd: <a href="https://signin.account.gov.uk/privacy-notice?lng=cy" class="govuk-link">https://signin.account.gov.uk/privacy-notice </a>
 </p>
 
 <br>

@@ -6,6 +6,17 @@ Your identity information
 
 {% block beforeContent %}
 
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
 <div class="govuk-breadcrumbs">
   <ol class="govuk-breadcrumbs__list">
     <li class="govuk-breadcrumbs__list-item">
@@ -76,7 +87,7 @@ Your identity information
           <h2 class="govuk-heading-s">Date of birth</h2>
         </dt>
         <dd class="govuk-summary-list__value">
-          <p>{{ data['dob-day'] }} {{ data['dob-month'] }} {{ data['dob-year'] or "01 January 1973"}}</p>
+          <p>{{ data['dob-day'] }} {{ data['dob-month'] }} {{ data['dob-year'] or "1 January 1973"}}</p>
           <p class="gem-c-hint govuk-hint govuk-!-margin-bottom-3">Saved on 25 March 2021</p> 
           <p class="govuk-body">
             <a href="#" class="govuk-link govuk-link--no-visited-state">Update your date of birth</a>
@@ -113,10 +124,9 @@ Your identity information
             {% endif %}
 
             {% else %}
-              Office 14, <br>
-              New Station St, <br>
-              Leeds, <br>
-              LS1 5DL
+            1 Street            <br>
+            Bristol            <br>
+            BS5 6LA
             {% endif %}
     
           </p>

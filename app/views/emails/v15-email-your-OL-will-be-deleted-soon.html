@@ -4,14 +4,16 @@
 {% block content %}
   <div style="max-width: 600px; margin: 0 auto;">
     <br>
-    <p>To:             {{ data['email-address'] or "name@email.com"}}</p>
+    <p class="govuk-hint">from:</p> <p>{{ sender | default('GOV.UK One Login') }}</p>
     <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
-    <p>Subject line: Action: sign in to keep your GOV.UK One Login | Gweithredu: mewngofnodwch i gadw eich GOV.UK One Login</p>
-
+    <p class="govuk-hint">to:</p>            <p> {{ data['email-address'] or "name@email.com"}}</p>
     <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
-    <p>From: {{ sender | default('GOV.UK One Login') }}</p>
+
+    <p class="govuk-hint">subject: </p> <p>Action: sign in to keep your GOV.UK One Login | Gweithredu: mewngofnodwch i gadw eich GOV.UK One Login</p>
+
+
     <header class="govuk-header" data-module="govuk-header">
       <div class="govuk-header__container govuk-width-container">
         <div class="govuk-header__logo">
@@ -37,14 +39,13 @@
 
 {% block emailBody %}
 
-<h2 class="govuk-heading-l">Sign in to keep your GOV.UK One Login</h2>
+<h1 class="govuk-heading-l">Sign in to keep your GOV.UK One Login</h1>
 
 <p>You’ve used GOV.UK One Login to access government services.</p>
 <p>As you’ve not signed in to your GOV.UK One Login for over 3 years, it will be deleted soon. </p>
 
-<p>To keep your GOV.UK One Login, sign in <strong>before 5 August 2024</strong>:</p>
 <p class="govuk-body">
-  <a href="/identity/auth/v15/gov-account" class="govuk-link govuk-link--no-visited-state">https://www.gov.uk/account</a>
+  To keep your GOV.UK One Login, sign in <strong>before 5 August 2024</strong>: <a href="/identity/auth/v15/gov-account" class="govuk-link">https://www.gov.uk/account</a>
 </p>
 
 <h2 class="govuk-heading-m">If you do not sign in</h2>
@@ -60,15 +61,15 @@
 <p>If you need a GOV.UK One Login in the future, you’ll have to create a new one.</p>
 
 <p class="govuk-body">
-  You can read more about how long GOV.UK One Login keeps your information, in the privacy notice:  <a href="https://signin.account.gov.uk/privacy-notice" class="govuk-link">https://signin.account.gov.uk/privacy-notice</a>.
+  You can read more about how long GOV.UK One Login keeps your information, in the privacy notice:  <a href="https://signin.account.gov.uk/privacy-notice" class="govuk-link">https://signin.account.gov.uk/privacy-notice</a>
 </p>
 
 <h2 class="govuk-heading-m">If you need help signing in</h2>
 <p class="govuk-body">
-  Read how to change your sign in details: <a href="https://www.gov.uk/guidance/changing-the-sign-in-details-for-your-govuk-one-login" class="govuk-link">https://www.gov.uk/guidance/changing-the-sign-in-details-for-your-govuk-one-login </a>.
+  Read how to change your sign in details: <a href="https://www.gov.uk/guidance/changing-the-sign-in-details-for-your-govuk-one-login" class="govuk-link">https://www.gov.uk/guidance/changing-the-sign-in-details-for-your-govuk-one-login </a>
 </p>
 <p class="govuk-body">
-  Or contact the GOV.UK One Login team for help: <a href="https://signin.account.gov.uk/contact-us?referer=inactiveAccountEmail" class="govuk-link"> https://signin.account.gov.uk/contact-us?referer=inactiveAccountEmail</a>.
+  Or contact the GOV.UK One Login team for help: <a href="https://signin.account.gov.uk/contact-us?referer=inactiveAccountEmail" class="govuk-link"> https://signin.account.gov.uk/contact-us?referer=inactiveAccountEmail</a>
 </p>
 
 {% endblock %}
@@ -82,9 +83,8 @@
     <p>Rydych chi wedi defnyddio GOV.UK One Login i gael mynediad at wasanaethau’r llywodraeth.</p>
     <p>Gan nad ydych wedi mewngofnodi i'ch GOV.UK One Login ers dros 3 blynedd, bydd yn cael ei ddileu yn fuan.</p>
 
-    <p>I gadw eich GOV.UK One Login, mewngofnodwch <strong>cyn 5 Awst 2024</strong>:</p>
 <p class="govuk-body">
-  <a href="/identity/auth/v15/signin-email.html" class="govuk-link govuk-link--no-visited-state">https://www.gov.uk/account</a>
+  I gadw eich GOV.UK One Login, mewngofnodwch <strong>cyn 5 Awst 2024</strong>: <a href="/identity/auth/v15/gov-account" class="govuk-link">https://www.gov.uk/account</a>
 </p>
 
 <h2 class="govuk-heading-m">Os nad ydych yn mewngofnodi</h2>
@@ -100,15 +100,15 @@
 <p>Os oes angen GOV.UK One Login arnoch yn y dyfodol, bydd yn rhaid i chi greu un newydd.</p>
 
 <p class="govuk-body">
-  Gallwch ddarllen mwy am ba mor hir y mae GOV.UK One Login yn cadw eich gwybodaeth, yn yr hysbysiad preifatrwydd:<a href="https://signin.account.gov.uk/privacy-notice" class="govuk-link">https://signin.account.gov.uk/privacy-notice</a>.
+  Gallwch ddarllen mwy am ba mor hir y mae GOV.UK One Login yn cadw eich gwybodaeth, yn yr hysbysiad preifatrwydd: <a href="https://signin.account.gov.uk/privacy-notice?lng=cy" class="govuk-link">https://signin.account.gov.uk/privacy-notice</a>
 </p>
 
 <h2 class="govuk-heading-m">Os oes angen help arnoch i fewngofnodi</h2>
 <p class="govuk-body">
-  Darllenwch sut i newid eich manylion mewngofnodi: <a href="https://www.gov.uk/guidance/changing-the-sign-in-details-for-your-govuk-one-login" class="govuk-link">https://www.gov.uk/guidance/changing-the-sign-in-details-for-your-govuk-one-login </a>.
+  Darllenwch sut i newid eich manylion mewngofnodi: <a href="https://www.gov.uk/guidance/changing-the-sign-in-details-for-your-govuk-one-login.cy" class="govuk-link">https://www.gov.uk/guidance/changing-the-sign-in-details-for-your-govuk-one-login </a>
 </p>
 <p class="govuk-body">
-  Neu cysylltwch â thîm One Login GOV.UK am help: <a href="https://signin.account.gov.uk/contact-us?referer=inactiveAccountEmail" class="govuk-link"> https://signin.account.gov.uk/contact-us?referer=inactiveAccountEmail</a>.
+  Neu cysylltwch â thîm One Login GOV.UK am help: <a href="https://signin.account.gov.uk/contact-us?referer=inactiveAccountEmail" class="govuk-link"> https://signin.account.gov.uk/contact-us?referer=inactiveAccountEmail</a>
 </p>
 
 <form class="form" action="/identity/task-pages/v15-task-page" method="post">
