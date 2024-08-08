@@ -1,0 +1,81 @@
+{% extends "/layouts/v16-one-login-plus-signout.html" %}
+
+{% block pageTitle %}
+Your services – {{ serviceName }} – GOV.UK Prototype Kit
+  
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/identity/one-login-home/v16/one-login-homepage">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="#">Your services</a>
+    </li>
+  </ol>
+</div>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl govuk-!-margin-bottom-4">
+        Your services
+      </h1>
+      <br>
+      <h2 class="govuk-heading-m">Your accounts</h2>
+
+      <div class="service-card--with-title">
+        <div class="service-card-title">
+          <h3 class="govuk-heading-s">Check your State Pension forecast</h3>
+        </div>
+        <div class="service-card-body">
+        <p>See how much State Pension you could get and when you’ll get it.</p>
+        <p class="govuk-body">
+          <a href="/services/state-pension/v16/state-pension-summary.html" class="govuk-link govuk-link--no-visited-state">Go to your State Pension forecast account</a>
+        </p>
+        <p class="service-card-date">Last used: 8 September 2020</p>
+        </div>
+      </div>
+
+      <h2 class="govuk-heading-m">Other services you’ve used</h2>
+
+
+      <div class="service-card--other-task">
+        <p><a href="https://sign-your-mortgage-deed.landregistry.gov.uk/" class="govuk-link--no-visited-state">Sign your mortgage deed</a></p>
+        <p class="service-card-date">Last used: 1 June 2021</p>
+      </div>
+
+      <div class="service-card--other-task">
+        <p><a href="https://www.gov.uk/request-copy-criminal-record" class="govuk-link--no-visited-state">Request a basic DBS check</a></p>
+        <p class="service-card-date">Last used: 25 March 2021</p>
+      </div>
+      
+      <div class="information-box">
+        <h3 class="govuk-heading-m">
+          Services you can use with GOV.UK One Login
+        </h3>
+        <p class="govuk-body">GOV.UK One Login is new. At the moment you can only use it to access some government services.</p>
+        <p class="govuk-body">In the future, you'll be able to use GOV.UK One Login to access all services on GOV.UK.</p>
+        <p class="govuk-!-margin-bottom-0"><a href="/identity/one-login-home/v16/guidance-page-2.html" class="govuk-link--no-visited-state">See the services you can use with GOV.UK One Login</a></p>
+
+      </div>
+
+    </div>
+  </div>
+
+{% endblock %}

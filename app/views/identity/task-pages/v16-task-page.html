@@ -1,0 +1,92 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Task page – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      Tasks 
+    </h1>
+ 
+    <h2 class="govuk-heading-m">Task 1</h2>
+    {{ govukButton({
+      text: "Start",
+      href: "/emails/v16-email-inbox-1.html"
+    }) }}
+
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Links
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p class="govuk-heading-s">Emails</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li><a href="/emails/v15-email-inbox-1" class="govuk-link govuk-link--no-visited-state">Inbox</a></li>
+          <li><a href="/emails/v15-email-your-OL-will-be-deleted-soon" class="govuk-link govuk-link--no-visited-state">Email | Action: sign in to keep your GOV.UK One Login</a></li>
+        </ul>
+      </div>
+
+      <div class="govuk-details__text">
+        <p class="govuk-heading-s">Authentication</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li><a href="/identity/auth/v15/signin-email" class="govuk-link govuk-link--no-visited-state">Enter your email address to sign in</a></li>
+          <li><a href="/identity/auth/v15/signin-password" class="govuk-link govuk-link--no-visited-state">Enter your password</a></li>
+          <li><a href="/identity/auth/v15/signin-check-phone" class="govuk-link govuk-link--no-visited-state">Check your phone</a></li>
+        </ul>
+      </div>
+
+      <div class="govuk-details__text">
+        <p class="govuk-heading-s">One Login Home</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li><a href="/identity/one-login-home/v15/successfully-signed-in" class="govuk-link govuk-link--no-visited-state">You’ve successfully signed in </a></li>
+          <li><a href="/identity/one-login-home/v15/one-login-homepage" class="govuk-link govuk-link--no-visited-state">GOV.UK One Login Home</a></li>
+          <li><a href="/identity/one-login-home/v15/your-services" class="govuk-link govuk-link--no-visited-state">Your services</a></li>
+          <li><a href="/identity/one-login-home/v15/security" class="govuk-link govuk-link--no-visited-state">Security</a></li>
+          <li><a href="/identity/one-login-home/v15/enter-password" class="govuk-link govuk-link--no-visited-state">Enter your password</a></li>
+          <li><a href="/identity/one-login-home/v15/your-identity-info" class="govuk-link govuk-link--no-visited-state">Your identity information</a></li>
+        </ul>
+      </div>
+
+      <div class="govuk-details__text">
+        <p class="govuk-heading-s">One Login Home</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li><a href="/identity/one-login-home/v15/you-have-signed-out" class="govuk-link govuk-link--no-visited-state">You have signed out </a></li>
+        </ul>
+      </div>
+    
+    
+    </details>
+
+    <h2 class="govuk-heading-m">Task 2</h2>
+    {{ govukButton({
+      text: "Start",
+      href: "/emails/v15-email-inbox-2.html"
+    }) }}
+
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Links
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p class="govuk-heading-s">Emails</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li><a href="/emails/v15-email-inbox-2" class="govuk-link govuk-link--no-visited-state">Email inbox</a></li>
+          <li><a href="/emails/v15-email-your-OL-has-been-deleted" class="govuk-link govuk-link--no-visited-state">Email | Your GOV.UK One Login has been deleted</a></li>
+        </ul>
+      </div>
+    
+    </details>
+    
+  </div>
+</div>
+
+
+{% endblock %}

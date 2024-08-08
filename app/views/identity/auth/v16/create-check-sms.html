@@ -1,0 +1,70 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Check your phone
+{% endblock %}
+
+{% block header %}
+{{ govukHeader({
+homepageUrl: "/identity/task-pages/v14-task-page.html",
+serviceName: "",
+serviceUrl: "/",
+containerClasses: "govuk-width-container"
+}) }}
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<a href="/identity/auth/v14/create-enter-mobile.html" class="govuk-back-link">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form class="form" action="/identity/auth/v14/create-success" method="POST">
+    <h1 class="govuk-heading-l">Check your phone</h1>
+
+    <div class="govuk-inset-text">
+      We have sent a code to your phone number ending with <span class="govuk-!-font-weight-bold">0406</span>
+    </div>
+
+    <p>It might take a few minutes to arrive. The code will expire after 15 minutes.</p>
+
+      <div class="govuk-form-group">
+
+        <label class="govuk-label" for="otp">Enter the 6 digit security code</label>
+
+        <input class="govuk-input govuk-input--width-5" id="otp" name="create-sms-otp" type="text" autocomplete="one-time-code" inputmode="numeric" spellcheck="false" >
+
+      </div>
+
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+        <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    Problems with the code?          </span>
+                </summary>
+                <div class="govuk-details__text">
+                  <p>We can <a href=""> send the code again</a> or you can <a href="/identity/auth/v14/create-enter-mobile.html">use a different phone number</a>.</p>
+                  <p><a href="/identity/auth/v14/create-choose-otp-method.html">Get a code another way</a>.</p>
+                </div>
+              </details>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

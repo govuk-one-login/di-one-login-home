@@ -1,0 +1,89 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Using your GOV.UK One Login
+{% endblock %}
+
+{% block header %}
+{{ govukHeader({
+homepageUrl: "/identity/task-pages/v14-task-page.html",
+serviceName: "",
+serviceUrl: "/",
+containerClasses: "govuk-width-container"
+}) }}
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="https://www.gov.uk/">Home</a>
+    </li>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      Using your GOV.UK One Login
+    </h1>
+
+    <p class="govuk-body-s">Contents</p>
+<ul class="govuk-list govuk-body-s">
+  <li> — Sign in to your GOV.UK One Login</li>
+  <li><a class="govuk-link" href="/identity/one-login-home/v14/guidance-page-2-task3"> — Services you can use with GOV.UK One Login</a></li>
+  <li><a class="govuk-link" href="/identity/one-login-home/v14/guidance-page-3-task3"> — Proving your identity with GOV.UK One Login</a></li>
+</ul>
+
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+    <h2 class="govuk-heading-l">Sign in to your GOV.UK One Login</h2>
+    <p>You can use your GOV.UK One Login to access some government services.</p>
+    <p>It does not work with all <a href="https://www.gov.uk/sign-in">government accounts and services </a> yet (for example Universal Credit).</p>
+    <p>Over time, GOV.UK One Login will replace all other ways to sign in to services on GOV.UK, including Government Gateway.    </p>
+    <p class="govuk-body">See the <a href="/identity/one-login-home/v14/guidance-page-2-task3" class="govuk-link"> services you can use with GOV.UK One Login</a>.</p>
+
+    <div class="govuk-inset-text">
+      This service is also available in <a href="">Welsh (Cymraeg)</a>.
+    </div>
+
+    <p>If you need a GOV.UK One Login to use a service, and you do not already have one, you’ll be able to create one when you first use that service.</p>
+    <p>Sign in to:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>see and access the services you’ve used with your GOV.UK One Login      </li>
+      <li>change your sign in details (email address, password or how you get security codes)      </li>
+      <li>update your identity information, including your name and address      </li>
+      <li>delete your GOV.UK One Login      </li>
+    </ul>
+
+{{ govukButton({
+  text: "Sign in",
+  href: "/identity/auth/v14/gov-account-task3",
+  isStartButton: true
+}) }}
+
+<h2 class="govuk-heading-m">Report a problem or give feedback</h2>
+<p class="govuk-body">To report a problem with your GOV.UK One Login or give feedback <a href="https://home.account.gov.uk/contact-gov-uk-one-login?fromURL=https%3A%2F%2Fhome.account.gov.uk%2Fyour-services%3F_ga%3D2.74737490.1562553744.1698932296-636000474.1677756439" class="govuk-link">contact the GOV.UK One Login team</a>.</p>
+
+<h2 class="govuk-heading-m">How GOV.UK One Login uses your information</h2>
+<p>To find out how your information is stored and used when you use GOV.UK One Login, see the <a href="https://signin.account.gov.uk/privacy-notice?_ga=2.199070319.1992640437.1712137227-669254218.1708941790">GOV.UK One Login privacy notice</a>.</p>
+
+<nav class="govuk-pagination govuk-pagination--block" role="navigation" aria-label="results">
+  
+  <div class="govuk-pagination__next">
+    <a class="govuk-link govuk-pagination__link" href="/identity/one-login-home/v14/guidance-page-2-task3" rel="next"> <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+        <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+      </svg> <span class="govuk-pagination__link-title">Next</span><span class="govuk-visually-hidden">:</span>
+      <span class="govuk-pagination__link-label">Services you can use with GOV.UK One Login      </span></a>
+  </div>
+</nav>
+
+<a href="#" class="govuk-link govuk-link--no-visited-state">View a printable version of the whole guide</a>
+  
+        </div>
+      </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends "layouts/one-login-home-v12-OL.html" %}
+
+{% block pageTitle %}
+Enter your current password
+{% endblock %}
+
+
+{% block content %}
+
+<a href="/identity/one-login-home/v12/event-reported-success" class="govuk-back-link">Back</a>
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      Enter your current password 
+    </h1>
+    <p class="govuk-body">We need to make sure it’s you before you can change your password.</p>
+
+    <div class="gem-c-show-password" data-module="show-password" data-disable-form-submit-check="false"
+           data-show-text="Show" data-hide-text="Hide" data-show-full-text="Show password" data-hide-full-text="Hide password" data-announce-show="Your password is shown" data-announce-hide="Your password is hidden">
+
+        <div class="govuk-form-group">
+          <label for="password" class="gem-c-label govuk-label">Enter your password</label>
+          <div class="gem-c-show-password__input-wrapper">
+            <input name="password[first]" class="gem-c-input govuk-input gem-c-input--with-password govuk-!-width-two-thirds"
+                   id="password" type="password" autocomplete="new-password" aria-describedby="hint-password">
+            <span class="govuk-visually-hidden" aria-live="polite">Your password is hidden</span>
+          </div> <!-- /. gem-c-show-password__input-wrapper -->
+        </div> <!-- /. govuk-form-group -->
+      </div>
+
+
+    <a href="/identity/one-login-home/v12/enter-new-password.html" role="button" draggable="false" class="govuk-button govuk-button--continue" data-module="govuk-button">
+      Continue
+    </a>
+
+    <p class="govuk-body">
+      <a href="/identity/one-login-home/v12/security.html" class="govuk-link govuk-link--no-visited-state"> I do not want to change my password</a>
+    </p>
+
+
+  </div>
+</div>
+
+{% endblock %}

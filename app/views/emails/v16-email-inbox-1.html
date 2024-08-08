@@ -1,0 +1,113 @@
+{% extends "govuk-prototype-kit/layouts/unbranded.html" %}
+
+{% block content %}
+  <div style="max-width: 600px; margin: 0 auto;">
+    <h1 class="govuk-heading-l">Email inbox <span class="hmrc-notification-badge">3</span></h1>
+    <hr style="border: 0; height: 2px; background: #000000; Margin: 0 0 30px 0;">
+{% block emailBody %}
+
+<dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Argos
+    </dt>
+    <dd class="govuk-summary-list__value">
+      <p class="govuk-body govuk-!-font-weight-bold">
+        <a href="">Your click and collect order is ready</a>
+      </p>
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <p class="govuk-body govuk-!-font-weight-bold">
+        Today<br>1:00pm
+      </p>
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      GOV.UK One Login
+    </dt>
+    <dd class="govuk-summary-list__value">
+      <p class="govuk-body govuk-!-font-weight-bold">
+        <a href="/emails/v16-email-your-OL-will-be-deleted-soon.html">Your GOV.UK One Login will be deleted soon</a>
+      </p>
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <p class="govuk-body govuk-!-font-weight-bold">
+        Today<br>9:55am
+      </p>
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      O2 billing
+    </dt>
+    <dd class="govuk-summary-list__value">
+      <p class="govuk-body govuk-!-font-weight-bold">
+        <a href="">Your O2 bill is ready</a>
+      </p>
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <p class="govuk-body govuk-!-font-weight-bold">
+        13/08/2024 <br>1:10pm
+      </p>
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      <p class="govuk-body">Royal Mail</p>
+    </dt>
+    <dd class="govuk-summary-list__value">
+      <p class="govuk-body"><a href="#">Your Royal Mail parcel is on its way</a></p>
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <p class="govuk-body">12/08/2024<br>2:30pm</p>
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      <p class="govuk-body">Trainline</p>
+    </dt>
+    <dd class="govuk-summary-list__value">
+      <p class="govuk-body"><a href="#">Ticket confirmation</a></p>
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <p class="govuk-body">12/08/2024<br>1:10pm</p>
+    </dd>
+  </div>
+</dl>
+
+<nav class="govuk-pagination" aria-label="Pagination">
+  <ul class="govuk-pagination__list">
+    <li class="govuk-pagination__item govuk-pagination__item--current">
+      <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1" aria-current="page">
+        1
+      </a>
+    </li>
+    <li class="govuk-pagination__item">
+      <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2">
+        2
+      </a>
+    </li>
+    <li class="govuk-pagination__item">
+      <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
+        3
+      </a>
+    </li>
+  </ul>
+  <div class="govuk-pagination__next">
+    <a class="govuk-link govuk-pagination__link" href="#" rel="next">
+      <span class="govuk-pagination__link-title">
+        Next<span class="govuk-visually-hidden"> page</span>
+      </span>
+      <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+        <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+      </svg>
+    </a>
+  </div>
+</nav>
+
+{% endblock %}
+
+<hr style="border: 0; height: 2px; background: #000000; Margin: 60px 0 30px 0;">
+
+  {% endblock %}

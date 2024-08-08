@@ -1,0 +1,146 @@
+{% extends "/layouts/v15-one-login-plus-signout.html" %}
+
+{% block pageTitle %}
+Your identity information
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/identity/one-login-home/v15/one-login-homepage">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="#">Your identity information
+      </a>
+    </li>
+  </ol>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    
+    <h1 class="govuk-heading-xl">
+      Your identity information
+    </h1>
+    <p>You’ve proved your identity with GOV.UK One Login. </p>
+    <p>When you sign in, we’ll sometimes ask you to confirm the saved information is still correct. 
+    </p>
+
+        <p class="govuk-body">This helps us:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>share the correct identity information with services</li>
+      <li>keep your GOV.UK One Login secure</li>
+    </ul>
+
+    <div class="activity-card govuk-!-margin-bottom-6">
+      <h2 class="govuk-heading-l">Your identity information</h2>
+      <p>Your GOV.UK One Login shares your identity information when a service needs to check who you are.</p>
+    
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+    <h2 class="govuk-heading-m">Name  on your UK passport</h2>
+    <dl class="govuk-summary-list govuk-summary-list--no-border govuk-!-margin-bottom-0">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Given names
+        </dt>
+        <p>
+          {{ data['first-name']  or "Joe Stuart"}}
+        </p>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Last name
+        </dt>
+        <p>
+          {{ data['surname']  or "Bloggs"}}
+        </p>
+        <p class="gem-c-hint govuk-hint govuk-!-margin-bottom-3">Saved on 25 March 2021</p> 
+        <p class="govuk-body">
+          <a href="#" class="govuk-link govuk-link--no-visited-state">Update your name</a>
+        </p>
+      </div>
+    </dl>
+
+    <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
+
+<br>
+    <dl class="govuk-summary-list govuk-!-margin-bottom-0">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          <h2 class="govuk-heading-s">Date of birth</h2>
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <p>{{ data['dob-day'] }} {{ data['dob-month'] }} {{ data['dob-year'] or "1 January 1973"}}</p>
+          <p class="gem-c-hint govuk-hint govuk-!-margin-bottom-3">Saved on 25 March 2021</p> 
+          <p class="govuk-body">
+            <a href="#" class="govuk-link govuk-link--no-visited-state">Update your date of birth</a>
+          </p>
+        </dd>
+      </div>
+    </dl>
+
+    <br>
+    <dl class="govuk-summary-list govuk-!-margin-bottom-0">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          <h2 class="govuk-heading-s">Current address</h2>
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <p>
+    
+            {% if data['address-line-1'] %}
+
+              {% if data['address-line-1'] %}
+                {{ data['address-line-1'] }},<br>
+              {% endif %}
+
+              {% if data['address-line-2'] %}
+                {{ data['address-line-2'] }}
+              {% endif %}, <br>
+
+              {% if data['town-or-city'] %}
+                {{ data['town-or-city'] }},<br>
+              {% endif %}
+
+              {% if data['post-code'] %}
+              {{ data['post-code'] }},<br>
+            {% endif %}
+
+            {% else %}
+            1 Street            <br>
+            Bristol            <br>
+            BS5 6LA
+            {% endif %}
+    
+          </p>
+          <p class="gem-c-hint govuk-hint govuk-!-margin-bottom-3">Saved on 8 June 2021</p> 
+          <p class="govuk-body">
+            <a href="#" class="govuk-link govuk-link--no-visited-state">Update your current address</a>
+          </p>
+        </dd>
+      </div>
+    </dl>
+
+    
+    </div>
+  </div>
+</div>
+
+{% endblock %}

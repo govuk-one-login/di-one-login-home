@@ -1,0 +1,41 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{{ govukHeader({
+homepageUrl: "/identity/task-page.html",
+serviceName: "",
+serviceUrl: "/",
+containerClasses: "govuk-width-container"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">
+      What name do you prefer to be called?
+    </h1>
+
+    <p>Tell us what name you’d like GOV.UK One Login to use when we communicate with you.</p>
+    <p>This does not have to be the same as the name on your identity documents.</p>
+    <p>Your preferred name may be shared with services you access with your GOV.UK One Login.</p>
+
+    <form class="form" action="/identity/auth/v9/create-success" method="post">
+      <label class="govuk-label" for="event-name">
+        Enter your preferred name
+      </label>
+      {{ govukInput({
+      name: 'preferred-name'
+  }) }}
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}

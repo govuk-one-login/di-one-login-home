@@ -1,0 +1,56 @@
+{% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
+
+{% block header %}
+  {{ govukHeader({
+    homepageUrl: "/identity/task-pages/v14-task-page.html",
+    productName: "One Login",
+    classes: "govuk-header--with-no-sign-out-link"
+  }) }}
+{% endblock %}
+
+{% block pageTitle %}
+Security  
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      You have signed out
+    </h1>
+    <p class="govuk-body">
+      To go back, <a href="#" class="govuk-link">sign in to your GOV.UK One Login</a>.
+    </p>
+
+    <p class="govuk-body">
+      Or <a href="#" class="govuk-link">go to the GOV.UK homepage</a>.
+    </p>
+
+    <form class="form" action="/identity/task-pages/v14-task-page" method="post">
+
+
+      <button class="govuk-button" data-module="govuk-button">Return to tasks </button>
+
+    </form>
+
+
+  </div>
+</div>
+
+{% endblock %}

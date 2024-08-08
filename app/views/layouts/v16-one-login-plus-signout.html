@@ -1,0 +1,15 @@
+{% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
+
+{% block header %}
+  {{ govukHeader({
+    homepageUrl: "/identity/task-pages/v16-task-page.html",
+    productName: "One Login",
+    classes: "govuk-header--with-sign-out-link",
+    navigation: [
+      {
+        href: "/identity/one-login-home/v16/you-have-signed-out.html",
+        text: "Sign out"
+      }
+    ]
+  }) }}
+{% endblock %}
