@@ -1,0 +1,54 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      Tasks
+    </h1>
+ 
+    <h2 class="govuk-heading-m">Task 1</h2>
+    {{ govukButton({
+      text: "Start",
+      href: "/services/service-cards-iteration/guidance-page-1.html"
+    }) }}
+
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Links
+        </span>
+      </summary>
+        <ul class="govuk-list govuk-list--bullet">
+          <li><a href="/services/service-cards-iteration/guidance-page-1.html" class="govuk-link govuk-link--no-visited-state">Using your GOV.UK One Login</a></li>
+          <li><a href="/services/service-cards-iteration/gov-account.html" class="govuk-link govuk-link--no-visited-state">Create your GOV.UK One Login or sign in</a></li>
+          <li><a href="/services/service-cards-iteration/signin-email.html" class="govuk-link govuk-link--no-visited-state">Enter your email address to sign in to your GOV.UK One Login</a></li>
+          <li><a href="/services/dbs/request-dbs-check.html" class="govuk-link govuk-link--no-visited-state">Using your GOV.UK One Login</a></li>
+          <li><a href="/services/dbs/request-dbs-check.html" class="govuk-link govuk-link--no-visited-state">Using your GOV.UK One Login</a></li>
+        </ul>
+    </details>
+
+    <!-- <h2 class="govuk-heading-m">Task 2</h2>
+    {{ govukButton({
+      text: "Start",
+      href: "/services/pta/pta-signin-up.html"
+    }) }} -->
+
+
+
+    <!-- <h2 class="govuk-heading-m">Task 3</h2>
+    {{ govukButton({
+      text: "Start",
+      href: "/identity/one-login-home/v9/guidance-page-1.html"
+    }) }} -->
+
+  </div>
+</div>
+
+
+{% endblock %}

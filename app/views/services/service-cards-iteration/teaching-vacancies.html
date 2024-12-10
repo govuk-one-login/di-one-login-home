@@ -1,0 +1,30 @@
+{% extends "di-govuk-one-login-service-header/layouts/service-header.html" %}
+{% set serviceName = "Teaching Vacancies" %}
+{% set homepageLink = "/services/service-cards-iteration/one-login-homepage.html" %}
+{% set oneLoginLink = "/services/service-cards-iteration/one-login-homepage.html" %}
+{% block pageTitle %}
+  {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+{% set navigationItems = [
+  {
+    href: "#",
+    text: 'Your profile',
+    id: 'testing2'
+  },{
+    href: "#",
+    text: 'Applications',
+    id: 'testing3'
+  },{
+    href: "#",
+    text: 'Job alerts',
+    id: 'testing3'
+  },{
+    href: "#",
+    text: 'Saved jobs',
+    id: 'testing4'
+  }]
+%} 
+{% block content %}
+
+<img src="/public/images/teacher-vacancies.png" alt="" style="width:100%;">
+{% endblock %}

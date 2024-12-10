@@ -313,3 +313,37 @@ router.post('/identity/one-login-home/v12/services-search', function(req, res){
     data: finalData
   });
 });
+
+router.get('/services/service-cards-iteration/services-search', function(req, res) {
+  const servicesPerPage = 10;
+
+  let finalData = data.sort((a, b) => a.name.toUpperCase().localeCompare(b.name.toUpperCase()));
+  const currentPage = req.query.page;
+  const dataLength = finalData.length;
+
+  if (dataLength > servicesPerPage) {
+    pagination = generatePagination(dataLength, currentPage);
+    finalData = formatData(data, pagination.currentPage);
+  } 
+
+  res.render("/services/service-cards-iteration/services-search.html", {
+    test: "testing",
+    page: req.query.page,
+    data: finalData,
+    pagination: pagination
+  });
+})
+
+router.post('/services/service-cards-iteration/services-search', function(req, res){
+  const searchQuery = req.body.search;
+  let finalData = data.sort((a, b) => a.name.toUpperCase().localeCompare(b.name.toUpperCase()));
+
+  finalData = finalData.filter((item) => {
+    return item.name.toUpperCase().match(searchQuery.toUpperCase());
+  });
+
+  res.render("/services/service-cards-iteration/services-search.html", {
+    searchQuery: searchQuery,
+    data: finalData
+  });
+});

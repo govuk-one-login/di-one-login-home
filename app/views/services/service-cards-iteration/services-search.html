@@ -1,0 +1,127 @@
+{% extends "layouts/main.html" %}
+{% from "govuk/components/select/macro.njk" import govukSelect %}
+{% from "govuk/components/pagination/macro.njk" import govukPagination %}
+
+{% block pageTitle %}
+Services you can use with GOV.UK One Login
+{% endblock %}
+
+{% block header %}
+  {{ govukHeader({
+    homepageUrl: "/services/service-cards-iteration/task-page.html",
+    productName: "One Login"
+  }) }}
+{% endblock %}
+
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "Beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-back-link" href="/services/service-cards-iteration/your-services">Back</a>
+    </li>
+  </ol>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      Services you can use with GOV.UK One Login
+    </h1>
+
+   <p>You can only use GOV.UK One Login to access some government services.</p>
+   <p>In the future, you’ll be able to use it to access all services on GOV.UK.</p>
+   
+   <h2 class="govuk-heading-m">Search</h2>
+    <div>
+      <form style="display: flex;" action="/services/service-cards-iteration/services-search" method="post">
+      <input aria-controls="js-search-results-info" enterkeyhint="search" class="gem-c-search__item gem-c-search__input js-class-toggle focus" id="finder-keyword-search" name="search" title="Search" type="search">
+      <div>
+        <button class="gem-c-search__submit" type="submit" data-module="gem-track-click" enterkeyhint="search" data-gem-track-click-module-started="true">
+          Search
+          
+          <svg class="gem-c-search__icon" width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+            <circle cx="12.0161" cy="11.0161" r="8.51613" stroke="currentColor" stroke-width="3"></circle>
+            <line x1="17.8668" y1="17.3587" x2="26.4475" y2="25.9393" stroke="currentColor" stroke-width="3"></line>
+          </svg>
+        </button>    
+      </div>
+    </div>
+    <br>
+    <h3 class="govuk-heading-s">122 results</h3>
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    <div class="most-visited-services">
+      <h2 class="govuk-heading-m">Most viewed</h2>
+      <ol class="govuk-list govuk-list--number">
+       <li><a class="govuk-link" href="https://www.gov.uk/sign-in-childcare-account">Childcare account</a></li>
+       <li><a class="govuk-link" href="/services/pta/v12/pta-signin-up-OL-journey">Personal tax account</a></li>
+       <li><a class="govuk-link" href="https://www.gov.uk/log-in-file-self-assessment-tax-return">File your Self Assessment tax return online</a></li>
+       <li><a class="govuk-link" href="https://www.gov.uk/pay-self-assessment-tax-bill/bank-details">Pay your Self Assessment tax bill</a></li>
+       <li><a class="govuk-link" href="https://www.gov.uk/check-national-insurance-record">Check your National Insurance record</a></li>
+      </ol>
+    </form>
+  </div>
+   
+   {{ govukSelect({
+    id: "sort",
+    name: "sort",
+    label: {
+      text: "Sort by"
+    },
+    items: [
+      {
+        value: "alphabetical",
+        text: "A-Z"
+      }
+    ]
+  }) }}
+
+  {% if data.length %}
+    <ul class="govuk-list service-search__list">
+      {% for service in data %}
+        <li class="service-search__list-item">
+          <a class="govuk-link" href="{{service.href}}">{{service.name}}</a>
+        </li>
+      {% endfor %}
+    </ul>
+
+
+  {% set paginationItems = [] %}
+
+  {% for item in pagination.items %}
+    {% set paginationItems = (paginationItems.push({
+      number: item,
+      href: "?page="+item,
+      current: true if (item == pagination.currentPage) else false
+  }), paginationItems) %}
+  {% endfor %}
+    {{ govukPagination({
+      landmarkLabel: "pages",
+      previous: {
+        href: "?page=" + pagination.previousPage
+      } if pagination.previousPage,
+      next: {
+        href: "?page=" + pagination.nextPage
+      } if pagination.nextPage,
+      items: paginationItems
+    }) if pagination.items }}
+  {% endif %}
+
+  
+  
+{% endblock %}
+
+
