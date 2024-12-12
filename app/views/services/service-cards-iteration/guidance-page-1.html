@@ -1,16 +1,14 @@
 {% extends "layouts/main.html" %}
 
-{% block pageTitle %}
-Personal tax account
-{% endblock %}
+{% block pageTitle %} Sign in to your GOV.UK One Login {% endblock %}
 
 {% block header %}
-{{ govukHeader({
-homepageUrl: "/services/service-cards-iteration/task-page.html",
-serviceName: "",
-serviceUrl: "/",
-containerClasses: "govuk-width-container"
-}) }}
+  {{ govukHeader({
+    homepageUrl: "/services/service-cards-iteration/task-page.html",
+    serviceName: "",
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+  }) }}
 {% endblock %}
 
 
@@ -40,10 +38,10 @@ containerClasses: "govuk-width-container"
 
     <h2 class="govuk-heading-l">Sign in to your GOV.UK One Login</h2>
     <p>You can use your GOV.UK One Login to access some government services.</p>
-    <p class="govuk-body">See the <a href="/identity/one-login-home/v10/services-search-task-1.html" class="govuk-link"> services you can use with GOV.UK One Login</a>.</p>
-    <p class="govuk-body">You currently need to use different accounts to <a href="https://www.gov.uk/sign-in" class="govuk-link"> sign in to other government services</a>, such as Universal Credit. </p>
-
-    <p>In the future, you'll be able to use your GOV.UK One Login to access all services on GOV.UK.</p>
+    <p class="govuk-body">It does not work with all <a class="govuk-link" href="https://www.gov.uk/sign-in">government accounts and services</a> yet (for example Universal Credit).</p>
+    
+    <p>Over time, GOV.UK One Login will replace all other ways to sign in to services on GOV.UK, including Government Gateway.</p>
+    <p class="govuk-body">See the <a href="/services/service-cards-iteration/services-search" class="govuk-link"> services you can use with GOV.UK One Login</a>.</p>
     <div class="govuk-inset-text">
       If  you need a GOV.UK One Login to use a service, and you do not already have one, you’ll be able to create one when you first use that service.
     </div>
