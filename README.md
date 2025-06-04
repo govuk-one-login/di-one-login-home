@@ -7,5 +7,5 @@ Pre-commit checks is configured via GitLint to ensure commit messages follow the
 To set up pre-commit checks, you need to install the pre-commit hooks and run the post-install script. This will ensure that your commit messages are checked against the rules defined in the `.pre-commit-config.yaml` file.
 To install the pre-commit hooks, run the following command:
 ```shell
-$ npm run postinstall
+$ npm install
 ```
