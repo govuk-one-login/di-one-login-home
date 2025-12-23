@@ -10,7 +10,7 @@
     "govuk-frontend": "5.13.0",
     "govuk-one-login-service-header": "github:govuk-one-login/service-header",
     "govuk-prototype-kit": "13.18.1",
-    "hmrc-frontend": "6.103.0"
+    "hmrc-frontend": "6.105.0"
   },
   "devDependencies": {
     "husky": "^9.1.7"
