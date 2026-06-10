@@ -1,5 +1,7 @@
 # DI One Login Home
 
+> ⚠️ **This repository is archived.** It was an old prototyping application which has been superseded by [home-research-prototype](https://github.com/govuk-one-login/home-research-prototype).
+
 ## Guide
 
 ### Pre-Commit check with Husky and GitLint
